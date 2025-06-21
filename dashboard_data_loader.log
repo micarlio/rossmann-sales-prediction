@@ -6109,3 +6109,1570 @@
 2025-06-21 16:59:43,309 - INFO - Amostragem concluída em 2.59 segundos
 2025-06-21 16:59:43,309 - INFO - Total de registros após amostragem: 55750
 2025-06-21 16:59:43,334 - INFO - 127.0.0.1 - - [21/Jun/2025 16:59:43] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:27:11,627 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 17:27:11,690 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 17:27:11,693 - INFO - Amostrando 50 registros por loja...
+2025-06-21 17:27:11,696 - INFO - Total de lojas: 1115
+2025-06-21 17:27:12,305 - INFO - Amostragem concluída em 0.61 segundos
+2025-06-21 17:27:12,305 - INFO - Total de registros após amostragem: 55750
+2025-06-21 17:27:12,404 - INFO - Carregamento de dados concluído no modo 'amostra'
+2025-06-21 17:27:12,404 - INFO - Registros no DataFrame reduzido: 55750
+2025-06-21 17:27:12,416 - INFO - Carregando dados brutos...
+2025-06-21 17:27:12,938 - INFO - Otimização de memória para df_vendas:
+2025-06-21 17:27:12,938 - INFO -   - Antes: 110.59 MB
+2025-06-21 17:27:12,938 - INFO -   - Depois: 18.43 MB
+2025-06-21 17:27:12,938 - INFO -   - Redução: 83.33%
+2025-06-21 17:27:12,938 - INFO -   - Tempo: 0.16 segundos
+2025-06-21 17:27:12,940 - INFO - Otimização de memória para df_lojas:
+2025-06-21 17:27:12,940 - INFO -   - Antes: 0.22 MB
+2025-06-21 17:27:12,940 - INFO -   - Depois: 0.03 MB
+2025-06-21 17:27:12,940 - INFO -   - Redução: 86.83%
+2025-06-21 17:27:12,940 - INFO -   - Tempo: 0.00 segundos
+2025-06-21 17:27:12,940 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-21 17:27:13,123 - INFO - Otimização de memória para df_lojas_bruto_dashboard:
+2025-06-21 17:27:13,123 - INFO -   - Antes: 0.22 MB
+2025-06-21 17:27:13,123 - INFO -   - Depois: 0.03 MB
+2025-06-21 17:27:13,123 - INFO -   - Redução: 86.83%
+2025-06-21 17:27:13,123 - INFO -   - Tempo: 0.00 segundos
+2025-06-21 17:27:13,174 - INFO - Dash is running on http://localhost:8050/
+
+2025-06-21 17:27:13,180 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:8050
+2025-06-21 17:27:13,180 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-21 17:27:15,795 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:15] "GET / HTTP/1.1" 200 -
+2025-06-21 17:27:15,798 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:15] "[36mGET /assets/custom.css?m=1750203746.0 HTTP/1.1[0m" 304 -
+2025-06-21 17:27:15,798 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:15] "[36mGET /assets/css/estilos_barra_lateral.css HTTP/1.1[0m" 304 -
+2025-06-21 17:27:15,799 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:15] "[36mGET /assets/css/estilos_barra_lateral.css?m=1750203746.0 HTTP/1.1[0m" 304 -
+2025-06-21 17:27:15,799 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:15] "[36mGET /assets/css/estilos_customizados.css HTTP/1.1[0m" 304 -
+2025-06-21 17:27:15,799 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:15] "[36mGET /assets/js/tela_cheia.js?m=1750203746.0 HTTP/1.1[0m" 304 -
+2025-06-21 17:27:15,802 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:15] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2025-06-21 17:27:15,804 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:15] "[36mGET /_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+2025-06-21 17:27:15,809 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:15] "[36mGET /_dash-component-suites/dash/dcc/async-markdown.js HTTP/1.1[0m" 304 -
+2025-06-21 17:27:15,812 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:15] "[36mGET /_dash-component-suites/dash/dcc/async-highlight.js HTTP/1.1[0m" 304 -
+2025-06-21 17:27:15,813 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:15] "[36mGET /_dash-component-suites/dash/dcc/async-datepicker.js HTTP/1.1[0m" 304 -
+2025-06-21 17:27:15,816 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:15] "[36mGET /_dash-component-suites/dash/dcc/async-slider.js HTTP/1.1[0m" 304 -
+2025-06-21 17:27:15,817 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:15] "[36mGET /assets/images/rossmann_logo2.png HTTP/1.1[0m" 304 -
+2025-06-21 17:27:15,818 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:15] "[36mGET /assets/images/rossmann_logo1.png HTTP/1.1[0m" 304 -
+2025-06-21 17:27:15,819 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:15] "[36mGET /assets/images/rossmann_logo_colorida.png HTTP/1.1[0m" 304 -
+2025-06-21 17:27:15,821 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:15] "[36mGET /assets/css/estilos_customizados.css?m=1750522264.3774626 HTTP/1.1[0m" 304 -
+2025-06-21 17:27:15,821 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:15] "[36mGET /assets/custom.css?m=1750522264.3775227 HTTP/1.1[0m" 304 -
+2025-06-21 17:27:15,821 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:15] "[36mGET /assets/css/estilos_barra_lateral.css?m=1750522264.3773763 HTTP/1.1[0m" 304 -
+2025-06-21 17:27:15,821 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:15] "[36mGET /assets/js/tela_cheia.js?m=1750522264.378281 HTTP/1.1[0m" 304 -
+2025-06-21 17:27:15,827 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:15] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2025-06-21 17:27:15,938 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:15] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-06-21 17:27:16,002 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:16] "GET /_dash-layout HTTP/1.1" 200 -
+2025-06-21 17:27:16,090 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:16] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:27:16,092 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:16] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:27:16,093 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:16] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:27:16,093 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:16] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:27:16,094 - INFO - Carregando dados brutos...
+2025-06-21 17:27:16,094 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:16] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:27:16,685 - INFO - Otimização de memória para df_vendas:
+2025-06-21 17:27:16,685 - INFO -   - Antes: 110.59 MB
+2025-06-21 17:27:16,685 - INFO -   - Depois: 18.43 MB
+2025-06-21 17:27:16,685 - INFO -   - Redução: 83.33%
+2025-06-21 17:27:16,685 - INFO -   - Tempo: 0.19 segundos
+2025-06-21 17:27:16,687 - INFO - Otimização de memória para df_lojas:
+2025-06-21 17:27:16,687 - INFO -   - Antes: 0.22 MB
+2025-06-21 17:27:16,687 - INFO -   - Depois: 0.03 MB
+2025-06-21 17:27:16,687 - INFO -   - Redução: 86.83%
+2025-06-21 17:27:16,687 - INFO -   - Tempo: 0.00 segundos
+2025-06-21 17:27:16,687 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-21 17:27:16,758 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 17:27:16,760 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 17:27:16,760 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 17:27:16,761 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 17:27:16,762 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 17:27:16,784 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 17:27:16,912 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 17:27:16,913 - INFO - Amostrando 50 registros por loja...
+2025-06-21 17:27:16,919 - INFO - Total de lojas: 1115
+2025-06-21 17:27:16,927 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 17:27:16,928 - INFO - Amostrando 50 registros por loja...
+2025-06-21 17:27:16,931 - INFO - Total de lojas: 1115
+2025-06-21 17:27:16,935 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 17:27:16,937 - INFO - Amostrando 50 registros por loja...
+2025-06-21 17:27:16,938 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 17:27:16,941 - INFO - Total de lojas: 1115
+2025-06-21 17:27:16,941 - INFO - Amostrando 50 registros por loja...
+2025-06-21 17:27:16,949 - INFO - Total de lojas: 1115
+2025-06-21 17:27:16,962 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 17:27:16,963 - INFO - Amostrando 50 registros por loja...
+2025-06-21 17:27:16,966 - INFO - Total de lojas: 1115
+2025-06-21 17:27:16,974 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 17:27:16,975 - INFO - Amostrando 50 registros por loja...
+2025-06-21 17:27:16,979 - INFO - Total de lojas: 1115
+2025-06-21 17:27:21,390 - INFO - Amostragem concluída em 4.46 segundos
+2025-06-21 17:27:21,390 - INFO - Total de registros após amostragem: 55750
+2025-06-21 17:27:21,405 - INFO - Carregando dados brutos...
+2025-06-21 17:27:21,420 - INFO - Amostragem concluída em 4.44 segundos
+2025-06-21 17:27:21,420 - INFO - Total de registros após amostragem: 55750
+2025-06-21 17:27:21,442 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:21] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:27:21,455 - INFO - Amostragem concluída em 4.49 segundos
+2025-06-21 17:27:21,456 - INFO - Total de registros após amostragem: 55750
+2025-06-21 17:27:21,477 - INFO - Carregando dados brutos...
+2025-06-21 17:27:21,497 - INFO - Amostragem concluída em 4.56 segundos
+2025-06-21 17:27:21,498 - INFO - Total de registros após amostragem: 55750
+2025-06-21 17:27:21,529 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:21] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:27:21,537 - INFO - Amostragem concluída em 4.59 segundos
+2025-06-21 17:27:21,538 - INFO - Total de registros após amostragem: 55750
+2025-06-21 17:27:21,562 - INFO - Carregando dados brutos...
+2025-06-21 17:27:21,592 - INFO - Amostragem concluída em 4.68 segundos
+2025-06-21 17:27:21,592 - INFO - Total de registros após amostragem: 55750
+2025-06-21 17:27:21,615 - INFO - Carregando dados brutos...
+2025-06-21 17:27:21,664 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:21] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:27:21,711 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:21] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:27:21,715 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:21] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 17:27:21,719 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:21] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 17:27:21,734 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:21] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:27:21,736 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:21] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 17:27:21,740 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:21] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 17:27:21,741 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:21] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 17:27:21,744 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:21] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:27:21,746 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:21] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 17:27:21,935 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:21] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 17:27:23,174 - INFO - Otimização de memória para df_vendas:
+2025-06-21 17:27:23,175 - INFO - Otimização de memória para df_vendas:
+2025-06-21 17:27:23,175 - INFO -   - Antes: 110.59 MB
+2025-06-21 17:27:23,179 - INFO -   - Depois: 18.43 MB
+2025-06-21 17:27:23,179 - INFO -   - Antes: 110.59 MB
+2025-06-21 17:27:23,179 - INFO -   - Redução: 83.33%
+2025-06-21 17:27:23,179 - INFO -   - Depois: 18.43 MB
+2025-06-21 17:27:23,179 - INFO -   - Tempo: 0.59 segundos
+2025-06-21 17:27:23,180 - INFO -   - Redução: 83.33%
+2025-06-21 17:27:23,183 - INFO - Otimização de memória para df_lojas:
+2025-06-21 17:27:23,183 - INFO -   - Tempo: 0.35 segundos
+2025-06-21 17:27:23,185 - INFO - Otimização de memória para df_vendas:
+2025-06-21 17:27:23,185 - INFO -   - Antes: 0.22 MB
+2025-06-21 17:27:23,188 - INFO - Otimização de memória para df_vendas:
+2025-06-21 17:27:23,189 - INFO - Otimização de memória para df_lojas:
+2025-06-21 17:27:23,189 - INFO -   - Antes: 110.59 MB
+2025-06-21 17:27:23,189 - INFO -   - Depois: 0.03 MB
+2025-06-21 17:27:23,189 - INFO -   - Antes: 110.59 MB
+2025-06-21 17:27:23,189 - INFO -   - Antes: 0.22 MB
+2025-06-21 17:27:23,189 - INFO -   - Depois: 18.43 MB
+2025-06-21 17:27:23,189 - INFO -   - Redução: 86.83%
+2025-06-21 17:27:23,189 - INFO -   - Depois: 18.43 MB
+2025-06-21 17:27:23,189 - INFO -   - Depois: 0.03 MB
+2025-06-21 17:27:23,189 - INFO -   - Redução: 83.33%
+2025-06-21 17:27:23,189 - INFO -   - Tempo: 0.00 segundos
+2025-06-21 17:27:23,189 - INFO -   - Redução: 83.33%
+2025-06-21 17:27:23,189 - INFO -   - Redução: 86.83%
+2025-06-21 17:27:23,189 - INFO -   - Tempo: 0.25 segundos
+2025-06-21 17:27:23,189 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-21 17:27:23,189 - INFO -   - Tempo: 0.47 segundos
+2025-06-21 17:27:23,189 - INFO -   - Tempo: 0.00 segundos
+2025-06-21 17:27:23,193 - INFO - Otimização de memória para df_lojas:
+2025-06-21 17:27:23,194 - INFO -   - Antes: 0.22 MB
+2025-06-21 17:27:23,194 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-21 17:27:23,194 - INFO - Otimização de memória para df_lojas:
+2025-06-21 17:27:23,194 - INFO -   - Depois: 0.03 MB
+2025-06-21 17:27:23,195 - INFO -   - Antes: 0.22 MB
+2025-06-21 17:27:23,195 - INFO -   - Redução: 86.83%
+2025-06-21 17:27:23,195 - INFO -   - Depois: 0.03 MB
+2025-06-21 17:27:23,195 - INFO -   - Tempo: 0.00 segundos
+2025-06-21 17:27:23,195 - INFO -   - Redução: 86.83%
+2025-06-21 17:27:23,195 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-21 17:27:23,195 - INFO -   - Tempo: 0.00 segundos
+2025-06-21 17:27:23,196 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-21 17:27:23,273 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 17:27:23,289 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 17:27:23,290 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 17:27:23,291 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 17:27:23,342 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 17:27:23,357 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 17:27:23,359 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 17:27:23,360 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 17:27:23,434 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:23] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:27:23,670 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:23] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:27:23,678 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:23] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:27:23,806 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:23] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:27:25,056 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:25] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:27:25,059 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:25] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 17:27:40,004 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:40] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:27:40,007 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:40] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 17:27:46,513 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:46] "GET /dashboard HTTP/1.1" 200 -
+2025-06-21 17:27:46,542 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:46] "[36mGET /assets/custom.css?m=1750522264.3775227 HTTP/1.1[0m" 304 -
+2025-06-21 17:27:46,544 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:46] "[36mGET /assets/css/estilos_barra_lateral.css?m=1750522264.3773763 HTTP/1.1[0m" 304 -
+2025-06-21 17:27:46,544 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:46] "[36mGET /assets/css/estilos_barra_lateral.css HTTP/1.1[0m" 304 -
+2025-06-21 17:27:46,544 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:46] "[36mGET /assets/css/estilos_customizados.css HTTP/1.1[0m" 304 -
+2025-06-21 17:27:46,547 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:46] "[36mGET /assets/css/estilos_customizados.css?m=1750522264.3774626 HTTP/1.1[0m" 304 -
+2025-06-21 17:27:46,547 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:46] "[36mGET /assets/js/tela_cheia.js?m=1750522264.378281 HTTP/1.1[0m" 304 -
+2025-06-21 17:27:46,594 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:46] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-06-21 17:27:46,662 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:46] "GET /_dash-layout HTTP/1.1" 200 -
+2025-06-21 17:27:46,690 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:46] "[36mGET /assets/images/rossmann_logo2.png HTTP/1.1[0m" 304 -
+2025-06-21 17:27:46,691 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:46] "[36mGET /assets/images/rossmann_logo_colorida.png HTTP/1.1[0m" 304 -
+2025-06-21 17:27:46,696 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:46] "[36mGET /_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+2025-06-21 17:27:46,703 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:46] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2025-06-21 17:27:46,706 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:46] "[36mGET /_dash-component-suites/dash/dcc/async-markdown.js HTTP/1.1[0m" 304 -
+2025-06-21 17:27:46,706 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:46] "[36mGET /_dash-component-suites/dash/dcc/async-datepicker.js HTTP/1.1[0m" 304 -
+2025-06-21 17:27:46,711 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:46] "[36mGET /_dash-component-suites/dash/dcc/async-slider.js HTTP/1.1[0m" 304 -
+2025-06-21 17:27:46,713 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:46] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2025-06-21 17:27:46,731 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:46] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:27:46,732 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:46] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:27:46,732 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:46] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:27:46,733 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:46] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:27:46,733 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:46] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:27:46,734 - INFO - Carregando dados brutos...
+2025-06-21 17:27:46,751 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:46] "[36mGET /assets/images/rossmann_logo1.png HTTP/1.1[0m" 304 -
+2025-06-21 17:27:46,762 - INFO - Carregando dados brutos...
+2025-06-21 17:27:46,764 - INFO - Carregando dados brutos...
+2025-06-21 17:27:46,765 - INFO - Carregando dados brutos...
+2025-06-21 17:27:46,765 - INFO - Carregando dados brutos...
+2025-06-21 17:27:46,845 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:46] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:27:46,910 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:46] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:27:46,946 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:46] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:27:46,953 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:46] "[36mGET /_dash-component-suites/dash/dcc/async-highlight.js HTTP/1.1[0m" 304 -
+2025-06-21 17:27:46,959 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:46] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 17:27:47,464 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:47] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 17:27:47,472 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:47] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 17:27:47,485 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:47] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:27:47,530 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:47] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 17:27:47,638 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:47] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 17:27:47,937 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:47] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 17:27:48,980 - INFO - Otimização de memória para df_vendas:
+2025-06-21 17:27:48,987 - INFO - Otimização de memória para df_vendas:
+2025-06-21 17:27:48,989 - INFO -   - Antes: 110.59 MB
+2025-06-21 17:27:48,990 - INFO -   - Antes: 110.59 MB
+2025-06-21 17:27:48,999 - INFO -   - Depois: 18.43 MB
+2025-06-21 17:27:48,999 - INFO -   - Depois: 18.43 MB
+2025-06-21 17:27:49,000 - INFO -   - Redução: 83.33%
+2025-06-21 17:27:49,000 - INFO -   - Redução: 83.33%
+2025-06-21 17:27:49,010 - INFO - Otimização de memória para df_vendas:
+2025-06-21 17:27:49,010 - INFO -   - Tempo: 0.27 segundos
+2025-06-21 17:27:49,010 - INFO -   - Tempo: 0.72 segundos
+2025-06-21 17:27:49,010 - INFO -   - Antes: 110.59 MB
+2025-06-21 17:27:49,019 - INFO -   - Depois: 18.43 MB
+2025-06-21 17:27:49,014 - INFO - Otimização de memória para df_vendas:
+2025-06-21 17:27:49,019 - INFO - Otimização de memória para df_lojas:
+2025-06-21 17:27:49,013 - INFO - Otimização de memória para df_lojas:
+2025-06-21 17:27:49,023 - INFO -   - Antes: 0.22 MB
+2025-06-21 17:27:49,022 - INFO -   - Antes: 110.59 MB
+2025-06-21 17:27:49,023 - INFO -   - Antes: 0.22 MB
+2025-06-21 17:27:49,023 - INFO -   - Depois: 0.03 MB
+2025-06-21 17:27:49,023 - INFO -   - Redução: 86.83%
+2025-06-21 17:27:49,023 - INFO -   - Tempo: 0.00 segundos
+2025-06-21 17:27:49,023 - INFO -   - Depois: 18.43 MB
+2025-06-21 17:27:49,023 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-21 17:27:49,023 - INFO -   - Depois: 0.03 MB
+2025-06-21 17:27:49,022 - INFO -   - Redução: 83.33%
+2025-06-21 17:27:49,023 - INFO -   - Redução: 83.33%
+2025-06-21 17:27:49,024 - INFO -   - Redução: 86.83%
+2025-06-21 17:27:49,024 - INFO -   - Tempo: 0.41 segundos
+2025-06-21 17:27:49,024 - INFO -   - Tempo: 0.64 segundos
+2025-06-21 17:27:49,024 - INFO -   - Tempo: 0.00 segundos
+2025-06-21 17:27:49,027 - INFO - Otimização de memória para df_lojas:
+2025-06-21 17:27:49,028 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-21 17:27:49,029 - INFO - Otimização de memória para df_vendas:
+2025-06-21 17:27:49,032 - INFO - Otimização de memória para df_lojas:
+2025-06-21 17:27:49,032 - INFO -   - Antes: 0.22 MB
+2025-06-21 17:27:49,032 - INFO -   - Antes: 110.59 MB
+2025-06-21 17:27:49,032 - INFO -   - Depois: 18.43 MB
+2025-06-21 17:27:49,032 - INFO -   - Depois: 0.03 MB
+2025-06-21 17:27:49,032 - INFO -   - Antes: 0.22 MB
+2025-06-21 17:27:49,032 - INFO -   - Redução: 83.33%
+2025-06-21 17:27:49,032 - INFO -   - Redução: 86.83%
+2025-06-21 17:27:49,032 - INFO -   - Depois: 0.03 MB
+2025-06-21 17:27:49,032 - INFO -   - Tempo: 0.54 segundos
+2025-06-21 17:27:49,032 - INFO -   - Tempo: 0.00 segundos
+2025-06-21 17:27:49,034 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-21 17:27:49,033 - INFO -   - Redução: 86.83%
+2025-06-21 17:27:49,036 - INFO - Otimização de memória para df_lojas:
+2025-06-21 17:27:49,036 - INFO -   - Tempo: 0.00 segundos
+2025-06-21 17:27:49,036 - INFO -   - Antes: 0.22 MB
+2025-06-21 17:27:49,036 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-21 17:27:49,037 - INFO -   - Depois: 0.03 MB
+2025-06-21 17:27:49,039 - INFO -   - Redução: 86.83%
+2025-06-21 17:27:49,039 - INFO -   - Tempo: 0.00 segundos
+2025-06-21 17:27:49,039 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-21 17:27:49,133 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 17:27:49,140 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 17:27:49,149 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 17:27:49,150 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 17:27:49,159 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 17:27:49,231 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 17:27:49,232 - INFO - Amostrando 50 registros por loja...
+2025-06-21 17:27:49,232 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 17:27:49,232 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 17:27:49,233 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 17:27:49,235 - INFO - Total de lojas: 1115
+2025-06-21 17:27:49,236 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 17:27:49,464 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:49] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:27:49,635 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:49] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:27:49,668 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:49] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:27:49,668 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:49] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:27:50,234 - INFO - Amostragem concluída em 1.00 segundos
+2025-06-21 17:27:50,235 - INFO - Total de registros após amostragem: 55750
+2025-06-21 17:27:50,258 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:50] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:27:51,436 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:51] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:27:51,467 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:51] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:27:51,537 - INFO - 127.0.0.1 - - [21/Jun/2025 17:27:51] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:28:09,120 - INFO - Carregando dados brutos...
+2025-06-21 17:28:09,650 - INFO - Otimização de memória para df_vendas:
+2025-06-21 17:28:09,650 - INFO -   - Antes: 110.59 MB
+2025-06-21 17:28:09,650 - INFO -   - Depois: 18.43 MB
+2025-06-21 17:28:09,650 - INFO -   - Redução: 83.33%
+2025-06-21 17:28:09,650 - INFO -   - Tempo: 0.16 segundos
+2025-06-21 17:28:09,652 - INFO - Otimização de memória para df_lojas:
+2025-06-21 17:28:09,652 - INFO -   - Antes: 0.22 MB
+2025-06-21 17:28:09,653 - INFO -   - Depois: 0.03 MB
+2025-06-21 17:28:09,653 - INFO -   - Redução: 86.83%
+2025-06-21 17:28:09,653 - INFO -   - Tempo: 0.00 segundos
+2025-06-21 17:28:09,653 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-21 17:28:09,867 - INFO - Otimização de memória para df_lojas_bruto_dashboard:
+2025-06-21 17:28:09,867 - INFO -   - Antes: 0.22 MB
+2025-06-21 17:28:09,867 - INFO -   - Depois: 0.03 MB
+2025-06-21 17:28:09,867 - INFO -   - Redução: 86.83%
+2025-06-21 17:28:09,867 - INFO -   - Tempo: 0.00 segundos
+2025-06-21 17:28:09,914 - INFO - Dash is running on http://localhost:8050/
+
+2025-06-21 17:28:09,920 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:8050
+2025-06-21 17:28:09,920 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-21 17:28:11,835 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:11] "GET /analise-lojas HTTP/1.1" 200 -
+2025-06-21 17:28:11,867 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:11] "[36mGET /assets/css/estilos_customizados.css?m=1750522264.3774626 HTTP/1.1[0m" 304 -
+2025-06-21 17:28:11,869 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:11] "[36mGET /assets/css/estilos_barra_lateral.css?m=1750522264.3773763 HTTP/1.1[0m" 304 -
+2025-06-21 17:28:11,870 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:11] "[36mGET /assets/custom.css?m=1750522264.3775227 HTTP/1.1[0m" 304 -
+2025-06-21 17:28:11,870 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:11] "[36mGET /assets/css/estilos_customizados.css HTTP/1.1[0m" 304 -
+2025-06-21 17:28:11,870 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:11] "[36mGET /assets/css/estilos_barra_lateral.css HTTP/1.1[0m" 304 -
+2025-06-21 17:28:11,871 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:11] "[36mGET /assets/js/tela_cheia.js?m=1750522264.378281 HTTP/1.1[0m" 304 -
+2025-06-21 17:28:11,927 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:11] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-06-21 17:28:11,995 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:11] "GET /_dash-layout HTTP/1.1" 200 -
+2025-06-21 17:28:12,023 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:12] "[36mGET /assets/images/rossmann_logo2.png HTTP/1.1[0m" 304 -
+2025-06-21 17:28:12,026 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:12] "[36mGET /assets/images/rossmann_logo_colorida.png HTTP/1.1[0m" 304 -
+2025-06-21 17:28:12,032 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:12] "[36mGET /_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+2025-06-21 17:28:12,041 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:12] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2025-06-21 17:28:12,041 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:12] "[36mGET /_dash-component-suites/dash/dcc/async-markdown.js HTTP/1.1[0m" 304 -
+2025-06-21 17:28:12,042 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:12] "[36mGET /_dash-component-suites/dash/dcc/async-datepicker.js HTTP/1.1[0m" 304 -
+2025-06-21 17:28:12,049 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:12] "[36mGET /_dash-component-suites/dash/dcc/async-slider.js HTTP/1.1[0m" 304 -
+2025-06-21 17:28:12,053 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:12] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2025-06-21 17:28:12,073 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:12] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:28:12,073 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:12] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:28:12,074 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:12] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:28:12,074 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:12] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:28:12,075 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:12] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:28:12,075 - INFO - Carregando dados brutos...
+2025-06-21 17:28:12,249 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:12] "[36mGET /_dash-component-suites/dash/dcc/async-highlight.js HTTP/1.1[0m" 304 -
+2025-06-21 17:28:12,655 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 17:28:12,655 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 17:28:12,656 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 17:28:12,657 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 17:28:12,658 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 17:28:12,753 - INFO - Otimização de memória para df_vendas:
+2025-06-21 17:28:12,753 - INFO -   - Antes: 110.59 MB
+2025-06-21 17:28:12,754 - INFO -   - Depois: 18.43 MB
+2025-06-21 17:28:12,754 - INFO -   - Redução: 83.33%
+2025-06-21 17:28:12,754 - INFO -   - Tempo: 0.22 segundos
+2025-06-21 17:28:12,759 - INFO - Otimização de memória para df_lojas:
+2025-06-21 17:28:12,759 - INFO -   - Antes: 0.22 MB
+2025-06-21 17:28:12,760 - INFO -   - Depois: 0.03 MB
+2025-06-21 17:28:12,760 - INFO -   - Redução: 86.83%
+2025-06-21 17:28:12,760 - INFO -   - Tempo: 0.00 segundos
+2025-06-21 17:28:12,760 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-21 17:28:12,836 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 17:28:12,837 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 17:28:12,838 - INFO - Amostrando 50 registros por loja...
+2025-06-21 17:28:12,838 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 17:28:12,838 - INFO - Amostrando 50 registros por loja...
+2025-06-21 17:28:12,839 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 17:28:12,841 - INFO - Amostrando 50 registros por loja...
+2025-06-21 17:28:12,841 - INFO - Total de lojas: 1115
+2025-06-21 17:28:12,842 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 17:28:12,844 - INFO - Amostrando 50 registros por loja...
+2025-06-21 17:28:12,844 - INFO - Total de lojas: 1115
+2025-06-21 17:28:12,847 - INFO - Total de lojas: 1115
+2025-06-21 17:28:12,847 - INFO - Amostrando 50 registros por loja...
+2025-06-21 17:28:12,849 - INFO - Total de lojas: 1115
+2025-06-21 17:28:12,853 - INFO - Total de lojas: 1115
+2025-06-21 17:28:12,890 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 17:28:12,996 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 17:28:12,998 - INFO - Amostrando 50 registros por loja...
+2025-06-21 17:28:13,005 - INFO - Total de lojas: 1115
+2025-06-21 17:28:17,282 - INFO - Amostragem concluída em 4.44 segundos
+2025-06-21 17:28:17,283 - INFO - Total de registros após amostragem: 55750
+2025-06-21 17:28:17,298 - INFO - Carregando dados brutos...
+2025-06-21 17:28:17,372 - INFO - Amostragem concluída em 4.53 segundos
+2025-06-21 17:28:17,372 - INFO - Total de registros após amostragem: 55750
+2025-06-21 17:28:17,418 - INFO - Amostragem concluída em 4.57 segundos
+2025-06-21 17:28:17,418 - INFO - Total de registros após amostragem: 55750
+2025-06-21 17:28:17,440 - INFO - Amostragem concluída em 4.60 segundos
+2025-06-21 17:28:17,440 - INFO - Total de registros após amostragem: 55750
+2025-06-21 17:28:17,458 - INFO - Carregando dados brutos...
+2025-06-21 17:28:17,458 - INFO - Carregando dados brutos...
+2025-06-21 17:28:17,476 - INFO - Amostragem concluída em 4.48 segundos
+2025-06-21 17:28:17,477 - INFO - Total de registros após amostragem: 55750
+2025-06-21 17:28:17,505 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:17] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:28:17,511 - INFO - Amostragem concluída em 4.66 segundos
+2025-06-21 17:28:17,511 - INFO - Total de registros após amostragem: 55750
+2025-06-21 17:28:17,512 - INFO - Carregando dados brutos...
+2025-06-21 17:28:17,539 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:17] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:28:17,554 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:17] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:28:17,661 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:17] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:28:17,773 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:17] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:28:17,828 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:17] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:28:17,830 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:17] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 17:28:17,884 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:17] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:28:17,888 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:17] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 17:28:17,894 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:17] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 17:28:17,900 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:17] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 17:28:17,905 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:17] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 17:28:17,922 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:17] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:28:17,971 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:17] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:28:18,059 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:18] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:28:19,186 - INFO - Otimização de memória para df_vendas:
+2025-06-21 17:28:19,186 - INFO -   - Antes: 110.59 MB
+2025-06-21 17:28:19,186 - INFO -   - Depois: 18.43 MB
+2025-06-21 17:28:19,186 - INFO -   - Redução: 83.33%
+2025-06-21 17:28:19,186 - INFO -   - Tempo: 0.73 segundos
+2025-06-21 17:28:19,190 - INFO - Otimização de memória para df_lojas:
+2025-06-21 17:28:19,190 - INFO -   - Antes: 0.22 MB
+2025-06-21 17:28:19,190 - INFO -   - Depois: 0.03 MB
+2025-06-21 17:28:19,190 - INFO -   - Redução: 86.83%
+2025-06-21 17:28:19,190 - INFO -   - Tempo: 0.00 segundos
+2025-06-21 17:28:19,190 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-21 17:28:19,310 - INFO - Otimização de memória para df_vendas:
+2025-06-21 17:28:19,310 - INFO -   - Antes: 110.59 MB
+2025-06-21 17:28:19,310 - INFO -   - Depois: 18.43 MB
+2025-06-21 17:28:19,310 - INFO -   - Redução: 83.33%
+2025-06-21 17:28:19,310 - INFO -   - Tempo: 0.46 segundos
+2025-06-21 17:28:19,313 - INFO - Otimização de memória para df_lojas:
+2025-06-21 17:28:19,315 - INFO - Otimização de memória para df_vendas:
+2025-06-21 17:28:19,315 - INFO -   - Antes: 0.22 MB
+2025-06-21 17:28:19,316 - INFO -   - Antes: 110.59 MB
+2025-06-21 17:28:19,316 - INFO -   - Depois: 0.03 MB
+2025-06-21 17:28:19,316 - INFO -   - Depois: 18.43 MB
+2025-06-21 17:28:19,316 - INFO -   - Redução: 86.83%
+2025-06-21 17:28:19,316 - INFO -   - Redução: 83.33%
+2025-06-21 17:28:19,316 - INFO -   - Tempo: 0.00 segundos
+2025-06-21 17:28:19,316 - INFO -   - Tempo: 0.24 segundos
+2025-06-21 17:28:19,316 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-21 17:28:19,319 - INFO - Otimização de memória para df_lojas:
+2025-06-21 17:28:19,320 - INFO -   - Antes: 0.22 MB
+2025-06-21 17:28:19,323 - INFO -   - Depois: 0.03 MB
+2025-06-21 17:28:19,323 - INFO -   - Redução: 86.83%
+2025-06-21 17:28:19,323 - INFO -   - Tempo: 0.00 segundos
+2025-06-21 17:28:19,324 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-21 17:28:19,327 - INFO - Otimização de memória para df_vendas:
+2025-06-21 17:28:19,327 - INFO -   - Antes: 110.59 MB
+2025-06-21 17:28:19,328 - INFO -   - Depois: 18.43 MB
+2025-06-21 17:28:19,328 - INFO -   - Redução: 83.33%
+2025-06-21 17:28:19,328 - INFO -   - Tempo: 0.36 segundos
+2025-06-21 17:28:19,331 - INFO - Otimização de memória para df_lojas:
+2025-06-21 17:28:19,331 - INFO -   - Antes: 0.22 MB
+2025-06-21 17:28:19,331 - INFO -   - Depois: 0.03 MB
+2025-06-21 17:28:19,331 - INFO -   - Redução: 86.83%
+2025-06-21 17:28:19,331 - INFO -   - Tempo: 0.00 segundos
+2025-06-21 17:28:19,331 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-21 17:28:19,359 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 17:28:19,425 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 17:28:19,434 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 17:28:19,440 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 17:28:19,466 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 17:28:19,797 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:19] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:28:19,869 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:19] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:28:19,890 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 17:28:19,897 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 17:28:19,902 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 17:28:19,975 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:19] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:28:19,993 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:19] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:28:20,017 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:20] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:28:20,358 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:20] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:28:23,021 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:23] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:28:23,023 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:23] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 17:28:23,123 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:23] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:28:23,555 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:23] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:28:23,559 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:23] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:28:23,577 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:23] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:28:23,583 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:23] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:28:29,981 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:29] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:28:29,983 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:29] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 17:28:30,041 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:30] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 17:28:35,773 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:35] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:28:35,776 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:35] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 17:28:35,861 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:35] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 17:28:36,600 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:36] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:28:36,601 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:36] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 17:28:36,682 - INFO - 127.0.0.1 - - [21/Jun/2025 17:28:36] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 17:35:28,277 - INFO - Carregando dados brutos...
+2025-06-21 17:35:28,823 - INFO - Otimização de memória para df_vendas:
+2025-06-21 17:35:28,824 - INFO -   - Antes: 110.59 MB
+2025-06-21 17:35:28,824 - INFO -   - Depois: 18.43 MB
+2025-06-21 17:35:28,824 - INFO -   - Redução: 83.33%
+2025-06-21 17:35:28,824 - INFO -   - Tempo: 0.16 segundos
+2025-06-21 17:35:28,826 - INFO - Otimização de memória para df_lojas:
+2025-06-21 17:35:28,826 - INFO -   - Antes: 0.22 MB
+2025-06-21 17:35:28,826 - INFO -   - Depois: 0.03 MB
+2025-06-21 17:35:28,826 - INFO -   - Redução: 86.83%
+2025-06-21 17:35:28,826 - INFO -   - Tempo: 0.00 segundos
+2025-06-21 17:35:28,826 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-21 17:35:29,117 - INFO - Otimização de memória para df_lojas_bruto_dashboard:
+2025-06-21 17:35:29,117 - INFO -   - Antes: 0.22 MB
+2025-06-21 17:35:29,117 - INFO -   - Depois: 0.03 MB
+2025-06-21 17:35:29,117 - INFO -   - Redução: 86.83%
+2025-06-21 17:35:29,117 - INFO -   - Tempo: 0.00 segundos
+2025-06-21 17:35:29,165 - INFO - Dash is running on http://localhost:8050/
+
+2025-06-21 17:35:29,171 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:8050
+2025-06-21 17:35:29,171 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-21 17:35:33,993 - INFO - 127.0.0.1 - - [21/Jun/2025 17:35:33] "GET /dashboard HTTP/1.1" 200 -
+2025-06-21 17:35:34,048 - INFO - 127.0.0.1 - - [21/Jun/2025 17:35:34] "[36mGET /assets/css/estilos_barra_lateral.css HTTP/1.1[0m" 304 -
+2025-06-21 17:35:34,051 - INFO - 127.0.0.1 - - [21/Jun/2025 17:35:34] "[36mGET /assets/css/estilos_customizados.css?m=1750522264.3774626 HTTP/1.1[0m" 304 -
+2025-06-21 17:35:34,051 - INFO - 127.0.0.1 - - [21/Jun/2025 17:35:34] "[36mGET /assets/css/estilos_barra_lateral.css?m=1750522264.3773763 HTTP/1.1[0m" 304 -
+2025-06-21 17:35:34,052 - INFO - 127.0.0.1 - - [21/Jun/2025 17:35:34] "[36mGET /assets/custom.css?m=1750522264.3775227 HTTP/1.1[0m" 304 -
+2025-06-21 17:35:34,052 - INFO - 127.0.0.1 - - [21/Jun/2025 17:35:34] "[36mGET /assets/js/tela_cheia.js?m=1750522264.378281 HTTP/1.1[0m" 304 -
+2025-06-21 17:35:34,053 - INFO - 127.0.0.1 - - [21/Jun/2025 17:35:34] "[36mGET /assets/css/estilos_customizados.css HTTP/1.1[0m" 304 -
+2025-06-21 17:35:34,092 - INFO - 127.0.0.1 - - [21/Jun/2025 17:35:34] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-06-21 17:35:34,157 - INFO - 127.0.0.1 - - [21/Jun/2025 17:35:34] "GET /_dash-layout HTTP/1.1" 200 -
+2025-06-21 17:35:34,191 - INFO - 127.0.0.1 - - [21/Jun/2025 17:35:34] "[36mGET /assets/images/rossmann_logo2.png HTTP/1.1[0m" 304 -
+2025-06-21 17:35:34,193 - INFO - 127.0.0.1 - - [21/Jun/2025 17:35:34] "[36mGET /assets/images/rossmann_logo_colorida.png HTTP/1.1[0m" 304 -
+2025-06-21 17:35:34,198 - INFO - 127.0.0.1 - - [21/Jun/2025 17:35:34] "[36mGET /_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+2025-06-21 17:35:34,206 - INFO - 127.0.0.1 - - [21/Jun/2025 17:35:34] "[36mGET /_dash-component-suites/dash/dcc/async-markdown.js HTTP/1.1[0m" 304 -
+2025-06-21 17:35:34,207 - INFO - 127.0.0.1 - - [21/Jun/2025 17:35:34] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2025-06-21 17:35:34,209 - INFO - 127.0.0.1 - - [21/Jun/2025 17:35:34] "[36mGET /_dash-component-suites/dash/dcc/async-datepicker.js HTTP/1.1[0m" 304 -
+2025-06-21 17:35:34,217 - INFO - 127.0.0.1 - - [21/Jun/2025 17:35:34] "[36mGET /_dash-component-suites/dash/dcc/async-slider.js HTTP/1.1[0m" 304 -
+2025-06-21 17:35:34,218 - INFO - 127.0.0.1 - - [21/Jun/2025 17:35:34] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2025-06-21 17:35:34,243 - INFO - 127.0.0.1 - - [21/Jun/2025 17:35:34] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:35:34,244 - INFO - 127.0.0.1 - - [21/Jun/2025 17:35:34] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:35:34,244 - INFO - 127.0.0.1 - - [21/Jun/2025 17:35:34] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:35:34,245 - INFO - 127.0.0.1 - - [21/Jun/2025 17:35:34] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:35:34,245 - INFO - Carregando dados brutos...
+2025-06-21 17:35:34,245 - INFO - 127.0.0.1 - - [21/Jun/2025 17:35:34] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:35:34,433 - INFO - 127.0.0.1 - - [21/Jun/2025 17:35:34] "[36mGET /_dash-component-suites/dash/dcc/async-highlight.js HTTP/1.1[0m" 304 -
+2025-06-21 17:35:34,800 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 17:35:34,801 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 17:35:34,802 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 17:35:34,803 - INFO - 127.0.0.1 - - [21/Jun/2025 17:35:34] "[36mGET /assets/images/rossmann_logo1.png HTTP/1.1[0m" 304 -
+2025-06-21 17:35:34,805 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 17:35:34,810 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 17:35:34,913 - INFO - Otimização de memória para df_vendas:
+2025-06-21 17:35:34,914 - INFO -   - Antes: 110.59 MB
+2025-06-21 17:35:34,914 - INFO -   - Depois: 18.43 MB
+2025-06-21 17:35:34,915 - INFO -   - Redução: 83.33%
+2025-06-21 17:35:34,916 - INFO -   - Tempo: 0.24 segundos
+2025-06-21 17:35:34,919 - INFO - Otimização de memória para df_lojas:
+2025-06-21 17:35:34,920 - INFO -   - Antes: 0.22 MB
+2025-06-21 17:35:34,920 - INFO -   - Depois: 0.03 MB
+2025-06-21 17:35:34,921 - INFO -   - Redução: 86.83%
+2025-06-21 17:35:34,921 - INFO -   - Tempo: 0.00 segundos
+2025-06-21 17:35:34,921 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-21 17:35:35,015 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 17:35:35,017 - INFO - Amostrando 50 registros por loja...
+2025-06-21 17:35:35,017 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 17:35:35,021 - INFO - Amostrando 50 registros por loja...
+2025-06-21 17:35:35,021 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 17:35:35,022 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 17:35:35,022 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 17:35:35,025 - INFO - Total de lojas: 1115
+2025-06-21 17:35:35,025 - INFO - Amostrando 50 registros por loja...
+2025-06-21 17:35:35,025 - INFO - Total de lojas: 1115
+2025-06-21 17:35:35,025 - INFO - Amostrando 50 registros por loja...
+2025-06-21 17:35:35,026 - INFO - Amostrando 50 registros por loja...
+2025-06-21 17:35:35,029 - INFO - Total de lojas: 1115
+2025-06-21 17:35:35,036 - INFO - Total de lojas: 1115
+2025-06-21 17:35:35,036 - INFO - Total de lojas: 1115
+2025-06-21 17:35:35,106 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 17:35:35,230 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 17:35:35,232 - INFO - Amostrando 50 registros por loja...
+2025-06-21 17:35:35,239 - INFO - Total de lojas: 1115
+2025-06-21 17:35:39,617 - INFO - Amostragem concluída em 4.59 segundos
+2025-06-21 17:35:39,619 - INFO - Total de registros após amostragem: 55750
+2025-06-21 17:35:39,634 - INFO - Carregando dados brutos...
+2025-06-21 17:35:39,653 - INFO - Amostragem concluída em 4.63 segundos
+2025-06-21 17:35:39,654 - INFO - Total de registros após amostragem: 55750
+2025-06-21 17:35:39,707 - INFO - Amostragem concluída em 4.67 segundos
+2025-06-21 17:35:39,707 - INFO - Total de registros após amostragem: 55750
+2025-06-21 17:35:39,729 - INFO - Amostragem concluída em 4.71 segundos
+2025-06-21 17:35:39,729 - INFO - Total de registros após amostragem: 55750
+2025-06-21 17:35:39,750 - INFO - 127.0.0.1 - - [21/Jun/2025 17:35:39] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:35:39,750 - INFO - Carregando dados brutos...
+2025-06-21 17:35:39,755 - INFO - Amostragem concluída em 4.52 segundos
+2025-06-21 17:35:39,755 - INFO - Total de registros após amostragem: 55750
+2025-06-21 17:35:39,784 - INFO - Carregando dados brutos...
+2025-06-21 17:35:39,793 - INFO - 127.0.0.1 - - [21/Jun/2025 17:35:39] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:35:39,813 - INFO - Amostragem concluída em 4.78 segundos
+2025-06-21 17:35:39,813 - INFO - Total de registros após amostragem: 55750
+2025-06-21 17:35:39,838 - INFO - Carregando dados brutos...
+2025-06-21 17:35:39,852 - INFO - 127.0.0.1 - - [21/Jun/2025 17:35:39] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:35:39,943 - INFO - 127.0.0.1 - - [21/Jun/2025 17:35:39] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:35:40,069 - INFO - 127.0.0.1 - - [21/Jun/2025 17:35:40] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:35:40,101 - INFO - 127.0.0.1 - - [21/Jun/2025 17:35:40] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:35:40,107 - INFO - 127.0.0.1 - - [21/Jun/2025 17:35:40] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 17:35:40,112 - INFO - 127.0.0.1 - - [21/Jun/2025 17:35:40] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 17:35:40,195 - INFO - 127.0.0.1 - - [21/Jun/2025 17:35:40] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 17:35:40,200 - INFO - 127.0.0.1 - - [21/Jun/2025 17:35:40] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 17:35:40,234 - INFO - 127.0.0.1 - - [21/Jun/2025 17:35:40] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 17:35:40,242 - INFO - 127.0.0.1 - - [21/Jun/2025 17:35:40] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:35:40,244 - INFO - 127.0.0.1 - - [21/Jun/2025 17:35:40] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 17:35:40,257 - INFO - 127.0.0.1 - - [21/Jun/2025 17:35:40] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:35:40,679 - INFO - 127.0.0.1 - - [21/Jun/2025 17:35:40] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 17:35:41,652 - INFO - Otimização de memória para df_vendas:
+2025-06-21 17:35:41,658 - INFO - Otimização de memória para df_vendas:
+2025-06-21 17:35:41,658 - INFO -   - Antes: 110.59 MB
+2025-06-21 17:35:41,658 - INFO -   - Antes: 110.59 MB
+2025-06-21 17:35:41,658 - INFO -   - Depois: 18.43 MB
+2025-06-21 17:35:41,658 - INFO -   - Depois: 18.43 MB
+2025-06-21 17:35:41,659 - INFO -   - Redução: 83.33%
+2025-06-21 17:35:41,660 - INFO - Otimização de memória para df_vendas:
+2025-06-21 17:35:41,660 - INFO -   - Redução: 83.33%
+2025-06-21 17:35:41,662 - INFO -   - Tempo: 0.61 segundos
+2025-06-21 17:35:41,660 - INFO -   - Tempo: 0.49 segundos
+2025-06-21 17:35:41,662 - INFO - Otimização de memória para df_vendas:
+2025-06-21 17:35:41,660 - INFO -   - Antes: 110.59 MB
+2025-06-21 17:35:41,664 - INFO -   - Antes: 110.59 MB
+2025-06-21 17:35:41,666 - INFO - Otimização de memória para df_lojas:
+2025-06-21 17:35:41,667 - INFO - Otimização de memória para df_lojas:
+2025-06-21 17:35:41,667 - INFO -   - Depois: 18.43 MB
+2025-06-21 17:35:41,667 - INFO -   - Depois: 18.43 MB
+2025-06-21 17:35:41,667 - INFO -   - Antes: 0.22 MB
+2025-06-21 17:35:41,667 - INFO -   - Antes: 0.22 MB
+2025-06-21 17:35:41,667 - INFO -   - Redução: 83.33%
+2025-06-21 17:35:41,667 - INFO -   - Tempo: 0.28 segundos
+2025-06-21 17:35:41,667 - INFO -   - Depois: 0.03 MB
+2025-06-21 17:35:41,667 - INFO -   - Depois: 0.03 MB
+2025-06-21 17:35:41,667 - INFO -   - Redução: 83.33%
+2025-06-21 17:35:41,669 - INFO - Otimização de memória para df_lojas:
+2025-06-21 17:35:41,669 - INFO -   - Redução: 86.83%
+2025-06-21 17:35:41,669 - INFO -   - Redução: 86.83%
+2025-06-21 17:35:41,669 - INFO -   - Tempo: 0.39 segundos
+2025-06-21 17:35:41,669 - INFO -   - Antes: 0.22 MB
+2025-06-21 17:35:41,670 - INFO -   - Tempo: 0.00 segundos
+2025-06-21 17:35:41,670 - INFO -   - Tempo: 0.00 segundos
+2025-06-21 17:35:41,671 - INFO -   - Depois: 0.03 MB
+2025-06-21 17:35:41,673 - INFO - Otimização de memória para df_lojas:
+2025-06-21 17:35:41,673 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-21 17:35:41,673 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-21 17:35:41,673 - INFO -   - Redução: 86.83%
+2025-06-21 17:35:41,673 - INFO -   - Antes: 0.22 MB
+2025-06-21 17:35:41,674 - INFO -   - Tempo: 0.00 segundos
+2025-06-21 17:35:41,674 - INFO -   - Depois: 0.03 MB
+2025-06-21 17:35:41,674 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-21 17:35:41,674 - INFO -   - Redução: 86.83%
+2025-06-21 17:35:41,674 - INFO -   - Tempo: 0.00 segundos
+2025-06-21 17:35:41,674 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-21 17:35:41,778 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 17:35:41,788 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 17:35:41,790 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 17:35:41,790 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 17:35:41,856 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 17:35:41,858 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 17:35:41,859 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 17:35:41,860 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 17:35:41,928 - INFO - 127.0.0.1 - - [21/Jun/2025 17:35:41] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:35:42,256 - INFO - 127.0.0.1 - - [21/Jun/2025 17:35:42] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:35:42,286 - INFO - 127.0.0.1 - - [21/Jun/2025 17:35:42] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 17:35:42,294 - INFO - 127.0.0.1 - - [21/Jun/2025 17:35:42] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:21:27,784 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 18:21:27,850 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 18:21:27,852 - INFO - Amostrando 50 registros por loja...
+2025-06-21 18:21:27,856 - INFO - Total de lojas: 1115
+2025-06-21 18:21:28,495 - INFO - Amostragem concluída em 0.64 segundos
+2025-06-21 18:21:28,495 - INFO - Total de registros após amostragem: 55750
+2025-06-21 18:21:28,599 - INFO - Carregamento de dados concluído no modo 'amostra'
+2025-06-21 18:21:28,600 - INFO - Registros no DataFrame reduzido: 55750
+2025-06-21 18:21:28,607 - INFO - Carregando dados brutos...
+2025-06-21 18:21:29,171 - INFO - Otimização de memória para df_vendas:
+2025-06-21 18:21:29,171 - INFO -   - Antes: 110.59 MB
+2025-06-21 18:21:29,171 - INFO -   - Depois: 18.43 MB
+2025-06-21 18:21:29,171 - INFO -   - Redução: 83.33%
+2025-06-21 18:21:29,171 - INFO -   - Tempo: 0.18 segundos
+2025-06-21 18:21:29,174 - INFO - Otimização de memória para df_lojas:
+2025-06-21 18:21:29,174 - INFO -   - Antes: 0.22 MB
+2025-06-21 18:21:29,174 - INFO -   - Depois: 0.03 MB
+2025-06-21 18:21:29,174 - INFO -   - Redução: 86.83%
+2025-06-21 18:21:29,174 - INFO -   - Tempo: 0.00 segundos
+2025-06-21 18:21:29,174 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-21 18:21:29,369 - INFO - Otimização de memória para df_lojas_bruto_dashboard:
+2025-06-21 18:21:29,369 - INFO -   - Antes: 0.22 MB
+2025-06-21 18:21:29,369 - INFO -   - Depois: 0.03 MB
+2025-06-21 18:21:29,369 - INFO -   - Redução: 86.83%
+2025-06-21 18:21:29,369 - INFO -   - Tempo: 0.00 segundos
+2025-06-21 18:21:29,419 - INFO - Dash is running on http://localhost:8050/
+
+2025-06-21 18:21:29,425 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:8050
+2025-06-21 18:21:29,425 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-21 18:21:37,888 - INFO - Carregando dados brutos...
+2025-06-21 18:21:38,439 - INFO - Otimização de memória para df_vendas:
+2025-06-21 18:21:38,439 - INFO -   - Antes: 110.59 MB
+2025-06-21 18:21:38,439 - INFO -   - Depois: 18.43 MB
+2025-06-21 18:21:38,439 - INFO -   - Redução: 83.33%
+2025-06-21 18:21:38,439 - INFO -   - Tempo: 0.18 segundos
+2025-06-21 18:21:38,441 - INFO - Otimização de memória para df_lojas:
+2025-06-21 18:21:38,441 - INFO -   - Antes: 0.22 MB
+2025-06-21 18:21:38,441 - INFO -   - Depois: 0.03 MB
+2025-06-21 18:21:38,441 - INFO -   - Redução: 86.83%
+2025-06-21 18:21:38,441 - INFO -   - Tempo: 0.00 segundos
+2025-06-21 18:21:38,441 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-21 18:21:38,647 - INFO - Otimização de memória para df_lojas_bruto_dashboard:
+2025-06-21 18:21:38,647 - INFO -   - Antes: 0.22 MB
+2025-06-21 18:21:38,647 - INFO -   - Depois: 0.03 MB
+2025-06-21 18:21:38,647 - INFO -   - Redução: 86.83%
+2025-06-21 18:21:38,647 - INFO -   - Tempo: 0.00 segundos
+2025-06-21 18:21:38,690 - INFO - Dash is running on http://localhost:8050/
+
+2025-06-21 18:21:38,695 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:8050
+2025-06-21 18:21:38,695 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-21 18:21:47,019 - INFO - 127.0.0.1 - - [21/Jun/2025 18:21:47] "GET /dashboard HTTP/1.1" 200 -
+2025-06-21 18:21:47,101 - INFO - 127.0.0.1 - - [21/Jun/2025 18:21:47] "[36mGET /assets/css/estilos_barra_lateral.css?m=1750522264.3773763 HTTP/1.1[0m" 304 -
+2025-06-21 18:21:47,102 - INFO - 127.0.0.1 - - [21/Jun/2025 18:21:47] "[36mGET /assets/custom.css?m=1750522264.3775227 HTTP/1.1[0m" 304 -
+2025-06-21 18:21:47,103 - INFO - 127.0.0.1 - - [21/Jun/2025 18:21:47] "[36mGET /assets/css/estilos_barra_lateral.css HTTP/1.1[0m" 304 -
+2025-06-21 18:21:47,104 - INFO - 127.0.0.1 - - [21/Jun/2025 18:21:47] "[36mGET /assets/css/estilos_customizados.css HTTP/1.1[0m" 304 -
+2025-06-21 18:21:47,104 - INFO - 127.0.0.1 - - [21/Jun/2025 18:21:47] "[36mGET /assets/css/estilos_customizados.css?m=1750522264.3774626 HTTP/1.1[0m" 304 -
+2025-06-21 18:21:47,105 - INFO - 127.0.0.1 - - [21/Jun/2025 18:21:47] "[36mGET /assets/js/tela_cheia.js?m=1750522264.378281 HTTP/1.1[0m" 304 -
+2025-06-21 18:21:47,231 - INFO - 127.0.0.1 - - [21/Jun/2025 18:21:47] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-06-21 18:21:47,292 - INFO - 127.0.0.1 - - [21/Jun/2025 18:21:47] "GET /_dash-layout HTTP/1.1" 200 -
+2025-06-21 18:21:47,292 - INFO - 127.0.0.1 - - [21/Jun/2025 18:21:47] "GET /apple-touch-icon-precomposed.png HTTP/1.1" 200 -
+2025-06-21 18:21:47,297 - INFO - 127.0.0.1 - - [21/Jun/2025 18:21:47] "GET /apple-touch-icon.png HTTP/1.1" 200 -
+2025-06-21 18:21:47,323 - INFO - 127.0.0.1 - - [21/Jun/2025 18:21:47] "[36mGET /assets/images/rossmann_logo2.png HTTP/1.1[0m" 304 -
+2025-06-21 18:21:47,327 - INFO - 127.0.0.1 - - [21/Jun/2025 18:21:47] "[36mGET /assets/images/rossmann_logo_colorida.png HTTP/1.1[0m" 304 -
+2025-06-21 18:21:47,334 - INFO - 127.0.0.1 - - [21/Jun/2025 18:21:47] "[36mGET /_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+2025-06-21 18:21:47,346 - INFO - 127.0.0.1 - - [21/Jun/2025 18:21:47] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2025-06-21 18:21:47,346 - INFO - 127.0.0.1 - - [21/Jun/2025 18:21:47] "[36mGET /_dash-component-suites/dash/dcc/async-markdown.js HTTP/1.1[0m" 304 -
+2025-06-21 18:21:47,349 - INFO - 127.0.0.1 - - [21/Jun/2025 18:21:47] "[36mGET /_dash-component-suites/dash/dcc/async-datepicker.js HTTP/1.1[0m" 304 -
+2025-06-21 18:21:47,359 - INFO - 127.0.0.1 - - [21/Jun/2025 18:21:47] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2025-06-21 18:21:47,360 - INFO - 127.0.0.1 - - [21/Jun/2025 18:21:47] "[36mGET /_dash-component-suites/dash/dcc/async-slider.js HTTP/1.1[0m" 304 -
+2025-06-21 18:21:47,652 - INFO - 127.0.0.1 - - [21/Jun/2025 18:21:47] "[36mGET /_dash-component-suites/dash/dcc/async-highlight.js HTTP/1.1[0m" 304 -
+2025-06-21 18:22:01,812 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:01] "GET /dashboard HTTP/1.1" 200 -
+2025-06-21 18:22:01,840 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:01] "[36mGET /assets/custom.css?m=1750522264.3775227 HTTP/1.1[0m" 304 -
+2025-06-21 18:22:01,843 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:01] "[36mGET /assets/css/estilos_barra_lateral.css?m=1750522264.3773763 HTTP/1.1[0m" 304 -
+2025-06-21 18:22:01,843 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:01] "[36mGET /assets/css/estilos_barra_lateral.css HTTP/1.1[0m" 304 -
+2025-06-21 18:22:01,846 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:01] "[36mGET /assets/js/tela_cheia.js?m=1750522264.378281 HTTP/1.1[0m" 304 -
+2025-06-21 18:22:01,847 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:01] "[36mGET /assets/css/estilos_customizados.css HTTP/1.1[0m" 304 -
+2025-06-21 18:22:01,848 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:01] "[36mGET /assets/css/estilos_customizados.css?m=1750522264.3774626 HTTP/1.1[0m" 304 -
+2025-06-21 18:22:01,896 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:01] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-06-21 18:22:01,960 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:01] "GET /_dash-layout HTTP/1.1" 200 -
+2025-06-21 18:22:01,987 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:01] "[36mGET /assets/images/rossmann_logo2.png HTTP/1.1[0m" 304 -
+2025-06-21 18:22:01,988 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:01] "[36mGET /assets/images/rossmann_logo_colorida.png HTTP/1.1[0m" 304 -
+2025-06-21 18:22:01,992 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:01] "[36mGET /_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+2025-06-21 18:22:02,000 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:02] "[36mGET /_dash-component-suites/dash/dcc/async-markdown.js HTTP/1.1[0m" 304 -
+2025-06-21 18:22:02,001 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:02] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2025-06-21 18:22:02,002 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:02] "[36mGET /_dash-component-suites/dash/dcc/async-datepicker.js HTTP/1.1[0m" 304 -
+2025-06-21 18:22:02,009 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:02] "[36mGET /_dash-component-suites/dash/dcc/async-slider.js HTTP/1.1[0m" 304 -
+2025-06-21 18:22:02,010 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:02] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2025-06-21 18:22:02,140 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:02] "[36mGET /_dash-component-suites/dash/dcc/async-highlight.js HTTP/1.1[0m" 304 -
+2025-06-21 18:22:32,618 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:32] "GET / HTTP/1.1" 200 -
+2025-06-21 18:22:32,659 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:32] "[36mGET /assets/css/estilos_barra_lateral.css?m=1750522264.3773763 HTTP/1.1[0m" 304 -
+2025-06-21 18:22:32,660 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:32] "[36mGET /assets/css/estilos_customizados.css HTTP/1.1[0m" 304 -
+2025-06-21 18:22:32,662 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:32] "[36mGET /assets/css/estilos_customizados.css?m=1750522264.3774626 HTTP/1.1[0m" 304 -
+2025-06-21 18:22:32,662 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:32] "[36mGET /assets/css/estilos_barra_lateral.css HTTP/1.1[0m" 304 -
+2025-06-21 18:22:32,663 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:32] "[36mGET /assets/custom.css?m=1750522264.3775227 HTTP/1.1[0m" 304 -
+2025-06-21 18:22:32,663 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:32] "[36mGET /assets/js/tela_cheia.js?m=1750522264.378281 HTTP/1.1[0m" 304 -
+2025-06-21 18:22:32,735 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:32] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-06-21 18:22:32,800 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:32] "GET /_dash-layout HTTP/1.1" 200 -
+2025-06-21 18:22:32,831 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:32] "[36mGET /assets/images/rossmann_logo2.png HTTP/1.1[0m" 304 -
+2025-06-21 18:22:32,832 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:32] "[36mGET /assets/images/rossmann_logo_colorida.png HTTP/1.1[0m" 304 -
+2025-06-21 18:22:32,839 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:32] "[36mGET /_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+2025-06-21 18:22:32,849 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:32] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2025-06-21 18:22:32,851 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:32] "[36mGET /_dash-component-suites/dash/dcc/async-markdown.js HTTP/1.1[0m" 304 -
+2025-06-21 18:22:32,852 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:32] "[36mGET /_dash-component-suites/dash/dcc/async-datepicker.js HTTP/1.1[0m" 304 -
+2025-06-21 18:22:32,859 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:32] "[36mGET /_dash-component-suites/dash/dcc/async-slider.js HTTP/1.1[0m" 304 -
+2025-06-21 18:22:32,862 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:32] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2025-06-21 18:22:33,032 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:33] "[36mGET /_dash-component-suites/dash/dcc/async-highlight.js HTTP/1.1[0m" 304 -
+2025-06-21 18:22:55,772 - INFO - Carregando dados brutos...
+2025-06-21 18:22:56,336 - INFO - Otimização de memória para df_vendas:
+2025-06-21 18:22:56,336 - INFO -   - Antes: 110.59 MB
+2025-06-21 18:22:56,336 - INFO -   - Depois: 18.43 MB
+2025-06-21 18:22:56,336 - INFO -   - Redução: 83.33%
+2025-06-21 18:22:56,336 - INFO -   - Tempo: 0.17 segundos
+2025-06-21 18:22:56,339 - INFO - Otimização de memória para df_lojas:
+2025-06-21 18:22:56,339 - INFO -   - Antes: 0.22 MB
+2025-06-21 18:22:56,339 - INFO -   - Depois: 0.03 MB
+2025-06-21 18:22:56,339 - INFO -   - Redução: 86.83%
+2025-06-21 18:22:56,339 - INFO -   - Tempo: 0.00 segundos
+2025-06-21 18:22:56,339 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-21 18:22:56,576 - INFO - Otimização de memória para df_lojas_bruto_dashboard:
+2025-06-21 18:22:56,576 - INFO -   - Antes: 0.22 MB
+2025-06-21 18:22:56,576 - INFO -   - Depois: 0.03 MB
+2025-06-21 18:22:56,576 - INFO -   - Redução: 86.83%
+2025-06-21 18:22:56,576 - INFO -   - Tempo: 0.00 segundos
+2025-06-21 18:22:56,625 - INFO - Dash is running on http://localhost:8050/
+
+2025-06-21 18:22:56,631 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:8050
+2025-06-21 18:22:56,631 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-21 18:22:59,622 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:59] "GET / HTTP/1.1" 200 -
+2025-06-21 18:22:59,651 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:59] "[36mGET /assets/css/estilos_customizados.css HTTP/1.1[0m" 304 -
+2025-06-21 18:22:59,653 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:59] "[36mGET /assets/css/estilos_customizados.css?m=1750522264.3774626 HTTP/1.1[0m" 304 -
+2025-06-21 18:22:59,654 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:59] "[36mGET /assets/custom.css?m=1750522264.3775227 HTTP/1.1[0m" 304 -
+2025-06-21 18:22:59,654 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:59] "[36mGET /assets/css/estilos_barra_lateral.css?m=1750522264.3773763 HTTP/1.1[0m" 304 -
+2025-06-21 18:22:59,655 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:59] "[36mGET /assets/css/estilos_barra_lateral.css HTTP/1.1[0m" 304 -
+2025-06-21 18:22:59,657 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:59] "[36mGET /assets/js/tela_cheia.js?m=1750522264.378281 HTTP/1.1[0m" 304 -
+2025-06-21 18:22:59,704 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:59] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-06-21 18:22:59,760 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:59] "GET /_dash-layout HTTP/1.1" 200 -
+2025-06-21 18:22:59,791 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:59] "[36mGET /assets/images/rossmann_logo2.png HTTP/1.1[0m" 304 -
+2025-06-21 18:22:59,792 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:59] "[36mGET /assets/images/rossmann_logo_colorida.png HTTP/1.1[0m" 304 -
+2025-06-21 18:22:59,799 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:59] "[36mGET /_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+2025-06-21 18:22:59,805 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:59] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2025-06-21 18:22:59,809 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:59] "[36mGET /_dash-component-suites/dash/dcc/async-markdown.js HTTP/1.1[0m" 304 -
+2025-06-21 18:22:59,811 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:59] "[36mGET /_dash-component-suites/dash/dcc/async-datepicker.js HTTP/1.1[0m" 304 -
+2025-06-21 18:22:59,814 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:59] "[36mGET /_dash-component-suites/dash/dcc/async-slider.js HTTP/1.1[0m" 304 -
+2025-06-21 18:22:59,822 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:59] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2025-06-21 18:22:59,842 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:59] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:22:59,843 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:59] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:22:59,843 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:59] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:22:59,844 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:59] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:22:59,844 - INFO - Carregando dados brutos...
+2025-06-21 18:22:59,844 - INFO - 127.0.0.1 - - [21/Jun/2025 18:22:59] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:23:00,011 - INFO - 127.0.0.1 - - [21/Jun/2025 18:23:00] "[36mGET /_dash-component-suites/dash/dcc/async-highlight.js HTTP/1.1[0m" 304 -
+2025-06-21 18:23:00,507 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 18:23:00,507 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 18:23:00,508 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 18:23:00,509 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 18:23:00,510 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 18:23:00,585 - INFO - Otimização de memória para df_vendas:
+2025-06-21 18:23:00,585 - INFO -   - Antes: 110.59 MB
+2025-06-21 18:23:00,587 - INFO -   - Depois: 18.43 MB
+2025-06-21 18:23:00,587 - INFO -   - Redução: 83.33%
+2025-06-21 18:23:00,588 - INFO -   - Tempo: 0.20 segundos
+2025-06-21 18:23:00,591 - INFO - Otimização de memória para df_lojas:
+2025-06-21 18:23:00,591 - INFO -   - Antes: 0.22 MB
+2025-06-21 18:23:00,592 - INFO -   - Depois: 0.03 MB
+2025-06-21 18:23:00,592 - INFO -   - Redução: 86.83%
+2025-06-21 18:23:00,592 - INFO -   - Tempo: 0.00 segundos
+2025-06-21 18:23:00,592 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-21 18:23:00,658 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 18:23:00,659 - INFO - Amostrando 50 registros por loja...
+2025-06-21 18:23:00,661 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 18:23:00,669 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 18:23:00,669 - INFO - Amostrando 50 registros por loja...
+2025-06-21 18:23:00,669 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 18:23:00,670 - INFO - Total de lojas: 1115
+2025-06-21 18:23:00,670 - INFO - Amostrando 50 registros por loja...
+2025-06-21 18:23:00,672 - INFO - Amostrando 50 registros por loja...
+2025-06-21 18:23:00,673 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 18:23:00,673 - INFO - Total de lojas: 1115
+2025-06-21 18:23:00,678 - INFO - Amostrando 50 registros por loja...
+2025-06-21 18:23:00,678 - INFO - Total de lojas: 1115
+2025-06-21 18:23:00,679 - INFO - Total de lojas: 1115
+2025-06-21 18:23:00,683 - INFO - Total de lojas: 1115
+2025-06-21 18:23:00,726 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 18:23:00,836 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 18:23:00,837 - INFO - Amostrando 50 registros por loja...
+2025-06-21 18:23:00,841 - INFO - Total de lojas: 1115
+2025-06-21 18:23:05,322 - INFO - Amostragem concluída em 4.64 segundos
+2025-06-21 18:23:05,322 - INFO - Total de registros após amostragem: 55750
+2025-06-21 18:23:05,339 - INFO - 127.0.0.1 - - [21/Jun/2025 18:23:05] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:23:05,343 - INFO - Carregando dados brutos...
+2025-06-21 18:23:05,356 - INFO - Amostragem concluída em 4.70 segundos
+2025-06-21 18:23:05,357 - INFO - Total de registros após amostragem: 55750
+2025-06-21 18:23:05,380 - INFO - Carregando dados brutos...
+2025-06-21 18:23:05,408 - INFO - Amostragem concluída em 4.74 segundos
+2025-06-21 18:23:05,409 - INFO - Total de registros após amostragem: 55750
+2025-06-21 18:23:05,431 - INFO - Carregando dados brutos...
+2025-06-21 18:23:05,453 - INFO - Amostragem concluída em 4.62 segundos
+2025-06-21 18:23:05,453 - INFO - Total de registros após amostragem: 55750
+2025-06-21 18:23:05,474 - INFO - Amostragem concluída em 4.80 segundos
+2025-06-21 18:23:05,476 - INFO - Total de registros após amostragem: 55750
+2025-06-21 18:23:05,509 - INFO - 127.0.0.1 - - [21/Jun/2025 18:23:05] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:23:05,515 - INFO - Amostragem concluída em 4.84 segundos
+2025-06-21 18:23:05,516 - INFO - Total de registros após amostragem: 55750
+2025-06-21 18:23:05,543 - INFO - Carregando dados brutos...
+2025-06-21 18:23:05,621 - INFO - 127.0.0.1 - - [21/Jun/2025 18:23:05] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:23:05,735 - INFO - 127.0.0.1 - - [21/Jun/2025 18:23:05] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:23:05,838 - INFO - 127.0.0.1 - - [21/Jun/2025 18:23:05] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:23:05,904 - INFO - 127.0.0.1 - - [21/Jun/2025 18:23:05] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:23:05,913 - INFO - 127.0.0.1 - - [21/Jun/2025 18:23:05] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 18:23:05,918 - INFO - 127.0.0.1 - - [21/Jun/2025 18:23:05] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:23:05,922 - INFO - 127.0.0.1 - - [21/Jun/2025 18:23:05] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 18:23:05,974 - INFO - 127.0.0.1 - - [21/Jun/2025 18:23:05] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:23:06,001 - INFO - 127.0.0.1 - - [21/Jun/2025 18:23:06] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 18:23:06,013 - INFO - 127.0.0.1 - - [21/Jun/2025 18:23:06] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 18:23:06,056 - INFO - 127.0.0.1 - - [21/Jun/2025 18:23:06] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:23:06,059 - INFO - 127.0.0.1 - - [21/Jun/2025 18:23:06] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 18:23:06,060 - INFO - 127.0.0.1 - - [21/Jun/2025 18:23:06] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 18:23:06,064 - INFO - 127.0.0.1 - - [21/Jun/2025 18:23:06] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 18:23:06,066 - INFO - 127.0.0.1 - - [21/Jun/2025 18:23:06] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 18:23:07,493 - INFO - Otimização de memória para df_vendas:
+2025-06-21 18:23:07,503 - INFO -   - Antes: 110.59 MB
+2025-06-21 18:23:07,504 - INFO -   - Depois: 18.43 MB
+2025-06-21 18:23:07,505 - INFO - Otimização de memória para df_vendas:
+2025-06-21 18:23:07,506 - INFO -   - Redução: 83.33%
+2025-06-21 18:23:07,506 - INFO -   - Antes: 110.59 MB
+2025-06-21 18:23:07,506 - INFO -   - Tempo: 0.24 segundos
+2025-06-21 18:23:07,506 - INFO -   - Depois: 18.43 MB
+2025-06-21 18:23:07,514 - INFO - Otimização de memória para df_lojas:
+2025-06-21 18:23:07,514 - INFO -   - Redução: 83.33%
+2025-06-21 18:23:07,515 - INFO -   - Antes: 0.22 MB
+2025-06-21 18:23:07,516 - INFO -   - Depois: 0.03 MB
+2025-06-21 18:23:07,516 - INFO - Otimização de memória para df_vendas:
+2025-06-21 18:23:07,515 - INFO -   - Tempo: 0.51 segundos
+2025-06-21 18:23:07,521 - INFO -   - Redução: 86.83%
+2025-06-21 18:23:07,521 - INFO -   - Antes: 110.59 MB
+2025-06-21 18:23:07,523 - INFO -   - Tempo: 0.00 segundos
+2025-06-21 18:23:07,523 - INFO - Otimização de memória para df_lojas:
+2025-06-21 18:23:07,524 - INFO -   - Depois: 18.43 MB
+2025-06-21 18:23:07,524 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-21 18:23:07,524 - INFO -   - Antes: 0.22 MB
+2025-06-21 18:23:07,524 - INFO -   - Redução: 83.33%
+2025-06-21 18:23:07,524 - INFO -   - Depois: 0.03 MB
+2025-06-21 18:23:07,524 - INFO -   - Tempo: 0.39 segundos
+2025-06-21 18:23:07,525 - INFO - Otimização de memória para df_vendas:
+2025-06-21 18:23:07,526 - INFO -   - Redução: 86.83%
+2025-06-21 18:23:07,528 - INFO -   - Tempo: 0.00 segundos
+2025-06-21 18:23:07,528 - INFO - Otimização de memória para df_lojas:
+2025-06-21 18:23:07,528 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-21 18:23:07,528 - INFO -   - Antes: 110.59 MB
+2025-06-21 18:23:07,528 - INFO -   - Depois: 18.43 MB
+2025-06-21 18:23:07,528 - INFO -   - Antes: 0.22 MB
+2025-06-21 18:23:07,529 - INFO -   - Redução: 83.33%
+2025-06-21 18:23:07,529 - INFO -   - Depois: 0.03 MB
+2025-06-21 18:23:07,529 - INFO -   - Tempo: 0.64 segundos
+2025-06-21 18:23:07,529 - INFO -   - Redução: 86.83%
+2025-06-21 18:23:07,531 - INFO - Otimização de memória para df_lojas:
+2025-06-21 18:23:07,532 - INFO -   - Tempo: 0.00 segundos
+2025-06-21 18:23:07,532 - INFO -   - Antes: 0.22 MB
+2025-06-21 18:23:07,532 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-21 18:23:07,532 - INFO -   - Depois: 0.03 MB
+2025-06-21 18:23:07,532 - INFO -   - Redução: 86.83%
+2025-06-21 18:23:07,532 - INFO -   - Tempo: 0.00 segundos
+2025-06-21 18:23:07,532 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-21 18:23:07,624 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 18:23:07,633 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 18:23:07,645 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 18:23:07,645 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 18:23:07,703 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 18:23:07,704 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 18:23:07,877 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 18:23:07,884 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 18:23:08,004 - INFO - 127.0.0.1 - - [21/Jun/2025 18:23:08] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:23:08,123 - INFO - 127.0.0.1 - - [21/Jun/2025 18:23:08] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:23:08,147 - INFO - 127.0.0.1 - - [21/Jun/2025 18:23:08] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:23:08,174 - INFO - 127.0.0.1 - - [21/Jun/2025 18:23:08] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:23:09,296 - INFO - 127.0.0.1 - - [21/Jun/2025 18:23:09] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:23:09,299 - INFO - 127.0.0.1 - - [21/Jun/2025 18:23:09] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 18:23:09,360 - INFO - 127.0.0.1 - - [21/Jun/2025 18:23:09] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 18:23:11,191 - INFO - 127.0.0.1 - - [21/Jun/2025 18:23:11] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:23:11,192 - INFO - 127.0.0.1 - - [21/Jun/2025 18:23:11] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 18:23:11,259 - INFO - 127.0.0.1 - - [21/Jun/2025 18:23:11] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 18:23:13,839 - INFO - 127.0.0.1 - - [21/Jun/2025 18:23:13] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:23:13,840 - INFO - 127.0.0.1 - - [21/Jun/2025 18:23:13] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 18:23:13,889 - INFO - 127.0.0.1 - - [21/Jun/2025 18:23:13] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 18:23:16,221 - INFO - 127.0.0.1 - - [21/Jun/2025 18:23:16] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:23:16,223 - INFO - 127.0.0.1 - - [21/Jun/2025 18:23:16] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 18:23:16,238 - INFO - 127.0.0.1 - - [21/Jun/2025 18:23:16] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 18:23:17,735 - INFO - 127.0.0.1 - - [21/Jun/2025 18:23:17] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:23:17,736 - INFO - 127.0.0.1 - - [21/Jun/2025 18:23:17] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 18:23:17,812 - INFO - 127.0.0.1 - - [21/Jun/2025 18:23:17] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:23:18,279 - INFO - 127.0.0.1 - - [21/Jun/2025 18:23:18] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:23:18,282 - INFO - 127.0.0.1 - - [21/Jun/2025 18:23:18] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:23:18,300 - INFO - 127.0.0.1 - - [21/Jun/2025 18:23:18] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:23:18,306 - INFO - 127.0.0.1 - - [21/Jun/2025 18:23:18] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:23:44,036 - INFO - 127.0.0.1 - - [21/Jun/2025 18:23:44] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:23:44,082 - INFO - 127.0.0.1 - - [21/Jun/2025 18:23:44] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:23:44,102 - INFO - 127.0.0.1 - - [21/Jun/2025 18:23:44] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 18:23:44,228 - INFO - 127.0.0.1 - - [21/Jun/2025 18:23:44] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:23:44,361 - INFO - 127.0.0.1 - - [21/Jun/2025 18:23:44] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:24:16,719 - INFO - 127.0.0.1 - - [21/Jun/2025 18:24:16] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:24:16,768 - INFO - 127.0.0.1 - - [21/Jun/2025 18:24:16] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:24:19,446 - INFO - 127.0.0.1 - - [21/Jun/2025 18:24:19] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:24:19,617 - INFO - 127.0.0.1 - - [21/Jun/2025 18:24:19] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:24:32,020 - INFO - 127.0.0.1 - - [21/Jun/2025 18:24:32] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:24:32,127 - INFO - 127.0.0.1 - - [21/Jun/2025 18:24:32] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:24:32,291 - INFO - 127.0.0.1 - - [21/Jun/2025 18:24:32] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:24:34,094 - INFO - 127.0.0.1 - - [21/Jun/2025 18:24:34] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:24:34,130 - INFO - 127.0.0.1 - - [21/Jun/2025 18:24:34] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:24:35,444 - INFO - 127.0.0.1 - - [21/Jun/2025 18:24:35] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:24:35,573 - INFO - 127.0.0.1 - - [21/Jun/2025 18:24:35] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:24:39,503 - INFO - 127.0.0.1 - - [21/Jun/2025 18:24:39] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:24:39,590 - INFO - 127.0.0.1 - - [21/Jun/2025 18:24:39] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:24:39,704 - INFO - 127.0.0.1 - - [21/Jun/2025 18:24:39] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:24:44,068 - INFO - 127.0.0.1 - - [21/Jun/2025 18:24:44] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:24:44,070 - INFO - 127.0.0.1 - - [21/Jun/2025 18:24:44] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 18:24:44,103 - INFO - 127.0.0.1 - - [21/Jun/2025 18:24:44] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 18:24:50,100 - INFO - 127.0.0.1 - - [21/Jun/2025 18:24:50] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:24:50,114 - INFO - 127.0.0.1 - - [21/Jun/2025 18:24:50] "[36mGET /assets/images/rossmann_logo1.png HTTP/1.1[0m" 304 -
+2025-06-21 18:25:05,485 - INFO - 127.0.0.1 - - [21/Jun/2025 18:25:05] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:25:05,487 - INFO - 127.0.0.1 - - [21/Jun/2025 18:25:05] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 18:25:05,566 - INFO - 127.0.0.1 - - [21/Jun/2025 18:25:05] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 18:25:11,902 - INFO - 127.0.0.1 - - [21/Jun/2025 18:25:11] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:25:11,903 - INFO - 127.0.0.1 - - [21/Jun/2025 18:25:11] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 18:25:11,983 - INFO - 127.0.0.1 - - [21/Jun/2025 18:25:11] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 18:25:34,594 - INFO - 127.0.0.1 - - [21/Jun/2025 18:25:34] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:25:34,595 - INFO - 127.0.0.1 - - [21/Jun/2025 18:25:34] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 18:25:34,647 - INFO - 127.0.0.1 - - [21/Jun/2025 18:25:34] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 18:25:39,986 - INFO - 127.0.0.1 - - [21/Jun/2025 18:25:39] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:25:40,002 - INFO - 127.0.0.1 - - [21/Jun/2025 18:25:40] "[36mGET /assets/images/rossmann_logo2.png HTTP/1.1[0m" 304 -
+2025-06-21 18:25:41,180 - INFO - 127.0.0.1 - - [21/Jun/2025 18:25:41] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:25:43,150 - INFO - 127.0.0.1 - - [21/Jun/2025 18:25:43] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:25:43,953 - INFO - 127.0.0.1 - - [21/Jun/2025 18:25:43] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:25:43,989 - INFO - 127.0.0.1 - - [21/Jun/2025 18:25:43] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:25:44,001 - INFO - 127.0.0.1 - - [21/Jun/2025 18:25:44] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 18:25:44,095 - INFO - 127.0.0.1 - - [21/Jun/2025 18:25:44] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:25:44,268 - INFO - 127.0.0.1 - - [21/Jun/2025 18:25:44] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:25:44,721 - INFO - 127.0.0.1 - - [21/Jun/2025 18:25:44] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:25:44,722 - INFO - 127.0.0.1 - - [21/Jun/2025 18:25:44] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 18:25:44,797 - INFO - 127.0.0.1 - - [21/Jun/2025 18:25:44] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 18:28:17,946 - INFO - Carregando dados brutos...
+2025-06-21 18:28:18,505 - INFO - Otimização de memória para df_vendas:
+2025-06-21 18:28:18,505 - INFO -   - Antes: 110.59 MB
+2025-06-21 18:28:18,505 - INFO -   - Depois: 18.43 MB
+2025-06-21 18:28:18,505 - INFO -   - Redução: 83.33%
+2025-06-21 18:28:18,505 - INFO -   - Tempo: 0.17 segundos
+2025-06-21 18:28:18,507 - INFO - Otimização de memória para df_lojas:
+2025-06-21 18:28:18,507 - INFO -   - Antes: 0.22 MB
+2025-06-21 18:28:18,507 - INFO -   - Depois: 0.03 MB
+2025-06-21 18:28:18,507 - INFO -   - Redução: 86.83%
+2025-06-21 18:28:18,507 - INFO -   - Tempo: 0.00 segundos
+2025-06-21 18:28:18,507 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-21 18:28:18,736 - INFO - Otimização de memória para df_lojas_bruto_dashboard:
+2025-06-21 18:28:18,736 - INFO -   - Antes: 0.22 MB
+2025-06-21 18:28:18,736 - INFO -   - Depois: 0.03 MB
+2025-06-21 18:28:18,736 - INFO -   - Redução: 86.83%
+2025-06-21 18:28:18,736 - INFO -   - Tempo: 0.00 segundos
+2025-06-21 18:28:18,783 - INFO - Dash is running on http://localhost:8050/
+
+2025-06-21 18:28:18,788 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:8050
+2025-06-21 18:28:18,789 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-21 18:28:23,255 - INFO - 127.0.0.1 - - [21/Jun/2025 18:28:23] "GET /dashboard HTTP/1.1" 200 -
+2025-06-21 18:28:23,302 - INFO - 127.0.0.1 - - [21/Jun/2025 18:28:23] "[36mGET /assets/css/estilos_barra_lateral.css HTTP/1.1[0m" 304 -
+2025-06-21 18:28:23,304 - INFO - 127.0.0.1 - - [21/Jun/2025 18:28:23] "[36mGET /assets/css/estilos_customizados.css HTTP/1.1[0m" 304 -
+2025-06-21 18:28:23,305 - INFO - 127.0.0.1 - - [21/Jun/2025 18:28:23] "[36mGET /assets/css/estilos_barra_lateral.css?m=1750522264.3773763 HTTP/1.1[0m" 304 -
+2025-06-21 18:28:23,305 - INFO - 127.0.0.1 - - [21/Jun/2025 18:28:23] "[36mGET /assets/css/estilos_customizados.css?m=1750522264.3774626 HTTP/1.1[0m" 304 -
+2025-06-21 18:28:23,307 - INFO - 127.0.0.1 - - [21/Jun/2025 18:28:23] "[36mGET /assets/js/tela_cheia.js?m=1750522264.378281 HTTP/1.1[0m" 304 -
+2025-06-21 18:28:23,307 - INFO - 127.0.0.1 - - [21/Jun/2025 18:28:23] "[36mGET /assets/custom.css?m=1750522264.3775227 HTTP/1.1[0m" 304 -
+2025-06-21 18:28:23,425 - INFO - 127.0.0.1 - - [21/Jun/2025 18:28:23] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-06-21 18:28:23,481 - INFO - 127.0.0.1 - - [21/Jun/2025 18:28:23] "GET /_dash-layout HTTP/1.1" 200 -
+2025-06-21 18:28:23,521 - INFO - 127.0.0.1 - - [21/Jun/2025 18:28:23] "[36mGET /assets/images/rossmann_logo2.png HTTP/1.1[0m" 304 -
+2025-06-21 18:28:23,526 - INFO - 127.0.0.1 - - [21/Jun/2025 18:28:23] "[36mGET /assets/images/rossmann_logo_colorida.png HTTP/1.1[0m" 304 -
+2025-06-21 18:28:23,534 - INFO - 127.0.0.1 - - [21/Jun/2025 18:28:23] "[36mGET /_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+2025-06-21 18:28:23,547 - INFO - 127.0.0.1 - - [21/Jun/2025 18:28:23] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2025-06-21 18:28:23,550 - INFO - 127.0.0.1 - - [21/Jun/2025 18:28:23] "[36mGET /_dash-component-suites/dash/dcc/async-datepicker.js HTTP/1.1[0m" 304 -
+2025-06-21 18:28:23,551 - INFO - 127.0.0.1 - - [21/Jun/2025 18:28:23] "[36mGET /_dash-component-suites/dash/dcc/async-markdown.js HTTP/1.1[0m" 304 -
+2025-06-21 18:28:23,560 - INFO - 127.0.0.1 - - [21/Jun/2025 18:28:23] "[36mGET /_dash-component-suites/dash/dcc/async-slider.js HTTP/1.1[0m" 304 -
+2025-06-21 18:28:23,565 - INFO - 127.0.0.1 - - [21/Jun/2025 18:28:23] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2025-06-21 18:28:23,593 - INFO - 127.0.0.1 - - [21/Jun/2025 18:28:23] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:28:23,594 - INFO - 127.0.0.1 - - [21/Jun/2025 18:28:23] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:28:23,595 - INFO - 127.0.0.1 - - [21/Jun/2025 18:28:23] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:28:23,596 - INFO - 127.0.0.1 - - [21/Jun/2025 18:28:23] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:28:23,596 - INFO - 127.0.0.1 - - [21/Jun/2025 18:28:23] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:28:23,596 - INFO - Carregando dados brutos...
+2025-06-21 18:28:23,957 - INFO - 127.0.0.1 - - [21/Jun/2025 18:28:23] "[36mGET /_dash-component-suites/dash/dcc/async-highlight.js HTTP/1.1[0m" 304 -
+2025-06-21 18:28:24,236 - INFO - Otimização de memória para df_vendas:
+2025-06-21 18:28:24,236 - INFO -   - Antes: 110.59 MB
+2025-06-21 18:28:24,236 - INFO -   - Depois: 18.43 MB
+2025-06-21 18:28:24,236 - INFO -   - Redução: 83.33%
+2025-06-21 18:28:24,236 - INFO -   - Tempo: 0.19 segundos
+2025-06-21 18:28:24,238 - INFO - Otimização de memória para df_lojas:
+2025-06-21 18:28:24,238 - INFO -   - Antes: 0.22 MB
+2025-06-21 18:28:24,238 - INFO -   - Depois: 0.03 MB
+2025-06-21 18:28:24,238 - INFO -   - Redução: 86.83%
+2025-06-21 18:28:24,238 - INFO -   - Tempo: 0.00 segundos
+2025-06-21 18:28:24,238 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-21 18:28:24,313 - INFO - 127.0.0.1 - - [21/Jun/2025 18:28:24] "[36mGET /assets/images/rossmann_logo1.png HTTP/1.1[0m" 304 -
+2025-06-21 18:28:24,334 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 18:28:24,406 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 18:28:24,406 - INFO - Amostrando 50 registros por loja...
+2025-06-21 18:28:24,409 - INFO - Total de lojas: 1115
+2025-06-21 18:28:24,769 - INFO - 127.0.0.1 - - [21/Jun/2025 18:28:24] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 18:28:25,156 - INFO - Amostragem concluída em 0.75 segundos
+2025-06-21 18:28:25,156 - INFO - Total de registros após amostragem: 55750
+2025-06-21 18:28:25,177 - INFO - 127.0.0.1 - - [21/Jun/2025 18:28:25] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:28:30,776 - INFO - 127.0.0.1 - - [21/Jun/2025 18:28:30] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:28:32,759 - INFO - 127.0.0.1 - - [21/Jun/2025 18:28:32] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:28:34,453 - INFO - 127.0.0.1 - - [21/Jun/2025 18:28:34] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:28:36,240 - INFO - 127.0.0.1 - - [21/Jun/2025 18:28:36] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:28:38,256 - INFO - 127.0.0.1 - - [21/Jun/2025 18:28:38] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:28:40,072 - INFO - 127.0.0.1 - - [21/Jun/2025 18:28:40] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:28:42,574 - INFO - 127.0.0.1 - - [21/Jun/2025 18:28:42] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:28:43,387 - INFO - 127.0.0.1 - - [21/Jun/2025 18:28:43] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:28:44,872 - INFO - 127.0.0.1 - - [21/Jun/2025 18:28:44] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:29:01,545 - INFO - Carregando dados brutos...
+2025-06-21 18:29:02,127 - INFO - Otimização de memória para df_vendas:
+2025-06-21 18:29:02,127 - INFO -   - Antes: 110.59 MB
+2025-06-21 18:29:02,127 - INFO -   - Depois: 18.43 MB
+2025-06-21 18:29:02,127 - INFO -   - Redução: 83.33%
+2025-06-21 18:29:02,127 - INFO -   - Tempo: 0.18 segundos
+2025-06-21 18:29:02,130 - INFO - Otimização de memória para df_lojas:
+2025-06-21 18:29:02,130 - INFO -   - Antes: 0.22 MB
+2025-06-21 18:29:02,130 - INFO -   - Depois: 0.03 MB
+2025-06-21 18:29:02,130 - INFO -   - Redução: 86.83%
+2025-06-21 18:29:02,130 - INFO -   - Tempo: 0.00 segundos
+2025-06-21 18:29:02,130 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-21 18:29:02,350 - INFO - Otimização de memória para df_lojas_bruto_dashboard:
+2025-06-21 18:29:02,350 - INFO -   - Antes: 0.22 MB
+2025-06-21 18:29:02,350 - INFO -   - Depois: 0.03 MB
+2025-06-21 18:29:02,350 - INFO -   - Redução: 86.83%
+2025-06-21 18:29:02,350 - INFO -   - Tempo: 0.00 segundos
+2025-06-21 18:29:02,394 - INFO - Dash is running on http://localhost:8050/
+
+2025-06-21 18:29:02,399 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:8050
+2025-06-21 18:29:02,399 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-21 18:29:04,638 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:04] "GET /analise-preliminar HTTP/1.1" 200 -
+2025-06-21 18:29:04,673 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:04] "[36mGET /assets/css/estilos_barra_lateral.css?m=1750522264.3773763 HTTP/1.1[0m" 304 -
+2025-06-21 18:29:04,674 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:04] "[36mGET /assets/css/estilos_customizados.css HTTP/1.1[0m" 304 -
+2025-06-21 18:29:04,675 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:04] "[36mGET /assets/css/estilos_barra_lateral.css HTTP/1.1[0m" 304 -
+2025-06-21 18:29:04,676 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:04] "[36mGET /assets/custom.css?m=1750522264.3775227 HTTP/1.1[0m" 304 -
+2025-06-21 18:29:04,677 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:04] "[36mGET /assets/js/tela_cheia.js?m=1750522264.378281 HTTP/1.1[0m" 304 -
+2025-06-21 18:29:04,677 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:04] "[36mGET /assets/css/estilos_customizados.css?m=1750522264.3774626 HTTP/1.1[0m" 304 -
+2025-06-21 18:29:04,736 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:04] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-06-21 18:29:04,803 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:04] "GET /_dash-layout HTTP/1.1" 200 -
+2025-06-21 18:29:04,835 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:04] "[36mGET /assets/images/rossmann_logo2.png HTTP/1.1[0m" 304 -
+2025-06-21 18:29:04,839 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:04] "[36mGET /assets/images/rossmann_logo_colorida.png HTTP/1.1[0m" 304 -
+2025-06-21 18:29:04,845 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:04] "[36mGET /_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+2025-06-21 18:29:04,854 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:04] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2025-06-21 18:29:04,856 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:04] "[36mGET /_dash-component-suites/dash/dcc/async-markdown.js HTTP/1.1[0m" 304 -
+2025-06-21 18:29:04,856 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:04] "[36mGET /_dash-component-suites/dash/dcc/async-datepicker.js HTTP/1.1[0m" 304 -
+2025-06-21 18:29:04,862 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:04] "[36mGET /_dash-component-suites/dash/dcc/async-slider.js HTTP/1.1[0m" 304 -
+2025-06-21 18:29:04,865 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:04] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2025-06-21 18:29:04,890 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:04] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:29:04,891 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:04] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:29:04,892 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:04] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:29:04,892 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:04] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:29:04,892 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:04] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:29:04,893 - INFO - Carregando dados brutos...
+2025-06-21 18:29:05,188 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:05] "[36mGET /_dash-component-suites/dash/dcc/async-highlight.js HTTP/1.1[0m" 304 -
+2025-06-21 18:29:05,510 - INFO - Otimização de memória para df_vendas:
+2025-06-21 18:29:05,510 - INFO -   - Antes: 110.59 MB
+2025-06-21 18:29:05,510 - INFO -   - Depois: 18.43 MB
+2025-06-21 18:29:05,510 - INFO -   - Redução: 83.33%
+2025-06-21 18:29:05,510 - INFO -   - Tempo: 0.20 segundos
+2025-06-21 18:29:05,513 - INFO - Otimização de memória para df_lojas:
+2025-06-21 18:29:05,513 - INFO -   - Antes: 0.22 MB
+2025-06-21 18:29:05,513 - INFO -   - Depois: 0.03 MB
+2025-06-21 18:29:05,513 - INFO -   - Redução: 86.83%
+2025-06-21 18:29:05,513 - INFO -   - Tempo: 0.00 segundos
+2025-06-21 18:29:05,513 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-21 18:29:05,578 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 18:29:05,579 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 18:29:05,579 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 18:29:05,579 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 18:29:05,580 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 18:29:05,653 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 18:29:05,792 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 18:29:05,807 - INFO - Amostrando 50 registros por loja...
+2025-06-21 18:29:05,815 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 18:29:05,819 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 18:29:05,822 - INFO - Amostrando 50 registros por loja...
+2025-06-21 18:29:05,824 - INFO - Total de lojas: 1115
+2025-06-21 18:29:05,824 - INFO - Amostrando 50 registros por loja...
+2025-06-21 18:29:05,826 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 18:29:05,837 - INFO - Total de lojas: 1115
+2025-06-21 18:29:05,843 - INFO - Amostrando 50 registros por loja...
+2025-06-21 18:29:05,843 - INFO - Total de lojas: 1115
+2025-06-21 18:29:05,856 - INFO - Total de lojas: 1115
+2025-06-21 18:29:05,865 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 18:29:05,865 - INFO - Amostrando 50 registros por loja...
+2025-06-21 18:29:05,871 - INFO - Total de lojas: 1115
+2025-06-21 18:29:05,982 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 18:29:05,982 - INFO - Amostrando 50 registros por loja...
+2025-06-21 18:29:06,002 - INFO - Total de lojas: 1115
+2025-06-21 18:29:10,693 - INFO - Amostragem concluída em 4.87 segundos
+2025-06-21 18:29:10,696 - INFO - Total de registros após amostragem: 55750
+2025-06-21 18:29:10,732 - INFO - Amostragem concluída em 4.75 segundos
+2025-06-21 18:29:10,732 - INFO - Total de registros após amostragem: 55750
+2025-06-21 18:29:10,755 - INFO - Amostragem concluída em 4.92 segundos
+2025-06-21 18:29:10,755 - INFO - Total de registros após amostragem: 55750
+2025-06-21 18:29:10,765 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:10] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:29:10,785 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:10] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:29:10,793 - INFO - Amostragem concluída em 4.95 segundos
+2025-06-21 18:29:10,793 - INFO - Total de registros após amostragem: 55750
+2025-06-21 18:29:10,825 - INFO - Carregando dados brutos...
+2025-06-21 18:29:10,826 - INFO - Carregando dados brutos...
+2025-06-21 18:29:10,854 - INFO - Amostragem concluída em 4.99 segundos
+2025-06-21 18:29:10,854 - INFO - Total de registros após amostragem: 55750
+2025-06-21 18:29:10,881 - INFO - Carregando dados brutos...
+2025-06-21 18:29:10,891 - INFO - Amostragem concluída em 5.08 segundos
+2025-06-21 18:29:10,892 - INFO - Total de registros após amostragem: 55750
+2025-06-21 18:29:10,921 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:10] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:29:10,923 - INFO - Carregando dados brutos...
+2025-06-21 18:29:10,935 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:10] "GET /analise-preliminar HTTP/1.1" 200 -
+2025-06-21 18:29:11,045 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:11] "[36mGET /assets/css/estilos_barra_lateral.css?m=1750522264.3773763 HTTP/1.1[0m" 304 -
+2025-06-21 18:29:11,048 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:11] "[36mGET /assets/css/estilos_barra_lateral.css HTTP/1.1[0m" 304 -
+2025-06-21 18:29:11,055 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:11] "[36mGET /assets/css/estilos_customizados.css HTTP/1.1[0m" 304 -
+2025-06-21 18:29:11,057 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:11] "[36mGET /assets/css/estilos_customizados.css?m=1750522264.3774626 HTTP/1.1[0m" 304 -
+2025-06-21 18:29:11,066 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:11] "[36mGET /assets/custom.css?m=1750522264.3775227 HTTP/1.1[0m" 304 -
+2025-06-21 18:29:11,067 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:11] "[36mGET /assets/js/tela_cheia.js?m=1750522264.378281 HTTP/1.1[0m" 304 -
+2025-06-21 18:29:11,119 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:11] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-06-21 18:29:11,157 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:11] "GET /_dash-layout HTTP/1.1" 200 -
+2025-06-21 18:29:11,195 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:11] "[36mGET /assets/images/rossmann_logo2.png HTTP/1.1[0m" 304 -
+2025-06-21 18:29:11,199 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:11] "[36mGET /assets/images/rossmann_logo_colorida.png HTTP/1.1[0m" 304 -
+2025-06-21 18:29:11,215 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:11] "[36mGET /_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+2025-06-21 18:29:11,216 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:11] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2025-06-21 18:29:11,223 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:11] "[36mGET /_dash-component-suites/dash/dcc/async-markdown.js HTTP/1.1[0m" 304 -
+2025-06-21 18:29:11,226 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:11] "[36mGET /_dash-component-suites/dash/dcc/async-datepicker.js HTTP/1.1[0m" 304 -
+2025-06-21 18:29:11,229 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:11] "[36mGET /_dash-component-suites/dash/dcc/async-slider.js HTTP/1.1[0m" 304 -
+2025-06-21 18:29:11,230 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:11] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2025-06-21 18:29:11,247 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:11] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:29:11,250 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:11] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:29:11,251 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:11] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:29:11,255 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:11] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:29:11,262 - INFO - Carregando dados brutos...
+2025-06-21 18:29:11,264 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:11] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:29:11,387 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:11] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:29:11,460 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:11] "[36mGET /_dash-component-suites/dash/dcc/async-highlight.js HTTP/1.1[0m" 304 -
+2025-06-21 18:29:11,923 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:11] "[36mGET /assets/images/rossmann_logo1.png HTTP/1.1[0m" 304 -
+2025-06-21 18:29:11,959 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:11] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:29:11,976 - INFO - Carregando dados brutos...
+2025-06-21 18:29:11,990 - INFO - Carregando dados brutos...
+2025-06-21 18:29:11,991 - INFO - Carregando dados brutos...
+2025-06-21 18:29:12,032 - INFO - Carregando dados brutos...
+2025-06-21 18:29:12,218 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:12] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:29:13,250 - INFO - Otimização de memória para df_vendas:
+2025-06-21 18:29:13,250 - INFO -   - Antes: 110.59 MB
+2025-06-21 18:29:13,250 - INFO -   - Depois: 18.43 MB
+2025-06-21 18:29:13,257 - INFO -   - Redução: 83.33%
+2025-06-21 18:29:13,257 - INFO -   - Tempo: 0.72 segundos
+2025-06-21 18:29:13,284 - INFO - Otimização de memória para df_vendas:
+2025-06-21 18:29:13,285 - INFO -   - Antes: 110.59 MB
+2025-06-21 18:29:13,289 - INFO - Otimização de memória para df_lojas:
+2025-06-21 18:29:13,289 - INFO -   - Depois: 18.43 MB
+2025-06-21 18:29:13,295 - INFO -   - Antes: 0.22 MB
+2025-06-21 18:29:13,310 - INFO -   - Redução: 83.33%
+2025-06-21 18:29:13,316 - INFO - Otimização de memória para df_vendas:
+2025-06-21 18:29:13,316 - INFO -   - Depois: 0.03 MB
+2025-06-21 18:29:13,323 - INFO -   - Tempo: 0.63 segundos
+2025-06-21 18:29:13,335 - INFO -   - Antes: 110.59 MB
+2025-06-21 18:29:13,360 - INFO -   - Redução: 86.83%
+2025-06-21 18:29:13,365 - INFO - Otimização de memória para df_vendas:
+2025-06-21 18:29:13,367 - INFO -   - Depois: 18.43 MB
+2025-06-21 18:29:13,367 - INFO -   - Tempo: 0.03 segundos
+2025-06-21 18:29:13,370 - INFO -   - Antes: 110.59 MB
+2025-06-21 18:29:13,379 - INFO -   - Redução: 83.33%
+2025-06-21 18:29:13,380 - INFO - Otimização de memória para df_lojas:
+2025-06-21 18:29:13,397 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-21 18:29:13,398 - INFO -   - Depois: 18.43 MB
+2025-06-21 18:29:13,406 - INFO -   - Tempo: 0.52 segundos
+2025-06-21 18:29:13,408 - INFO -   - Antes: 0.22 MB
+2025-06-21 18:29:13,409 - INFO -   - Redução: 83.33%
+2025-06-21 18:29:13,412 - INFO -   - Depois: 0.03 MB
+2025-06-21 18:29:13,413 - INFO - Otimização de memória para df_lojas:
+2025-06-21 18:29:13,414 - INFO -   - Tempo: 0.44 segundos
+2025-06-21 18:29:13,414 - INFO -   - Redução: 86.83%
+2025-06-21 18:29:13,415 - INFO -   - Antes: 0.22 MB
+2025-06-21 18:29:13,417 - INFO -   - Tempo: 0.02 segundos
+2025-06-21 18:29:13,419 - INFO -   - Depois: 0.03 MB
+2025-06-21 18:29:13,419 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-21 18:29:13,420 - INFO -   - Redução: 86.83%
+2025-06-21 18:29:13,421 - INFO - Otimização de memória para df_lojas:
+2025-06-21 18:29:13,429 - INFO -   - Tempo: 0.00 segundos
+2025-06-21 18:29:13,561 - INFO -   - Antes: 0.22 MB
+2025-06-21 18:29:13,562 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-21 18:29:13,568 - INFO -   - Depois: 0.03 MB
+2025-06-21 18:29:13,574 - INFO -   - Redução: 86.83%
+2025-06-21 18:29:13,574 - INFO -   - Tempo: 0.01 segundos
+2025-06-21 18:29:13,574 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-21 18:29:13,712 - INFO - Otimização de memória para df_vendas:
+2025-06-21 18:29:13,713 - INFO -   - Antes: 110.59 MB
+2025-06-21 18:29:13,713 - INFO -   - Depois: 18.43 MB
+2025-06-21 18:29:13,713 - INFO -   - Redução: 83.33%
+2025-06-21 18:29:13,713 - INFO -   - Tempo: 0.28 segundos
+2025-06-21 18:29:13,719 - INFO - Otimização de memória para df_lojas:
+2025-06-21 18:29:13,719 - INFO -   - Antes: 0.22 MB
+2025-06-21 18:29:13,728 - INFO -   - Depois: 0.03 MB
+2025-06-21 18:29:13,730 - INFO -   - Redução: 86.83%
+2025-06-21 18:29:13,730 - INFO -   - Tempo: 0.01 segundos
+2025-06-21 18:29:13,730 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-21 18:29:13,778 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:13] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:29:13,840 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 18:29:13,905 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 18:29:13,912 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:13] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:29:13,913 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 18:29:13,950 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 18:29:14,067 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 18:29:14,122 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:14] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:29:14,248 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:14] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:29:14,342 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:14] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 18:29:14,392 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:14] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 18:29:14,454 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:14] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 18:29:14,459 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:14] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 18:29:14,480 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:14] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 18:29:14,490 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:14] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 18:29:14,582 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:14] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:29:14,584 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 18:29:14,634 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:14] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 18:29:14,756 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 18:29:14,968 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:14] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:29:14,980 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:14] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:29:15,244 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 18:29:15,378 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 18:29:15,906 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:15] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:29:15,929 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:15] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:29:15,958 - INFO - Otimização de memória para df_vendas:
+2025-06-21 18:29:15,959 - INFO - Otimização de memória para df_vendas:
+2025-06-21 18:29:15,960 - INFO -   - Antes: 110.59 MB
+2025-06-21 18:29:15,960 - INFO -   - Antes: 110.59 MB
+2025-06-21 18:29:15,960 - INFO -   - Depois: 18.43 MB
+2025-06-21 18:29:15,960 - INFO -   - Depois: 18.43 MB
+2025-06-21 18:29:15,960 - INFO -   - Redução: 83.33%
+2025-06-21 18:29:15,960 - INFO -   - Redução: 83.33%
+2025-06-21 18:29:15,960 - INFO -   - Tempo: 0.85 segundos
+2025-06-21 18:29:15,960 - INFO -   - Tempo: 0.98 segundos
+2025-06-21 18:29:15,985 - INFO - Otimização de memória para df_lojas:
+2025-06-21 18:29:15,986 - INFO - Otimização de memória para df_lojas:
+2025-06-21 18:29:15,987 - INFO -   - Antes: 0.22 MB
+2025-06-21 18:29:15,988 - INFO - Otimização de memória para df_vendas:
+2025-06-21 18:29:15,992 - INFO -   - Antes: 0.22 MB
+2025-06-21 18:29:15,992 - INFO -   - Depois: 0.03 MB
+2025-06-21 18:29:15,992 - INFO -   - Antes: 110.59 MB
+2025-06-21 18:29:15,993 - INFO -   - Redução: 86.83%
+2025-06-21 18:29:15,992 - INFO -   - Depois: 0.03 MB
+2025-06-21 18:29:15,993 - INFO -   - Depois: 18.43 MB
+2025-06-21 18:29:15,993 - INFO -   - Tempo: 0.02 segundos
+2025-06-21 18:29:15,993 - INFO -   - Redução: 86.83%
+2025-06-21 18:29:15,993 - INFO -   - Redução: 83.33%
+2025-06-21 18:29:15,993 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-21 18:29:15,993 - INFO -   - Tempo: 0.02 segundos
+2025-06-21 18:29:15,993 - INFO -   - Tempo: 0.61 segundos
+2025-06-21 18:29:15,994 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-21 18:29:15,998 - INFO - Otimização de memória para df_vendas:
+2025-06-21 18:29:15,998 - INFO - Otimização de memória para df_lojas:
+2025-06-21 18:29:15,998 - INFO -   - Antes: 110.59 MB
+2025-06-21 18:29:15,999 - INFO -   - Antes: 0.22 MB
+2025-06-21 18:29:15,999 - INFO -   - Depois: 18.43 MB
+2025-06-21 18:29:15,999 - INFO -   - Depois: 0.03 MB
+2025-06-21 18:29:15,999 - INFO -   - Redução: 83.33%
+2025-06-21 18:29:15,999 - INFO -   - Redução: 86.83%
+2025-06-21 18:29:15,999 - INFO -   - Tempo: 0.74 segundos
+2025-06-21 18:29:16,000 - INFO -   - Tempo: 0.00 segundos
+2025-06-21 18:29:16,002 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-21 18:29:16,003 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 18:29:16,003 - INFO - Amostrando 50 registros por loja...
+2025-06-21 18:29:16,006 - INFO - Total de lojas: 1115
+2025-06-21 18:29:16,007 - INFO - Otimização de memória para df_lojas:
+2025-06-21 18:29:16,007 - INFO -   - Antes: 0.22 MB
+2025-06-21 18:29:16,007 - INFO -   - Depois: 0.03 MB
+2025-06-21 18:29:16,007 - INFO -   - Redução: 86.83%
+2025-06-21 18:29:16,008 - INFO -   - Tempo: 0.01 segundos
+2025-06-21 18:29:16,008 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-21 18:29:16,116 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 18:29:16,117 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 18:29:16,130 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 18:29:16,131 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 18:29:16,239 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 18:29:16,240 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 18:29:16,260 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 18:29:16,374 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 18:29:16,469 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:16] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:29:16,642 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:16] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:29:16,660 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:16] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:29:16,730 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:16] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:29:17,150 - INFO - Amostragem concluída em 1.15 segundos
+2025-06-21 18:29:17,150 - INFO - Total de registros após amostragem: 55750
+2025-06-21 18:29:17,182 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:17] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:29:18,657 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:18] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:29:18,658 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:18] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 18:29:18,730 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:18] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 18:29:22,472 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:22] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:29:22,504 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:22] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:29:22,530 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:22] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 18:29:22,615 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:22] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:29:22,737 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:22] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:29:25,592 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:25] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:29:25,593 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:25] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 18:29:25,703 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:25] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:29:26,178 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:26] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:29:26,181 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:26] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:29:26,200 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:26] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:29:26,207 - INFO - 127.0.0.1 - - [21/Jun/2025 18:29:26] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 18:31:20,541 - INFO - 127.0.0.1 - - [21/Jun/2025 18:31:20] "GET /apple-touch-icon-precomposed.png HTTP/1.1" 200 -
+2025-06-21 18:31:20,542 - INFO - 127.0.0.1 - - [21/Jun/2025 18:31:20] "GET /favicon.ico HTTP/1.1" 200 -
+2025-06-21 18:31:20,543 - INFO - 127.0.0.1 - - [21/Jun/2025 18:31:20] "GET /apple-touch-icon.png HTTP/1.1" 200 -
+2025-06-21 18:31:20,545 - INFO - 127.0.0.1 - - [21/Jun/2025 18:31:20] "GET /_favicon.ico?v=2.14.2 HTTP/1.1" 200 -
+2025-06-21 18:31:21,023 - INFO - 127.0.0.1 - - [21/Jun/2025 18:31:21] "GET /apple-touch-icon-precomposed.png HTTP/1.1" 200 -
+2025-06-21 18:31:21,026 - INFO - 127.0.0.1 - - [21/Jun/2025 18:31:21] "GET /_favicon.ico?v=2.14.2 HTTP/1.1" 200 -
+2025-06-21 18:31:21,027 - INFO - 127.0.0.1 - - [21/Jun/2025 18:31:21] "GET /favicon.ico HTTP/1.1" 200 -
+2025-06-21 18:31:21,027 - INFO - 127.0.0.1 - - [21/Jun/2025 18:31:21] "GET /apple-touch-icon.png HTTP/1.1" 200 -
+2025-06-21 20:02:00,328 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 20:02:00,401 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 20:02:00,406 - INFO - Amostrando 50 registros por loja...
+2025-06-21 20:02:00,410 - INFO - Total de lojas: 1115
+2025-06-21 20:02:01,020 - INFO - Amostragem concluída em 0.61 segundos
+2025-06-21 20:02:01,020 - INFO - Total de registros após amostragem: 55750
+2025-06-21 20:02:01,123 - INFO - Carregamento de dados concluído no modo 'amostra'
+2025-06-21 20:02:01,123 - INFO - Registros no DataFrame reduzido: 55750
+2025-06-21 20:02:01,136 - INFO - Carregando dados brutos...
+2025-06-21 20:02:01,705 - INFO - Otimização de memória para df_vendas:
+2025-06-21 20:02:01,705 - INFO -   - Antes: 110.59 MB
+2025-06-21 20:02:01,705 - INFO -   - Depois: 18.43 MB
+2025-06-21 20:02:01,706 - INFO -   - Redução: 83.33%
+2025-06-21 20:02:01,706 - INFO -   - Tempo: 0.18 segundos
+2025-06-21 20:02:01,708 - INFO - Otimização de memória para df_lojas:
+2025-06-21 20:02:01,708 - INFO -   - Antes: 0.22 MB
+2025-06-21 20:02:01,708 - INFO -   - Depois: 0.03 MB
+2025-06-21 20:02:01,708 - INFO -   - Redução: 86.83%
+2025-06-21 20:02:01,708 - INFO -   - Tempo: 0.00 segundos
+2025-06-21 20:02:01,708 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-21 20:02:01,890 - INFO - Otimização de memória para df_lojas_bruto_dashboard:
+2025-06-21 20:02:01,890 - INFO -   - Antes: 0.22 MB
+2025-06-21 20:02:01,890 - INFO -   - Depois: 0.03 MB
+2025-06-21 20:02:01,890 - INFO -   - Redução: 86.83%
+2025-06-21 20:02:01,890 - INFO -   - Tempo: 0.00 segundos
+2025-06-21 20:02:01,938 - INFO - Dash is running on http://localhost:8050/
+
+2025-06-21 20:02:01,945 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:8050
+2025-06-21 20:02:01,945 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-21 20:02:13,508 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:13] "GET / HTTP/1.1" 200 -
+2025-06-21 20:02:13,512 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:13] "[36mGET /assets/css/estilos_barra_lateral.css HTTP/1.1[0m" 304 -
+2025-06-21 20:02:13,513 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:13] "[36mGET /assets/css/estilos_customizados.css HTTP/1.1[0m" 304 -
+2025-06-21 20:02:13,518 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:13] "[36mGET /_dash-component-suites/dash/dcc/async-markdown.js HTTP/1.1[0m" 304 -
+2025-06-21 20:02:13,526 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:13] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2025-06-21 20:02:13,527 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:13] "[36mGET /_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+2025-06-21 20:02:13,528 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:13] "[36mGET /_dash-component-suites/dash/dcc/async-datepicker.js HTTP/1.1[0m" 304 -
+2025-06-21 20:02:13,531 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:13] "[36mGET /_dash-component-suites/dash/dcc/async-slider.js HTTP/1.1[0m" 304 -
+2025-06-21 20:02:13,532 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:13] "[36mGET /assets/images/rossmann_logo_colorida.png HTTP/1.1[0m" 304 -
+2025-06-21 20:02:13,533 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:13] "[36mGET /_dash-component-suites/dash/dcc/async-highlight.js HTTP/1.1[0m" 304 -
+2025-06-21 20:02:13,533 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:13] "[36mGET /assets/images/rossmann_logo2.png HTTP/1.1[0m" 304 -
+2025-06-21 20:02:13,534 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:13] "[36mGET /assets/custom.css?m=1750522264.3775227 HTTP/1.1[0m" 304 -
+2025-06-21 20:02:13,536 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:13] "[36mGET /assets/css/estilos_barra_lateral.css?m=1750522264.3773763 HTTP/1.1[0m" 304 -
+2025-06-21 20:02:13,536 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:13] "[36mGET /assets/css/estilos_customizados.css?m=1750522264.3774626 HTTP/1.1[0m" 304 -
+2025-06-21 20:02:13,537 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:13] "[36mGET /assets/js/tela_cheia.js?m=1750522264.378281 HTTP/1.1[0m" 304 -
+2025-06-21 20:02:13,542 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:13] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2025-06-21 20:02:13,675 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:13] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-06-21 20:02:13,739 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:13] "GET /_dash-layout HTTP/1.1" 200 -
+2025-06-21 20:02:13,866 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:13] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 20:02:13,868 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:13] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 20:02:13,869 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:13] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 20:02:13,869 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:13] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 20:02:13,870 - INFO - Carregando dados brutos...
+2025-06-21 20:02:13,870 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:13] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 20:02:14,596 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:14] "[36mGET /assets/images/rossmann_logo1.png HTTP/1.1[0m" 304 -
+2025-06-21 20:02:14,649 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 20:02:14,650 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 20:02:14,650 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 20:02:14,651 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 20:02:14,652 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 20:02:14,686 - INFO - Otimização de memória para df_vendas:
+2025-06-21 20:02:14,686 - INFO -   - Antes: 110.59 MB
+2025-06-21 20:02:14,686 - INFO -   - Depois: 18.43 MB
+2025-06-21 20:02:14,687 - INFO -   - Redução: 83.33%
+2025-06-21 20:02:14,687 - INFO -   - Tempo: 0.30 segundos
+2025-06-21 20:02:14,700 - INFO - Otimização de memória para df_lojas:
+2025-06-21 20:02:14,700 - INFO -   - Antes: 0.22 MB
+2025-06-21 20:02:14,700 - INFO -   - Depois: 0.03 MB
+2025-06-21 20:02:14,700 - INFO -   - Redução: 86.83%
+2025-06-21 20:02:14,700 - INFO -   - Tempo: 0.01 segundos
+2025-06-21 20:02:14,700 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-21 20:02:14,957 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 20:02:14,959 - INFO - Amostrando 50 registros por loja...
+2025-06-21 20:02:14,971 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 20:02:14,971 - INFO - Amostrando 50 registros por loja...
+2025-06-21 20:02:14,972 - INFO - Total de lojas: 1115
+2025-06-21 20:02:14,973 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 20:02:14,978 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 20:02:14,978 - INFO - Total de lojas: 1115
+2025-06-21 20:02:14,979 - INFO - Amostrando 50 registros por loja...
+2025-06-21 20:02:14,980 - INFO - Amostrando 50 registros por loja...
+2025-06-21 20:02:14,990 - INFO - Total de lojas: 1115
+2025-06-21 20:02:14,991 - INFO - Total de lojas: 1115
+2025-06-21 20:02:14,994 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 20:02:14,995 - INFO - Amostrando 50 registros por loja...
+2025-06-21 20:02:15,002 - INFO - Total de lojas: 1115
+2025-06-21 20:02:15,036 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 20:02:15,143 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 20:02:15,144 - INFO - Amostrando 50 registros por loja...
+2025-06-21 20:02:15,148 - INFO - Total de lojas: 1115
+2025-06-21 20:02:19,758 - INFO - Amostragem concluída em 4.77 segundos
+2025-06-21 20:02:19,758 - INFO - Total de registros após amostragem: 55750
+2025-06-21 20:02:19,777 - INFO - Carregando dados brutos...
+2025-06-21 20:02:19,799 - INFO - Amostragem concluída em 4.65 segundos
+2025-06-21 20:02:19,799 - INFO - Total de registros após amostragem: 55750
+2025-06-21 20:02:19,828 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:19] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 20:02:19,838 - INFO - Amostragem concluída em 4.86 segundos
+2025-06-21 20:02:19,838 - INFO - Total de registros após amostragem: 55750
+2025-06-21 20:02:19,872 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:19] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 20:02:19,872 - INFO - Carregando dados brutos...
+2025-06-21 20:02:19,890 - INFO - Amostragem concluída em 4.91 segundos
+2025-06-21 20:02:19,891 - INFO - Total de registros após amostragem: 55750
+2025-06-21 20:02:19,932 - INFO - Amostragem concluída em 4.97 segundos
+2025-06-21 20:02:19,933 - INFO - Total de registros após amostragem: 55750
+2025-06-21 20:02:19,958 - INFO - Carregando dados brutos...
+2025-06-21 20:02:19,973 - INFO - Amostragem concluída em 4.98 segundos
+2025-06-21 20:02:19,973 - INFO - Total de registros após amostragem: 55750
+2025-06-21 20:02:20,000 - INFO - Carregando dados brutos...
+2025-06-21 20:02:20,031 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:20] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 20:02:20,141 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:20] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 20:02:20,263 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:20] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 20:02:20,313 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:20] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 20:02:20,322 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:20] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 20:02:20,329 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:20] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 20:02:20,337 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:20] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 20:02:20,454 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:20] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 20:02:20,477 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:20] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 20:02:20,544 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:20] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 20:02:20,555 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:20] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 20:02:20,559 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:20] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 20:02:20,571 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:20] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 20:02:20,575 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:20] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 20:02:20,577 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:20] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 20:02:22,241 - INFO - Otimização de memória para df_vendas:
+2025-06-21 20:02:22,242 - INFO -   - Antes: 110.59 MB
+2025-06-21 20:02:22,242 - INFO -   - Depois: 18.43 MB
+2025-06-21 20:02:22,246 - INFO -   - Redução: 83.33%
+2025-06-21 20:02:22,248 - INFO -   - Tempo: 0.55 segundos
+2025-06-21 20:02:22,253 - INFO - Otimização de memória para df_vendas:
+2025-06-21 20:02:22,260 - INFO - Otimização de memória para df_lojas:
+2025-06-21 20:02:22,262 - INFO -   - Antes: 0.22 MB
+2025-06-21 20:02:22,261 - INFO - Otimização de memória para df_vendas:
+2025-06-21 20:02:22,260 - INFO -   - Antes: 110.59 MB
+2025-06-21 20:02:22,262 - INFO -   - Depois: 0.03 MB
+2025-06-21 20:02:22,262 - INFO -   - Antes: 110.59 MB
+2025-06-21 20:02:22,263 - INFO -   - Depois: 18.43 MB
+2025-06-21 20:02:22,262 - INFO -   - Depois: 18.43 MB
+2025-06-21 20:02:22,263 - INFO - Otimização de memória para df_vendas:
+2025-06-21 20:02:22,263 - INFO -   - Redução: 83.33%
+2025-06-21 20:02:22,263 - INFO -   - Redução: 83.33%
+2025-06-21 20:02:22,263 - INFO -   - Tempo: 0.71 segundos
+2025-06-21 20:02:22,262 - INFO -   - Redução: 86.83%
+2025-06-21 20:02:22,265 - INFO -   - Tempo: 0.01 segundos
+2025-06-21 20:02:22,263 - INFO -   - Antes: 110.59 MB
+2025-06-21 20:02:22,265 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-21 20:02:22,263 - INFO -   - Tempo: 0.44 segundos
+2025-06-21 20:02:22,265 - INFO -   - Depois: 18.43 MB
+2025-06-21 20:02:22,268 - INFO -   - Redução: 83.33%
+2025-06-21 20:02:22,268 - INFO - Otimização de memória para df_lojas:
+2025-06-21 20:02:22,269 - INFO - Otimização de memória para df_lojas:
+2025-06-21 20:02:22,270 - INFO -   - Tempo: 0.32 segundos
+2025-06-21 20:02:22,270 - INFO -   - Antes: 0.22 MB
+2025-06-21 20:02:22,270 - INFO -   - Antes: 0.22 MB
+2025-06-21 20:02:22,271 - INFO -   - Depois: 0.03 MB
+2025-06-21 20:02:22,272 - INFO -   - Redução: 86.83%
+2025-06-21 20:02:22,271 - INFO -   - Depois: 0.03 MB
+2025-06-21 20:02:22,272 - INFO -   - Tempo: 0.00 segundos
+2025-06-21 20:02:22,272 - INFO -   - Redução: 86.83%
+2025-06-21 20:02:22,272 - INFO - Otimização de memória para df_lojas:
+2025-06-21 20:02:22,273 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-21 20:02:22,273 - INFO -   - Tempo: 0.00 segundos
+2025-06-21 20:02:22,273 - INFO -   - Antes: 0.22 MB
+2025-06-21 20:02:22,273 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-21 20:02:22,273 - INFO -   - Depois: 0.03 MB
+2025-06-21 20:02:22,274 - INFO -   - Redução: 86.83%
+2025-06-21 20:02:22,274 - INFO -   - Tempo: 0.00 segundos
+2025-06-21 20:02:22,274 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-21 20:02:22,364 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 20:02:22,381 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 20:02:22,381 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 20:02:22,382 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/rossmann-sales-predict/dataset/processados/df_completo_processado.pkl.gz
+2025-06-21 20:02:22,437 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 20:02:22,447 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 20:02:22,450 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 20:02:22,451 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-21 20:02:22,711 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:22] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 20:02:22,872 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:22] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 20:02:22,881 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:22] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 20:02:22,908 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:22] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 20:02:24,767 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:24] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 20:02:24,768 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:24] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 20:02:24,780 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:24] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 20:02:28,127 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:28] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 20:02:28,129 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:28] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 20:02:28,189 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:28] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 20:02:30,102 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:30] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 20:02:30,127 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:30] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 20:02:30,157 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:30] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 20:02:30,246 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:30] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 20:02:30,368 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:30] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 20:02:31,785 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:31] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 20:02:31,787 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:31] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 20:02:31,894 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:31] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 20:02:32,353 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:32] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 20:02:32,357 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:32] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 20:02:32,377 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:32] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 20:02:32,383 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:32] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 20:02:37,059 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:37] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-21 20:02:37,062 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:37] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-21 20:02:37,119 - INFO - 127.0.0.1 - - [21/Jun/2025 20:02:37] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -

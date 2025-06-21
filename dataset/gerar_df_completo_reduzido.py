@@ -3,7 +3,24 @@ import numpy as np
 import logging
 import os
 import sys
-from reduzir_dataset import main as reduzir_datasets, N_AMOSTRAS
+from pathlib import Path
+
+# Obtém o diretório atual
+DIRETORIO_ATUAL = Path(__file__).resolve().parent
+
+# Importa a função reduzir_dataset.main() e a constante N_AMOSTRAS
+# Adiciona o diretório dataset ao path para garantir que a importação funcione
+sys.path.append(str(DIRETORIO_ATUAL))
+try:
+    from reduzir_dataset import main as reduzir_datasets, N_AMOSTRAS
+except ImportError:
+    # Fallback caso não consiga importar diretamente
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("reduzir_dataset", os.path.join(DIRETORIO_ATUAL, "reduzir_dataset.py"))
+    reduzir_dataset = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(reduzir_dataset)
+    reduzir_datasets = reduzir_dataset.main
+    N_AMOSTRAS = reduzir_dataset.N_AMOSTRAS
 
 # Configuração do logging
 logging.basicConfig(
@@ -11,7 +28,7 @@ logging.basicConfig(
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
         logging.StreamHandler(sys.stdout),
-        logging.FileHandler('gerar_df_completo.log')
+        logging.FileHandler(os.path.join(DIRETORIO_ATUAL, 'gerar_df_completo.log'))
     ]
 )
 
@@ -24,6 +41,14 @@ def verificar_diretorio(caminho):
 
 def processar_datasets():
     try:
+        # Define caminhos absolutos para os arquivos
+        caminho_train_reduzido = os.path.join(DIRETORIO_ATUAL, "reduzidos", "train_reduzido.csv")
+        caminho_store_reduzido = os.path.join(DIRETORIO_ATUAL, "reduzidos", "store_reduzido.csv")
+        caminho_df_completo = os.path.join(DIRETORIO_ATUAL, "processados", "df_completo_reduzido.csv")
+        
+        # Verifica se os diretórios existem
+        verificar_diretorio(caminho_df_completo)
+        
         # Reduzir datasets usando a função do módulo reduzir_dataset
         logging.info(f"Iniciando redução dos datasets com {N_AMOSTRAS} amostras por loja...")
         df_vendas, df_lojas = reduzir_datasets()
@@ -56,13 +81,10 @@ def processar_datasets():
         if 'Open' in df_completo.columns:
             df_completo.drop(['Open'], axis=1, inplace=True)
             logging.info("Coluna 'Open' removida (filtro já aplicado na amostragem)")
-
-        # Verificando e criando diretórios se necessário
-        verificar_diretorio('processados/df_completo_reduzido.csv')
         
         logging.info("\nSalvando novo df_completo...")
         # Salvando o novo df_completo
-        df_completo.to_csv('processados/df_completo_reduzido.csv', index=False)
+        df_completo.to_csv(caminho_df_completo, index=False)
 
         logging.info("\nEstatísticas do novo df_completo:")
         logging.info(f"Total de registros: {len(df_completo)}")

@@ -3,6 +3,7 @@ import numpy as np
 import logging
 import os
 import sys
+from pathlib import Path
 
 # Configuração para reprodutibilidade
 np.random.seed(42)
@@ -19,6 +20,15 @@ logging.basicConfig(
         logging.FileHandler('dataset_reducao.log')
     ]
 )
+
+# Função para obter o caminho base do projeto
+def get_base_dir():
+    """Retorna o diretório base do projeto (onde está a pasta dataset)."""
+    # Caminho do arquivo atual
+    current_file = Path(__file__).resolve()
+    # Diretório do arquivo atual (dataset)
+    dataset_dir = current_file.parent
+    return dataset_dir
 
 # Função robusta para amostrar n linhas por loja
 def amostrar_por_loja(df, n_amostras=N_AMOSTRAS, random_state=42, filtrar_abertas=True):
@@ -83,18 +93,32 @@ def verificar_diretorio(caminho):
 
 def main():
     try:
+        # Obtém o diretório base (dataset)
+        dataset_dir = get_base_dir()
+        
+        # Define caminhos absolutos para os arquivos
+        caminho_store = os.path.join(dataset_dir, "brutos", "store.csv")
+        caminho_train = os.path.join(dataset_dir, "brutos", "train.csv")
+        caminho_store_reduzido = os.path.join(dataset_dir, "reduzidos", "store_reduzido.csv")
+        caminho_train_reduzido = os.path.join(dataset_dir, "reduzidos", "train_reduzido.csv")
+        
+        # Verificar se os diretórios existem, se não, criá-los
+        verificar_diretorio(caminho_store_reduzido)
+        verificar_diretorio(caminho_train_reduzido)
+        
         # Carregando os datasets
         logging.info("Carregando datasets originais...")
         
         # Verificar se os arquivos existem
-        arquivos_necessarios = ['brutos/store.csv', 'brutos/train.csv']
-        for arquivo in arquivos_necessarios:
-            if not os.path.exists(arquivo):
-                logging.error(f"Arquivo não encontrado: {arquivo}")
-                return
+        if not os.path.exists(caminho_store):
+            logging.error(f"Arquivo não encontrado: {caminho_store}")
+            return
+        if not os.path.exists(caminho_train):
+            logging.error(f"Arquivo não encontrado: {caminho_train}")
+            return
         
-        df_store = pd.read_csv('brutos/store.csv')
-        df_train = pd.read_csv('brutos/train.csv', low_memory=False)
+        df_store = pd.read_csv(caminho_store)
+        df_train = pd.read_csv(caminho_train, low_memory=False)
         
         # Amostrando dados do dataset de vendas, filtrando apenas lojas abertas
         logging.info(f"Amostrando dados com {N_AMOSTRAS} registros por loja (apenas lojas abertas)...")
@@ -104,13 +128,10 @@ def main():
         lojas_selecionadas = df_train_reduzido['Store'].unique()
         df_store_reduzido = df_store[df_store['Store'].isin(lojas_selecionadas)]
         
-        # Verificando e criando diretórios se necessário
-        verificar_diretorio('reduzidos/store_reduzido.csv')
-        
         # Salvando os datasets reduzidos
         logging.info("Salvando datasets reduzidos...")
-        df_store_reduzido.to_csv('reduzidos/store_reduzido.csv', index=False)
-        df_train_reduzido.to_csv('reduzidos/train_reduzido.csv', index=False)
+        df_store_reduzido.to_csv(caminho_store_reduzido, index=False)
+        df_train_reduzido.to_csv(caminho_train_reduzido, index=False)
         
         # Imprimindo estatísticas
         logging.info("\nEstatísticas dos datasets:")

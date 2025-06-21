@@ -9,7 +9,7 @@ from pathlib import Path
 np.random.seed(42)
 
 # Número fixo de amostras por loja
-N_AMOSTRAS = 100
+N_AMOSTRAS = 40
 
 # Configuração do logging
 logging.basicConfig(

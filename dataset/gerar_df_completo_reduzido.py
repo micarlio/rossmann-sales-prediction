@@ -1,38 +1,97 @@
 import pandas as pd
 import numpy as np
+import logging
+import os
+import sys
+from reduzir_dataset import main as reduzir_datasets, N_AMOSTRAS
 
-print("Carregando datasets reduzidos...")
-df_vendas = pd.read_csv('reduzidos/train_reduzido.csv', dtype={'StateHoliday': str})
-df_lojas = pd.read_csv('reduzidos/store_reduzido.csv')
+# Configuração do logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.StreamHandler(sys.stdout),
+        logging.FileHandler('gerar_df_completo.log')
+    ]
+)
 
-print("\nTratando dados...")
-# Convertendo a coluna Date para datetime
-df_vendas['Date'] = pd.to_datetime(df_vendas['Date'])
+def verificar_diretorio(caminho):
+    """Verifica se o diretório existe, se não, cria."""
+    diretorio = os.path.dirname(caminho)
+    if diretorio and not os.path.exists(diretorio):
+        os.makedirs(diretorio)
+        logging.info(f"Diretório criado: {diretorio}")
 
-# Tratamento do dataset de lojas
-# Preenchendo valores ausentes
-df_lojas['PromoInterval'] = df_lojas['PromoInterval'].fillna("Nenhum")
+def processar_datasets():
+    try:
+        # Reduzir datasets usando a função do módulo reduzir_dataset
+        logging.info(f"Iniciando redução dos datasets com {N_AMOSTRAS} amostras por loja...")
+        df_vendas, df_lojas = reduzir_datasets()
+        
+        if df_vendas is None or df_lojas is None:
+            logging.error("Falha ao reduzir os datasets. Verifique os logs para mais detalhes.")
+            return False
+        
+        logging.info("\nTratando dados...")
+        # Convertendo a coluna Date para datetime
+        df_vendas['Date'] = pd.to_datetime(df_vendas['Date'])
 
-colunas_preencher_zero = ['CompetitionOpenSinceMonth', 'CompetitionOpenSinceYear', 'Promo2SinceWeek', 'Promo2SinceYear']
-for col in colunas_preencher_zero:
-    df_lojas[col] = df_lojas[col].fillna(0)
+        # Tratamento do dataset de lojas
+        # Preenchendo valores ausentes
+        df_lojas['PromoInterval'] = df_lojas['PromoInterval'].fillna("Nenhum") 
 
-# CompetitionDistance: Preencher com a MÉDIA
-df_lojas['CompetitionDistance'] = df_lojas['CompetitionDistance'].fillna(df_lojas['CompetitionDistance'].mean())
+        colunas_preencher_zero = ['CompetitionOpenSinceMonth', 'CompetitionOpenSinceYear', 'Promo2SinceWeek', 'Promo2SinceYear']
+        for col in colunas_preencher_zero:
+            df_lojas[col] = df_lojas[col].fillna(0)
 
-print("\nRealizando merge dos datasets...")
-# Merge dos dataframes
-df_completo = pd.merge(df_vendas, df_lojas, on='Store', how='left')
+        # CompetitionDistance: Preencher com a MÉDIA
+        df_lojas['CompetitionDistance'] = df_lojas['CompetitionDistance'].fillna(df_lojas['CompetitionDistance'].mean())
 
-# Filtrando apenas lojas abertas
-df_completo = df_completo[df_completo['Open'] == 1].copy()
-df_completo.drop(['Open'], axis=1, inplace=True)
+        logging.info("\nRealizando merge dos datasets...")
+        # Merge dos dataframes
+        df_completo = pd.merge(df_vendas, df_lojas, on='Store', how='left')
 
-print("\nSalvando novo df_completo...")
-# Salvando o novo df_completo
-df_completo.to_csv('processados/df_completo_reduzido.csv', index=False)
+        # Não precisamos mais filtrar lojas abertas, pois isso já foi feito na amostragem
+        # Removemos a coluna Open que não é mais necessária
+        if 'Open' in df_completo.columns:
+            df_completo.drop(['Open'], axis=1, inplace=True)
+            logging.info("Coluna 'Open' removida (filtro já aplicado na amostragem)")
 
-print("\nEstatísticas do novo df_completo:")
-print(f"Total de registros: {len(df_completo)}")
-print(f"Número de lojas únicas: {df_completo['Store'].nunique()}")
-print(f"Período: de {df_completo['Date'].min().strftime('%d/%m/%Y')} até {df_completo['Date'].max().strftime('%d/%m/%Y')}") 
+        # Verificando e criando diretórios se necessário
+        verificar_diretorio('processados/df_completo_reduzido.csv')
+        
+        logging.info("\nSalvando novo df_completo...")
+        # Salvando o novo df_completo
+        df_completo.to_csv('processados/df_completo_reduzido.csv', index=False)
+
+        logging.info("\nEstatísticas do novo df_completo:")
+        logging.info(f"Total de registros: {len(df_completo)}")
+        logging.info(f"Número de lojas únicas: {df_completo['Store'].nunique()}")
+        logging.info(f"Período: de {df_completo['Date'].min().strftime('%d/%m/%Y')} até {df_completo['Date'].max().strftime('%d/%m/%Y')}")
+
+        # Verificando número de registros por loja
+        registros_por_loja = df_completo['Store'].value_counts().sort_index()
+        logging.info("\nDistribuição de registros por loja (primeiras 5 lojas):")
+        logging.info(registros_por_loja.head())
+
+        # Verificando lojas com menos registros que o solicitado
+        lojas_com_menos_registros = registros_por_loja[registros_por_loja < N_AMOSTRAS]
+        if not lojas_com_menos_registros.empty:
+            logging.info(f"\nLojas com menos registros que os {N_AMOSTRAS} solicitados:")
+            logging.info(f"Total de lojas com menos registros: {len(lojas_com_menos_registros)}")
+            logging.info(f"Média de registros nestas lojas: {lojas_com_menos_registros.mean():.2f}")
+            
+        return True
+    
+    except Exception as e:
+        logging.error(f"Erro ao processar e gerar o dataset completo: {str(e)}")
+        return False
+
+if __name__ == "__main__":
+    # Processar os datasets
+    sucesso = processar_datasets()
+    
+    if sucesso:
+        logging.info("Processamento concluído com sucesso!")
+    else:
+        logging.error("Processamento falhou. Verifique os logs para mais detalhes.") 

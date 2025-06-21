@@ -43,11 +43,31 @@ aplicativo = dash.Dash(
 servidor = aplicativo.server
 aplicativo.title = "Rossmann Sales Dashboard"
 
-# Carregar os dados uma vez
-dados = carregar_dados()
+# Carregar os dados usando o novo sistema centralizado
+# Você pode escolher entre o modo 'amostra' ou 'data' aqui
+# Para desenvolvimento e testes rápidos, use o modo 'amostra' com um número baixo de amostras
+# Para análises mais completas, use o modo 'data' com um intervalo de datas específico
+modo_carregamento = os.environ.get('MODO_CARREGAMENTO', 'amostra')
+n_amostras = int(os.environ.get('N_AMOSTRAS', '40'))
+data_inicio = os.environ.get('DATA_INICIO', None)
+data_fim = os.environ.get('DATA_FIM', None)
+force_reprocess = os.environ.get('FORCE_REPROCESS', 'False').lower() == 'true'
+
+print(f"Carregando dados no modo '{modo_carregamento}'...")
+print(f"  - Amostras por loja: {n_amostras if modo_carregamento == 'amostra' else 'N/A'}")
+print(f"  - Intervalo de datas: {data_inicio} a {data_fim if data_fim else 'hoje'}" if modo_carregamento == 'data' else "")
+print(f"  - Forçar reprocessamento: {force_reprocess}")
+
+dados = carregar_dados(
+    modo=modo_carregamento,
+    n_amostras=n_amostras,
+    data_inicio=data_inicio,
+    data_fim=data_fim,
+    force_reprocess=force_reprocess
+)
 
 # Converter o DataFrame principal para JSON para armazenar no dcc.Store
-df_principal_json = dados["df_principal"].to_json(date_format='iso', orient='split')
+df_principal_json = dados.get("df_principal_json", "{}")
 
 # ==============================================================================
 # Layout do Aplicativo

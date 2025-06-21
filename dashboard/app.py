@@ -48,7 +48,7 @@ aplicativo.title = "Rossmann Sales Dashboard"
 # Para desenvolvimento e testes rápidos, use o modo 'amostra' com um número baixo de amostras
 # Para análises mais completas, use o modo 'data' com um intervalo de datas específico
 modo_carregamento = os.environ.get('MODO_CARREGAMENTO', 'amostra')
-n_amostras = int(os.environ.get('N_AMOSTRAS', '40'))
+n_amostras = int(os.environ.get('N_AMOSTRAS', '400'))
 data_inicio = os.environ.get('DATA_INICIO', None)
 data_fim = os.environ.get('DATA_FIM', None)
 force_reprocess = os.environ.get('FORCE_REPROCESS', 'False').lower() == 'true'

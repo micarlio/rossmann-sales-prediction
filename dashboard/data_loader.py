@@ -33,7 +33,7 @@ CAMINHO_ARQUIVO_PROCESSADO = DIRETORIO_DADOS / "processados" / "df_completo_proc
 CAMINHO_ARQUIVO_REDUZIDO = DIRETORIO_DADOS / "processados" / "df_completo_reduzido.pkl.gz"
 
 # Número padrão de amostras por loja
-N_AMOSTRAS_PADRAO = 40
+N_AMOSTRAS_PADRAO = 400
 
 
 def verificar_diretorios():
@@ -189,14 +189,22 @@ def processar_dados_brutos(force_reprocess=False):
         logging.info(f"Filtradas apenas lojas abertas: {len(df_vendas_filtrado)} de {len(df_vendas)} registros")
         
         # Tratamento de valores ausentes em df_lojas
-        df_lojas['PromoInterval'] = df_lojas['PromoInterval'].fillna("Nenhum") 
+        # Primeiro, converter coluna categórica para string para evitar erro de categoria
+        if 'PromoInterval' in df_lojas.columns:
+            # Se a coluna for categórica, primeiro a convertemos para string
+            if str(df_lojas['PromoInterval'].dtype).startswith('category'):
+                df_lojas['PromoInterval'] = df_lojas['PromoInterval'].astype(str)
+            
+            df_lojas['PromoInterval'] = df_lojas['PromoInterval'].fillna("Nenhum") 
 
         colunas_preencher_zero = ['CompetitionOpenSinceMonth', 'CompetitionOpenSinceYear', 'Promo2SinceWeek', 'Promo2SinceYear']
         for col in colunas_preencher_zero:
-            df_lojas[col] = df_lojas[col].fillna(0)
+            if col in df_lojas.columns:
+                df_lojas[col] = df_lojas[col].fillna(0)
 
         # CompetitionDistance: Preencher com a MÉDIA
-        df_lojas['CompetitionDistance'] = df_lojas['CompetitionDistance'].fillna(df_lojas['CompetitionDistance'].mean())
+        if 'CompetitionDistance' in df_lojas.columns:
+            df_lojas['CompetitionDistance'] = df_lojas['CompetitionDistance'].fillna(df_lojas['CompetitionDistance'].mean())
         
         # Merge dos dataframes
         logging.info("Realizando merge dos dataframes...")
@@ -244,6 +252,10 @@ def amostrar_por_loja(df, n_amostras=N_AMOSTRAS_PADRAO, random_state=42):
     Returns:
         pd.DataFrame: DataFrame com amostras selecionadas
     """
+    if df is None:
+        logging.error("DataFrame é None, não é possível amostrar")
+        return pd.DataFrame()
+        
     if 'Store' not in df.columns:
         logging.error("Coluna 'Store' não encontrada no DataFrame")
         return df
@@ -295,6 +307,10 @@ def filtrar_por_data(df, data_inicio=None, data_fim=None):
     Returns:
         pd.DataFrame: DataFrame filtrado
     """
+    if df is None:
+        logging.error("DataFrame é None, não é possível filtrar por data")
+        return pd.DataFrame()
+        
     if 'Date' not in df.columns:
         logging.error("Coluna 'Date' não encontrada no DataFrame")
         return df
@@ -352,9 +368,25 @@ def carregar_dados(
     
     # Carrega/processa o DataFrame completo
     df_completo = processar_dados_brutos(force_reprocess)
+    
+    # Se não conseguiu processar os dados, retorna um dicionário com dados vazios
+    # mas que ainda tem todas as chaves necessárias para não quebrar o dashboard
     if df_completo is None:
-        logging.error("Não foi possível carregar ou processar os dados")
-        return {}
+        logging.error("Não foi possível carregar ou processar os dados. Retornando dados vazios.")
+        return {
+        "df_principal": pd.DataFrame(),
+        "df_vendas_original": pd.DataFrame(),
+        "df_lojas_original": pd.DataFrame(),
+        "distancia_max_global": 0,
+        "contagem_vendas_antes": 0,
+        "media_vendas_antes": 0,
+        "contagem_vendas_depois": 0,
+        "media_vendas_depois": 0,
+        "df_vendas_antes_preprocessamento": pd.DataFrame(),
+        "df_vendas_depois_preprocessamento": pd.DataFrame(),
+            "df_lojas_tratado": pd.DataFrame(),
+            "df_principal_json": "{}"
+        }
     
     # Métricas sobre o dataset completo
     contagem_registros_original = len(df_completo)
@@ -417,5 +449,5 @@ def carregar_dados(
     
     logging.info(f"Carregamento de dados concluído no modo '{modo}'")
     logging.info(f"Registros no DataFrame reduzido: {contagem_registros_reduzido}")
-    
+
     return dados

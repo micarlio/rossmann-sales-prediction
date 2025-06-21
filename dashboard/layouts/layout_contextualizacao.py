@@ -15,13 +15,23 @@ def criar_layout_contextualizacao(dados):
     df_principal = dados['df_principal']
     df_vendas_original = dados['df_vendas_original']
     df_caracteristicas_original = dados['df_lojas_original']
-    todas_colunas = sorted(df_principal.columns.tolist())
+    todas_colunas = []
     
-    # Calcula algumas estatísticas básicas
-    periodo_inicio = df_principal['Date'].min().strftime('%d/%m/%Y')
-    periodo_fim = df_principal['Date'].max().strftime('%d/%m/%Y')
-    total_lojas = df_principal['Store'].nunique()
-    total_registros = len(df_principal)
+    # Verifica se os DataFrames não estão vazios
+    if not df_principal.empty:
+        todas_colunas = sorted(df_principal.columns.tolist())
+    
+    # Calcula algumas estatísticas básicas com verificações
+    if not df_principal.empty and 'Date' in df_principal.columns and len(df_principal['Date']) > 0:
+        periodo_inicio = df_principal['Date'].min().strftime('%d/%m/%Y')
+        periodo_fim = df_principal['Date'].max().strftime('%d/%m/%Y')
+        total_lojas = df_principal['Store'].nunique()
+        total_registros = len(df_principal)
+    else:
+        periodo_inicio = 'N/A'
+        periodo_fim = 'N/A'
+        total_lojas = 0
+        total_registros = 0
     
     # Estilos base
     estilo_card_principal = {
@@ -782,7 +792,7 @@ def criar_layout_contextualizacao(dados):
                                             
                                             html.Div([
                                                 html.Span("Período", className="fw-bold"),
-                                                html.Span(f"{df_vendas_original['Date'].min()} - {df_vendas_original['Date'].max()}", className="ms-auto")
+                                                html.Span(f"{df_vendas_original['Date'].min().strftime('%Y-%m-%d')} - {df_vendas_original['Date'].max().strftime('%Y-%m-%d')}", className="ms-auto")
                                             ], style={'display': 'flex', 'justifyContent': 'space-between'})
                                         ], style={
                                             'backgroundColor': FUNDO_CINZA_CLARO,
@@ -797,23 +807,53 @@ def criar_layout_contextualizacao(dados):
                                             html.H5("Amostra de Dados", className="mb-3"),
                                             
                                             html.Div(
-                                                dbc.Table.from_dataframe(
-                                                    df_vendas_original.head(5),
-                                                    striped=True,
-                                                    bordered=True,
-                                                    hover=True,
-                                                    responsive=True,
-                                                    className="mb-0",
-                                                    style={
-                                                        'fontSize': '0.85rem',
-                                                        'whiteSpace': 'nowrap'
-                                                    }
-                                                ),
                                                 style={
-                                                    'boxShadow': '0 2px 5px rgba(0,0,0,0.05)',
+                                                    'width': '100%',
+                                                    'overflowX': 'auto',
                                                     'borderRadius': '8px',
-                                                    'overflowX': 'auto'
-                                                }
+                                                    'boxShadow': '0 2px 5px rgba(0,0,0,0.05)',
+                                                    'backgroundColor': 'white',
+                                                },
+                                                children=[
+                                                    html.Table(
+                                                        # Header
+                                                        [html.Thead(html.Tr([
+                                                            html.Th(col, style={
+                                                                'backgroundColor': '#f8f9fa',
+                                                                'color': '#495057',
+                                                                'fontWeight': '600',
+                                                                'padding': '12px 15px',
+                                                                'borderBottom': '2px solid #dee2e6',
+                                                                'textAlign': 'left',
+                                                                'whiteSpace': 'nowrap'
+                                                            }) for col in df_vendas_original.columns
+                                                        ]))] +
+                                                        # Corpo da tabela
+                                                        [html.Tbody([
+                                                            html.Tr([
+                                                                html.Td(
+                                                                    # Formata data sem hora se a coluna for 'Date'
+                                                                    df_vendas_original.iloc[i][col].strftime('%Y-%m-%d') if col == 'Date' and hasattr(df_vendas_original.iloc[i][col], 'strftime') else 
+                                                                    df_vendas_original.iloc[i][col],
+                                                                    style={
+                                                                        'padding': '10px 15px',
+                                                                        'borderBottom': '1px solid #dee2e6',
+                                                                        'whiteSpace': 'nowrap'
+                                                                    }
+                                                                ) for col in df_vendas_original.columns
+                                                            ], style={
+                                                                'backgroundColor': 'white' if i % 2 == 0 else '#f8f9fa'
+                                                            }) for i in range(min(5, len(df_vendas_original)))
+                                                        ])],
+                                                        style={
+                                                            'borderCollapse': 'collapse',
+                                                            'width': '100%',
+                                                            'fontSize': '0.9rem',
+                                                            'fontFamily': 'Arial, sans-serif'
+                                                        },
+                                                        className="table"
+                                                    )
+                                                ]
                                             )
                                         ])
                                     ], md=8)
@@ -872,23 +912,51 @@ def criar_layout_contextualizacao(dados):
                                             html.H5("Amostra de Dados", className="mb-3"),
                                             
                                             html.Div(
-                                                dbc.Table.from_dataframe(
-                                                    df_caracteristicas_original.head(5),
-                                                    striped=True,
-                                                    bordered=True,
-                                                    hover=True,
-                                                    responsive=True,
-                                                    className="mb-0",
-                                                    style={
-                                                        'fontSize': '0.85rem',
-                                                        'whiteSpace': 'nowrap'
-                                                    }
-                                                ),
                                                 style={
-                                                    'boxShadow': '0 2px 5px rgba(0,0,0,0.05)',
+                                                    'width': '100%',
+                                                    'overflowX': 'auto',
                                                     'borderRadius': '8px',
-                                                    'overflowX': 'auto'
-                                                }
+                                                    'boxShadow': '0 2px 5px rgba(0,0,0,0.05)',
+                                                    'backgroundColor': 'white',
+                                                },
+                                                children=[
+                                                    html.Table(
+                                                        # Header
+                                                        [html.Thead(html.Tr([
+                                                            html.Th(col, style={
+                                                                'backgroundColor': '#f8f9fa',
+                                                                'color': '#495057',
+                                                                'fontWeight': '600',
+                                                                'padding': '12px 15px',
+                                                                'borderBottom': '2px solid #dee2e6',
+                                                                'textAlign': 'left',
+                                                                'whiteSpace': 'nowrap'
+                                                            }) for col in df_caracteristicas_original.columns
+                                                        ]))] +
+                                                        # Corpo da tabela
+                                                        [html.Tbody([
+                                                            html.Tr([
+                                                                html.Td(
+                                                                    df_caracteristicas_original.iloc[i][col],
+                                                                    style={
+                                                                        'padding': '10px 15px',
+                                                                        'borderBottom': '1px solid #dee2e6',
+                                                                        'whiteSpace': 'nowrap'
+                                                                    }
+                                                                ) for col in df_caracteristicas_original.columns
+                                                            ], style={
+                                                                'backgroundColor': 'white' if i % 2 == 0 else '#f8f9fa'
+                                                            }) for i in range(min(5, len(df_caracteristicas_original)))
+                                                        ])],
+                                                        style={
+                                                            'borderCollapse': 'collapse',
+                                                            'width': '100%',
+                                                            'fontSize': '0.9rem',
+                                                            'fontFamily': 'Arial, sans-serif'
+                                                        },
+                                                        className="table"
+                                                    )
+                                                ]
                                             )
                                         ])
                                     ], md=8)

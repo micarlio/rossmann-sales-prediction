@@ -1,6 +1,6 @@
 [build]
-  command = "pip install -r requirements.txt"
-  publish = "build" # Ou o diretório onde seus arquivos estáticos, se houver, seriam publicados
+  command = "mkdir -p build && pip install -r requirements.txt"
+  publish = "build" # Continua apontando para 'build'
 
 [functions]
   # Esta seção 'functions' pode estar vazia ou conter outras configurações

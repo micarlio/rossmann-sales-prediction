@@ -152,7 +152,7 @@ registrar_callbacks(aplicativo, dados)
 # ==============================================================================
 if __name__ == '__main__':
     # Definir o host como 0.0.0.0 para permitir acesso externo
-    aplicativo.run(host='0.0.0.0', port=port, debug=False)
+    aplicativo.run(host='localhost', port=8050, debug=False)
 
 # Exportar o servidor para o gunicorn
 server = aplicativo.server

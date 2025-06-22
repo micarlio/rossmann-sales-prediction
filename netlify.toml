@@ -3,7 +3,8 @@
   publish = "build" # Ou o diretório onde seus arquivos estáticos, se houver, seriam publicados
 
 [functions]
-  python_version = "3.12" # Certifique-se de que corresponde ao seu runtime.txt
+  # Esta seção 'functions' pode estar vazia ou conter outras configurações
+  # MAS NÃO o 'python_version = "3.12"' diretamente aqui.
 
 [[redirects]]
   from = "/*"

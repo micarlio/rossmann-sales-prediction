@@ -28,6 +28,9 @@ from dashboard.callbacks import registrar_callbacks
 # ==============================================================================
 # Inicialização do Aplicativo
 # ==============================================================================
+# Configuração da porta
+port = int(os.environ.get('PORT', 10000))
+
 aplicativo = dash.Dash(
     __name__,
     external_stylesheets=[
@@ -44,7 +47,9 @@ aplicativo = dash.Dash(
     title='Dashboard Rossmann',
     update_title='Atualizando...'
 )
-servidor = aplicativo.server
+
+# Configuração do servidor
+server = aplicativo.server
 aplicativo.title = "Rossmann Sales Dashboard"
 
 # Configuração do cache
@@ -146,9 +151,6 @@ registrar_callbacks(aplicativo, dados)
 # Execução do Aplicativo
 # ==============================================================================
 if __name__ == '__main__':
-    # Obter a porta do ambiente (para Heroku/Render) ou usar 8050 como padrão
-    port = int(os.environ.get('PORT', 8050))
-    
     # Definir o host como 0.0.0.0 para permitir acesso externo
     aplicativo.run(host='0.0.0.0', port=port, debug=False)
 

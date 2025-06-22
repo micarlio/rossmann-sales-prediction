@@ -150,4 +150,7 @@ if __name__ == '__main__':
     port = int(os.environ.get('PORT', 8050))
     
     # Definir o host como 0.0.0.0 para permitir acesso externo
-    aplicativo.run(host='localhost', port=8050, debug=False)
+    aplicativo.run(host='0.0.0.0', port=port, debug=False)
+
+# Exportar o servidor para o gunicorn
+server = aplicativo.server

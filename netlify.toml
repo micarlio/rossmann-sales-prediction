@@ -1,0 +1,11 @@
+[build]
+  command = "pip install -r requirements.txt"
+  publish = "build" # Ou o diretório onde seus arquivos estáticos, se houver, seriam publicados
+
+[functions]
+  python_version = "3.12" # Certifique-se de que corresponde ao seu runtime.txt
+
+[[redirects]]
+  from = "/*"
+  to = "/.netlify/functions/app" # Onde 'app' é o nome do seu arquivo principal (ex: app.py) sem a extensão
+  status = 200

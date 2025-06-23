@@ -10156,3 +10156,1157 @@ Traceback (most recent call last):
     raise KeyError(name)
 KeyError: 'a'
 2025-06-23 00:24:41,849 - INFO - 127.0.0.1 - - [23/Jun/2025 00:24:41] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2025-06-23 14:13:18,306 - INFO - Diretório criado: /Users/micarloteixeira/Desktop/teste-1/dataset/reduzidos
+2025-06-23 14:13:18,307 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 14:13:18,436 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 14:13:18,438 - INFO - Amostrando 50 registros por loja...
+2025-06-23 14:13:18,449 - INFO - Total de lojas: 1115
+2025-06-23 14:13:18,921 - INFO - Amostragem concluída em 0.48 segundos
+2025-06-23 14:13:18,921 - INFO - Total de registros após amostragem: 55750
+2025-06-23 14:13:19,021 - INFO - Carregamento de dados concluído no modo 'amostra'
+2025-06-23 14:13:19,022 - INFO - Registros no DataFrame reduzido: 55750
+2025-06-23 14:13:19,030 - INFO - Carregando dados brutos em Parquet...
+2025-06-23 14:13:19,313 - INFO - Otimização de memória para df_vendas:
+2025-06-23 14:13:19,313 - INFO -   - Antes: 110.59 MB
+2025-06-23 14:13:19,313 - INFO -   - Depois: 18.43 MB
+2025-06-23 14:13:19,313 - INFO -   - Redução: 83.33%
+2025-06-23 14:13:19,313 - INFO -   - Tempo: 0.18 segundos
+2025-06-23 14:13:19,315 - INFO - Otimização de memória para df_lojas:
+2025-06-23 14:13:19,315 - INFO -   - Antes: 0.21 MB
+2025-06-23 14:13:19,315 - INFO -   - Depois: 0.03 MB
+2025-06-23 14:13:19,315 - INFO -   - Redução: 86.57%
+2025-06-23 14:13:19,315 - INFO -   - Tempo: 0.00 segundos
+2025-06-23 14:13:19,315 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-23 14:13:19,496 - INFO - Otimização de memória para df_lojas_bruto_dashboard:
+2025-06-23 14:13:19,496 - INFO -   - Antes: 0.21 MB
+2025-06-23 14:13:19,496 - INFO -   - Depois: 0.03 MB
+2025-06-23 14:13:19,496 - INFO -   - Redução: 86.57%
+2025-06-23 14:13:19,496 - INFO -   - Tempo: 0.00 segundos
+2025-06-23 14:13:19,545 - INFO - Dash is running on http://localhost:8050/
+
+2025-06-23 14:13:19,550 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:8050
+2025-06-23 14:13:19,550 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-23 14:13:33,167 - INFO - 127.0.0.1 - - [23/Jun/2025 14:13:33] "GET /dashboard HTTP/1.1" 200 -
+2025-06-23 14:13:33,258 - INFO - 127.0.0.1 - - [23/Jun/2025 14:13:33] "GET /assets/css/estilos_barra_lateral.css?m=1750697690.947188 HTTP/1.1" 200 -
+2025-06-23 14:13:33,260 - INFO - 127.0.0.1 - - [23/Jun/2025 14:13:33] "GET /assets/css/estilos_customizados.css?m=1750697690.9472873 HTTP/1.1" 200 -
+2025-06-23 14:13:33,260 - INFO - 127.0.0.1 - - [23/Jun/2025 14:13:33] "GET /assets/css/estilos_customizados.css HTTP/1.1" 200 -
+2025-06-23 14:13:33,261 - INFO - 127.0.0.1 - - [23/Jun/2025 14:13:33] "GET /assets/css/estilos_barra_lateral.css HTTP/1.1" 200 -
+2025-06-23 14:13:33,407 - INFO - 127.0.0.1 - - [23/Jun/2025 14:13:33] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-06-23 14:13:33,477 - INFO - 127.0.0.1 - - [23/Jun/2025 14:13:33] "GET /_dash-layout HTTP/1.1" 200 -
+2025-06-23 14:13:33,548 - INFO - 127.0.0.1 - - [23/Jun/2025 14:13:33] "GET /assets/images/rossmann_logo2.png HTTP/1.1" 200 -
+2025-06-23 14:13:33,551 - INFO - 127.0.0.1 - - [23/Jun/2025 14:13:33] "GET /assets/images/rossmann_logo_colorida.png HTTP/1.1" 200 -
+2025-06-23 14:13:33,562 - INFO - 127.0.0.1 - - [23/Jun/2025 14:13:33] "[36mGET /_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+2025-06-23 14:13:33,580 - INFO - 127.0.0.1 - - [23/Jun/2025 14:13:33] "[36mGET /_dash-component-suites/dash/dcc/async-markdown.js HTTP/1.1[0m" 304 -
+2025-06-23 14:13:33,581 - INFO - 127.0.0.1 - - [23/Jun/2025 14:13:33] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2025-06-23 14:13:33,583 - INFO - 127.0.0.1 - - [23/Jun/2025 14:13:33] "[36mGET /_dash-component-suites/dash/dcc/async-datepicker.js HTTP/1.1[0m" 304 -
+2025-06-23 14:13:33,599 - INFO - 127.0.0.1 - - [23/Jun/2025 14:13:33] "[36mGET /_dash-component-suites/dash/dcc/async-slider.js HTTP/1.1[0m" 304 -
+2025-06-23 14:13:33,604 - INFO - 127.0.0.1 - - [23/Jun/2025 14:13:33] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2025-06-23 14:13:33,634 - INFO - 127.0.0.1 - - [23/Jun/2025 14:13:33] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:13:33,637 - INFO - 127.0.0.1 - - [23/Jun/2025 14:13:33] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:13:33,638 - INFO - 127.0.0.1 - - [23/Jun/2025 14:13:33] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:13:33,639 - INFO - 127.0.0.1 - - [23/Jun/2025 14:13:33] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:13:33,640 - INFO - 127.0.0.1 - - [23/Jun/2025 14:13:33] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:13:33,643 - INFO - Carregando dados brutos em Parquet...
+2025-06-23 14:13:34,060 - INFO - 127.0.0.1 - - [23/Jun/2025 14:13:34] "[36mGET /_dash-component-suites/dash/dcc/async-highlight.js HTTP/1.1[0m" 304 -
+2025-06-23 14:13:34,166 - INFO - Otimização de memória para df_vendas:
+2025-06-23 14:13:34,166 - INFO -   - Antes: 110.59 MB
+2025-06-23 14:13:34,166 - INFO -   - Depois: 18.43 MB
+2025-06-23 14:13:34,166 - INFO -   - Redução: 83.33%
+2025-06-23 14:13:34,166 - INFO -   - Tempo: 0.38 segundos
+2025-06-23 14:13:34,168 - INFO - Otimização de memória para df_lojas:
+2025-06-23 14:13:34,168 - INFO -   - Antes: 0.21 MB
+2025-06-23 14:13:34,168 - INFO -   - Depois: 0.03 MB
+2025-06-23 14:13:34,168 - INFO -   - Redução: 86.57%
+2025-06-23 14:13:34,168 - INFO -   - Tempo: 0.00 segundos
+2025-06-23 14:13:34,168 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-23 14:13:34,277 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 14:13:34,315 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 14:13:34,315 - INFO - Amostrando 50 registros por loja...
+2025-06-23 14:13:34,318 - INFO - Total de lojas: 1115
+2025-06-23 14:13:34,598 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 14:13:34,598 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 14:13:34,601 - INFO - 127.0.0.1 - - [23/Jun/2025 14:13:34] "GET /assets/images/rossmann_logo1.png HTTP/1.1" 200 -
+2025-06-23 14:13:34,608 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 14:13:34,611 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 14:13:34,613 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 14:13:34,795 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 14:13:34,796 - INFO - Amostrando 50 registros por loja...
+2025-06-23 14:13:34,808 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 14:13:34,808 - INFO - Amostrando 50 registros por loja...
+2025-06-23 14:13:34,821 - INFO - Total de lojas: 1115
+2025-06-23 14:13:34,833 - INFO - Total de lojas: 1115
+2025-06-23 14:13:34,875 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 14:13:34,875 - INFO - Amostrando 50 registros por loja...
+2025-06-23 14:13:34,881 - INFO - Total de lojas: 1115
+2025-06-23 14:13:34,885 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 14:13:34,886 - INFO - Amostrando 50 registros por loja...
+2025-06-23 14:13:34,894 - INFO - Total de lojas: 1115
+2025-06-23 14:13:34,901 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 14:13:34,904 - INFO - Amostrando 50 registros por loja...
+2025-06-23 14:13:34,915 - INFO - Total de lojas: 1115
+2025-06-23 14:13:38,427 - INFO - Amostragem concluída em 4.11 segundos
+2025-06-23 14:13:38,428 - INFO - Total de registros após amostragem: 55750
+2025-06-23 14:13:38,449 - INFO - 127.0.0.1 - - [23/Jun/2025 14:13:38] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:13:38,461 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 14:13:38,550 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 14:13:38,551 - INFO - Amostrando 50 registros por loja...
+2025-06-23 14:13:38,554 - INFO - Total de lojas: 1115
+2025-06-23 14:13:38,569 - INFO - Amostragem concluída em 3.66 segundos
+2025-06-23 14:13:38,575 - INFO - Total de registros após amostragem: 55750
+2025-06-23 14:13:38,586 - INFO - Carregando dados brutos em Parquet...
+2025-06-23 14:13:38,907 - INFO - Amostragem concluída em 4.02 segundos
+2025-06-23 14:13:38,907 - INFO - Total de registros após amostragem: 55750
+2025-06-23 14:13:38,922 - INFO - Carregando dados brutos em Parquet...
+2025-06-23 14:13:38,944 - INFO - Amostragem concluída em 4.15 segundos
+2025-06-23 14:13:38,959 - INFO - Total de registros após amostragem: 55750
+2025-06-23 14:13:39,035 - INFO - Otimização de memória para df_vendas:
+2025-06-23 14:13:39,035 - INFO -   - Antes: 110.59 MB
+2025-06-23 14:13:39,036 - INFO -   - Depois: 18.43 MB
+2025-06-23 14:13:39,036 - INFO -   - Redução: 83.33%
+2025-06-23 14:13:39,036 - INFO -   - Tempo: 0.28 segundos
+2025-06-23 14:13:39,059 - INFO - Otimização de memória para df_lojas:
+2025-06-23 14:13:39,059 - INFO -   - Antes: 0.21 MB
+2025-06-23 14:13:39,059 - INFO -   - Depois: 0.03 MB
+2025-06-23 14:13:39,059 - INFO -   - Redução: 86.57%
+2025-06-23 14:13:39,060 - INFO -   - Tempo: 0.02 segundos
+2025-06-23 14:13:39,060 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-23 14:13:39,079 - INFO - Amostragem concluída em 4.20 segundos
+2025-06-23 14:13:39,080 - INFO - Total de registros após amostragem: 55750
+2025-06-23 14:13:39,092 - INFO - Carregando dados brutos em Parquet...
+2025-06-23 14:13:39,252 - INFO - Amostragem concluída em 4.44 segundos
+2025-06-23 14:13:39,256 - INFO - Total de registros após amostragem: 55750
+2025-06-23 14:13:39,280 - INFO - 127.0.0.1 - - [23/Jun/2025 14:13:39] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:13:39,428 - INFO - 127.0.0.1 - - [23/Jun/2025 14:13:39] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:13:39,430 - INFO - Otimização de memória para df_vendas:
+2025-06-23 14:13:39,430 - INFO -   - Antes: 110.59 MB
+2025-06-23 14:13:39,431 - INFO -   - Depois: 18.43 MB
+2025-06-23 14:13:39,580 - INFO -   - Redução: 83.33%
+2025-06-23 14:13:39,580 - INFO -   - Tempo: 0.33 segundos
+2025-06-23 14:13:39,586 - INFO - Otimização de memória para df_lojas:
+2025-06-23 14:13:39,586 - INFO -   - Antes: 0.21 MB
+2025-06-23 14:13:39,586 - INFO -   - Depois: 0.03 MB
+2025-06-23 14:13:39,586 - INFO -   - Redução: 86.57%
+2025-06-23 14:13:39,586 - INFO -   - Tempo: 0.00 segundos
+2025-06-23 14:13:39,586 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-23 14:13:39,597 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 14:13:39,686 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 14:13:39,687 - INFO - Otimização de memória para df_vendas:
+2025-06-23 14:13:39,690 - INFO -   - Antes: 110.59 MB
+2025-06-23 14:13:39,692 - INFO -   - Depois: 18.43 MB
+2025-06-23 14:13:39,694 - INFO -   - Redução: 83.33%
+2025-06-23 14:13:39,694 - INFO -   - Tempo: 0.25 segundos
+2025-06-23 14:13:39,700 - INFO - Otimização de memória para df_lojas:
+2025-06-23 14:13:39,701 - INFO -   - Antes: 0.21 MB
+2025-06-23 14:13:39,701 - INFO -   - Depois: 0.03 MB
+2025-06-23 14:13:39,702 - INFO -   - Redução: 86.57%
+2025-06-23 14:13:39,702 - INFO -   - Tempo: 0.01 segundos
+2025-06-23 14:13:39,703 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-23 14:13:39,732 - INFO - 127.0.0.1 - - [23/Jun/2025 14:13:39] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:13:39,749 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 14:13:39,789 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 14:13:39,896 - INFO - 127.0.0.1 - - [23/Jun/2025 14:13:39] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:13:39,957 - INFO - 127.0.0.1 - - [23/Jun/2025 14:13:39] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:13:39,963 - INFO - 127.0.0.1 - - [23/Jun/2025 14:13:39] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-23 14:13:39,967 - INFO - 127.0.0.1 - - [23/Jun/2025 14:13:39] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-23 14:13:39,996 - INFO - 127.0.0.1 - - [23/Jun/2025 14:13:39] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:13:39,997 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 14:13:40,028 - INFO - 127.0.0.1 - - [23/Jun/2025 14:13:40] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:13:40,099 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 14:13:40,489 - INFO - 127.0.0.1 - - [23/Jun/2025 14:13:40] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:13:40,586 - INFO - 127.0.0.1 - - [23/Jun/2025 14:13:40] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-23 14:13:40,588 - INFO - 127.0.0.1 - - [23/Jun/2025 14:13:40] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-23 14:13:40,590 - INFO - 127.0.0.1 - - [23/Jun/2025 14:13:40] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-23 14:13:40,592 - INFO - 127.0.0.1 - - [23/Jun/2025 14:13:40] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-23 14:13:40,604 - INFO - 127.0.0.1 - - [23/Jun/2025 14:13:40] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:13:40,782 - INFO - 127.0.0.1 - - [23/Jun/2025 14:13:40] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:13:41,151 - INFO - Amostragem concluída em 2.60 segundos
+2025-06-23 14:13:41,152 - INFO - Total de registros após amostragem: 55750
+2025-06-23 14:13:41,170 - INFO - Carregando dados brutos em Parquet...
+2025-06-23 14:13:41,546 - INFO - 127.0.0.1 - - [23/Jun/2025 14:13:41] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-23 14:13:41,668 - INFO - Otimização de memória para df_vendas:
+2025-06-23 14:13:41,668 - INFO -   - Antes: 110.59 MB
+2025-06-23 14:13:41,668 - INFO -   - Depois: 18.43 MB
+2025-06-23 14:13:41,668 - INFO -   - Redução: 83.33%
+2025-06-23 14:13:41,668 - INFO -   - Tempo: 0.34 segundos
+2025-06-23 14:13:41,672 - INFO - Otimização de memória para df_lojas:
+2025-06-23 14:13:41,672 - INFO -   - Antes: 0.21 MB
+2025-06-23 14:13:41,672 - INFO -   - Depois: 0.03 MB
+2025-06-23 14:13:41,672 - INFO -   - Redução: 86.57%
+2025-06-23 14:13:41,672 - INFO -   - Tempo: 0.00 segundos
+2025-06-23 14:13:41,672 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-23 14:13:41,799 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 14:13:41,866 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 14:13:41,957 - INFO - 127.0.0.1 - - [23/Jun/2025 14:13:41] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:16:15,910 - INFO - 127.0.0.1 - - [23/Jun/2025 14:16:15] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:16:15,934 - INFO - 127.0.0.1 - - [23/Jun/2025 14:16:15] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:16:15,962 - INFO - 127.0.0.1 - - [23/Jun/2025 14:16:15] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:16:16,046 - ERROR - Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/dash/dash.py", line 1310, in dispatch
+    ctx.run(
+  File "/opt/anaconda3/lib/python3.12/site-packages/dash/_callback.py", line 442, in add_context
+    output_value = func(*func_args, **func_kwargs)  # %% callback invoked %%
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/micarloteixeira/Desktop/teste-1/dashboard/callbacks/callbacks_dashboard_geral.py", line 518, in atualizar_pagina_dashboard
+    fig_impacto_distancia_concorrencia, analise_impacto_distancia_concorrencia_text = obter_grafico_impacto_distancia_concorrencia(df_filtrado, metrica_temporal, rotulo_eixo_y, titulo_eixo_y)
+                                                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/micarloteixeira/Desktop/teste-1/dashboard/callbacks/callbacks_dashboard_geral.py", line 183, in obter_grafico_impacto_distancia_concorrencia
+    fig = px.scatter(
+          ^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/plotly/express/_chart_types.py", line 66, in scatter
+    return make_figure(args=locals(), constructor=go.Scatter)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/plotly/express/_core.py", line 2089, in make_figure
+    groups, orders = get_groups_and_orders(args, grouper)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/plotly/express/_core.py", line 2065, in get_groups_and_orders
+    sf: grouped.get_group(s if len(s) > 1 else s[0])
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/pandas/core/groupby/groupby.py", line 1063, in get_group
+    raise KeyError(name)
+KeyError: 'd'
+2025-06-23 14:16:16,060 - INFO - 127.0.0.1 - - [23/Jun/2025 14:16:16] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2025-06-23 14:25:47,521 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:47] "GET /dashboard HTTP/1.1" 200 -
+2025-06-23 14:25:47,614 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:47] "[36mGET /assets/css/estilos_barra_lateral.css HTTP/1.1[0m" 304 -
+2025-06-23 14:25:47,615 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:47] "[36mGET /assets/css/estilos_customizados.css?m=1750697690.9472873 HTTP/1.1[0m" 304 -
+2025-06-23 14:25:47,615 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:47] "[36mGET /assets/css/estilos_customizados.css HTTP/1.1[0m" 304 -
+2025-06-23 14:25:47,616 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:47] "[36mGET /assets/css/estilos_barra_lateral.css?m=1750697690.947188 HTTP/1.1[0m" 304 -
+2025-06-23 14:25:47,741 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:47] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-06-23 14:25:47,812 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:47] "GET /_dash-layout HTTP/1.1" 200 -
+2025-06-23 14:25:47,848 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:47] "[36mGET /assets/images/rossmann_logo2.png HTTP/1.1[0m" 304 -
+2025-06-23 14:25:47,852 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:47] "[36mGET /assets/images/rossmann_logo_colorida.png HTTP/1.1[0m" 304 -
+2025-06-23 14:25:47,865 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:47] "[36mGET /_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+2025-06-23 14:25:47,877 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:47] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2025-06-23 14:25:47,879 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:47] "[36mGET /_dash-component-suites/dash/dcc/async-markdown.js HTTP/1.1[0m" 304 -
+2025-06-23 14:25:47,880 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:47] "[36mGET /_dash-component-suites/dash/dcc/async-datepicker.js HTTP/1.1[0m" 304 -
+2025-06-23 14:25:47,891 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:47] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2025-06-23 14:25:47,895 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:47] "[36mGET /_dash-component-suites/dash/dcc/async-slider.js HTTP/1.1[0m" 304 -
+2025-06-23 14:25:47,931 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:47] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:25:47,933 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:47] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:25:47,933 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:47] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:25:47,934 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:47] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:25:47,934 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:47] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:25:47,935 - INFO - Carregando dados brutos em Parquet...
+2025-06-23 14:25:48,393 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:48] "[36mGET /_dash-component-suites/dash/dcc/async-highlight.js HTTP/1.1[0m" 304 -
+2025-06-23 14:25:48,478 - INFO - Otimização de memória para df_vendas:
+2025-06-23 14:25:48,479 - INFO -   - Antes: 110.59 MB
+2025-06-23 14:25:48,479 - INFO -   - Depois: 18.43 MB
+2025-06-23 14:25:48,479 - INFO -   - Redução: 83.33%
+2025-06-23 14:25:48,479 - INFO -   - Tempo: 0.27 segundos
+2025-06-23 14:25:48,485 - INFO - Otimização de memória para df_lojas:
+2025-06-23 14:25:48,485 - INFO -   - Antes: 0.21 MB
+2025-06-23 14:25:48,485 - INFO -   - Depois: 0.03 MB
+2025-06-23 14:25:48,485 - INFO -   - Redução: 86.57%
+2025-06-23 14:25:48,485 - INFO -   - Tempo: 0.01 segundos
+2025-06-23 14:25:48,485 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-23 14:25:48,612 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 14:25:48,670 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 14:25:48,670 - INFO - Amostrando 50 registros por loja...
+2025-06-23 14:25:48,674 - INFO - Total de lojas: 1115
+2025-06-23 14:25:48,784 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:48] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:25:48,786 - INFO - Carregando dados brutos em Parquet...
+2025-06-23 14:25:48,789 - INFO - Carregando dados brutos em Parquet...
+2025-06-23 14:25:48,791 - INFO - Carregando dados brutos em Parquet...
+2025-06-23 14:25:48,792 - INFO - Carregando dados brutos em Parquet...
+2025-06-23 14:25:49,228 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:49] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:25:50,099 - INFO - Otimização de memória para df_vendas:
+2025-06-23 14:25:50,108 - INFO -   - Antes: 110.59 MB
+2025-06-23 14:25:50,109 - INFO -   - Depois: 18.43 MB
+2025-06-23 14:25:50,109 - INFO -   - Redução: 83.33%
+2025-06-23 14:25:50,109 - INFO -   - Tempo: 0.69 segundos
+2025-06-23 14:25:50,116 - INFO - Otimização de memória para df_vendas:
+2025-06-23 14:25:50,116 - INFO -   - Antes: 110.59 MB
+2025-06-23 14:25:50,116 - INFO -   - Depois: 18.43 MB
+2025-06-23 14:25:50,126 - INFO -   - Redução: 83.33%
+2025-06-23 14:25:50,128 - INFO -   - Tempo: 0.57 segundos
+2025-06-23 14:25:50,134 - INFO - Otimização de memória para df_lojas:
+2025-06-23 14:25:50,135 - INFO -   - Antes: 0.21 MB
+2025-06-23 14:25:50,139 - INFO -   - Depois: 0.03 MB
+2025-06-23 14:25:50,140 - INFO -   - Redução: 86.57%
+2025-06-23 14:25:50,142 - INFO - Otimização de memória para df_lojas:
+2025-06-23 14:25:50,143 - INFO - Otimização de memória para df_vendas:
+2025-06-23 14:25:50,143 - INFO -   - Tempo: 0.02 segundos
+2025-06-23 14:25:50,143 - INFO -   - Antes: 0.21 MB
+2025-06-23 14:25:50,143 - INFO -   - Antes: 110.59 MB
+2025-06-23 14:25:50,145 - INFO - Otimização de memória para df_vendas:
+2025-06-23 14:25:50,145 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-23 14:25:50,146 - INFO -   - Depois: 0.03 MB
+2025-06-23 14:25:50,146 - INFO -   - Depois: 18.43 MB
+2025-06-23 14:25:50,146 - INFO -   - Antes: 110.59 MB
+2025-06-23 14:25:50,148 - INFO -   - Redução: 86.57%
+2025-06-23 14:25:50,148 - INFO -   - Redução: 83.33%
+2025-06-23 14:25:50,149 - INFO -   - Depois: 18.43 MB
+2025-06-23 14:25:50,153 - INFO -   - Tempo: 0.01 segundos
+2025-06-23 14:25:50,161 - INFO -   - Tempo: 0.46 segundos
+2025-06-23 14:25:50,162 - INFO -   - Redução: 83.33%
+2025-06-23 14:25:50,163 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-23 14:25:50,164 - INFO -   - Tempo: 0.33 segundos
+2025-06-23 14:25:50,177 - INFO - Otimização de memória para df_lojas:
+2025-06-23 14:25:50,178 - INFO - Otimização de memória para df_lojas:
+2025-06-23 14:25:50,179 - INFO -   - Antes: 0.21 MB
+2025-06-23 14:25:50,179 - INFO -   - Antes: 0.21 MB
+2025-06-23 14:25:50,180 - INFO -   - Depois: 0.03 MB
+2025-06-23 14:25:50,180 - INFO -   - Depois: 0.03 MB
+2025-06-23 14:25:50,180 - INFO -   - Redução: 86.57%
+2025-06-23 14:25:50,181 - INFO -   - Redução: 86.57%
+2025-06-23 14:25:50,182 - INFO -   - Tempo: 0.01 segundos
+2025-06-23 14:25:50,182 - INFO -   - Tempo: 0.02 segundos
+2025-06-23 14:25:50,182 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-23 14:25:50,184 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-23 14:25:50,328 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 14:25:50,408 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 14:25:50,448 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 14:25:50,459 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 14:25:50,499 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 14:25:50,507 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:50] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:25:50,816 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 14:25:50,990 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:50] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:25:50,990 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 14:25:51,015 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 14:25:51,118 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:51] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:25:51,196 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:51] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:25:51,200 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:51] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-23 14:25:51,205 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:51] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:25:51,224 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:51] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:25:51,225 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:51] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-23 14:25:51,240 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:51] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:25:51,278 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:51] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:25:51,922 - INFO - Amostragem concluída em 3.25 segundos
+2025-06-23 14:25:51,922 - INFO - Total de registros após amostragem: 55750
+2025-06-23 14:25:51,940 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:51] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:25:52,619 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:52] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-23 14:25:52,620 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:52] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-23 14:25:52,622 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:52] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-23 14:25:52,624 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:52] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-23 14:25:52,803 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:52] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:25:53,117 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:53] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-23 14:25:55,638 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:55] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:25:55,678 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:55] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:25:55,697 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:55] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:25:55,782 - ERROR - Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/dash/dash.py", line 1310, in dispatch
+    ctx.run(
+  File "/opt/anaconda3/lib/python3.12/site-packages/dash/_callback.py", line 442, in add_context
+    output_value = func(*func_args, **func_kwargs)  # %% callback invoked %%
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/micarloteixeira/Desktop/teste-1/dashboard/callbacks/callbacks_dashboard_geral.py", line 518, in atualizar_pagina_dashboard
+    fig_impacto_distancia_concorrencia, analise_impacto_distancia_concorrencia_text = obter_grafico_impacto_distancia_concorrencia(df_filtrado, metrica_temporal, rotulo_eixo_y, titulo_eixo_y)
+                                                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/micarloteixeira/Desktop/teste-1/dashboard/callbacks/callbacks_dashboard_geral.py", line 183, in obter_grafico_impacto_distancia_concorrencia
+    fig = px.scatter(
+          ^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/plotly/express/_chart_types.py", line 66, in scatter
+    return make_figure(args=locals(), constructor=go.Scatter)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/plotly/express/_core.py", line 2089, in make_figure
+    groups, orders = get_groups_and_orders(args, grouper)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/plotly/express/_core.py", line 2065, in get_groups_and_orders
+    sf: grouped.get_group(s if len(s) > 1 else s[0])
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/pandas/core/groupby/groupby.py", line 1063, in get_group
+    raise KeyError(name)
+KeyError: 'd'
+2025-06-23 14:25:55,793 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:55] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2025-06-23 14:25:58,563 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:58] "GET /dashboard HTTP/1.1" 200 -
+2025-06-23 14:25:58,587 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:58] "[36mGET /assets/css/estilos_customizados.css HTTP/1.1[0m" 304 -
+2025-06-23 14:25:58,587 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:58] "[36mGET /assets/css/estilos_barra_lateral.css?m=1750697690.947188 HTTP/1.1[0m" 304 -
+2025-06-23 14:25:58,589 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:58] "[36mGET /assets/css/estilos_customizados.css?m=1750697690.9472873 HTTP/1.1[0m" 304 -
+2025-06-23 14:25:58,590 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:58] "[36mGET /assets/css/estilos_barra_lateral.css HTTP/1.1[0m" 304 -
+2025-06-23 14:25:58,637 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:58] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-06-23 14:25:58,685 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:58] "GET /_dash-layout HTTP/1.1" 200 -
+2025-06-23 14:25:58,713 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:58] "[36mGET /assets/images/rossmann_logo2.png HTTP/1.1[0m" 304 -
+2025-06-23 14:25:58,715 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:58] "[36mGET /assets/images/rossmann_logo_colorida.png HTTP/1.1[0m" 304 -
+2025-06-23 14:25:58,719 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:58] "[36mGET /_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+2025-06-23 14:25:58,736 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:58] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2025-06-23 14:25:58,739 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:58] "[36mGET /_dash-component-suites/dash/dcc/async-markdown.js HTTP/1.1[0m" 304 -
+2025-06-23 14:25:58,739 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:58] "[36mGET /_dash-component-suites/dash/dcc/async-datepicker.js HTTP/1.1[0m" 304 -
+2025-06-23 14:25:58,740 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:58] "[36mGET /_dash-component-suites/dash/dcc/async-slider.js HTTP/1.1[0m" 304 -
+2025-06-23 14:25:58,741 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:58] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2025-06-23 14:25:58,755 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:58] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:25:58,757 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:58] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:25:58,758 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:58] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:25:58,758 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:58] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:25:58,758 - INFO - Carregando dados brutos em Parquet...
+2025-06-23 14:25:58,759 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:58] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:25:58,894 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:58] "[36mGET /_dash-component-suites/dash/dcc/async-highlight.js HTTP/1.1[0m" 304 -
+2025-06-23 14:25:59,162 - INFO - Otimização de memória para df_vendas:
+2025-06-23 14:25:59,162 - INFO -   - Antes: 110.59 MB
+2025-06-23 14:25:59,162 - INFO -   - Depois: 18.43 MB
+2025-06-23 14:25:59,162 - INFO -   - Redução: 83.33%
+2025-06-23 14:25:59,163 - INFO -   - Tempo: 0.26 segundos
+2025-06-23 14:25:59,166 - INFO - Otimização de memória para df_lojas:
+2025-06-23 14:25:59,166 - INFO -   - Antes: 0.21 MB
+2025-06-23 14:25:59,166 - INFO -   - Depois: 0.03 MB
+2025-06-23 14:25:59,166 - INFO -   - Redução: 86.57%
+2025-06-23 14:25:59,166 - INFO -   - Tempo: 0.00 segundos
+2025-06-23 14:25:59,166 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-23 14:25:59,240 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:59] "[36mGET /assets/images/rossmann_logo1.png HTTP/1.1[0m" 304 -
+2025-06-23 14:25:59,259 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:59] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:25:59,259 - INFO - Carregando dados brutos em Parquet...
+2025-06-23 14:25:59,260 - INFO - Carregando dados brutos em Parquet...
+2025-06-23 14:25:59,263 - INFO - Carregando dados brutos em Parquet...
+2025-06-23 14:25:59,266 - INFO - Carregando dados brutos em Parquet...
+2025-06-23 14:25:59,297 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 14:25:59,564 - INFO - 127.0.0.1 - - [23/Jun/2025 14:25:59] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:26:00,221 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 14:26:00,222 - INFO - Amostrando 50 registros por loja...
+2025-06-23 14:26:00,226 - INFO - Total de lojas: 1115
+2025-06-23 14:26:00,577 - INFO - Otimização de memória para df_vendas:
+2025-06-23 14:26:00,577 - INFO -   - Antes: 110.59 MB
+2025-06-23 14:26:00,577 - INFO -   - Depois: 18.43 MB
+2025-06-23 14:26:00,577 - INFO -   - Redução: 83.33%
+2025-06-23 14:26:00,577 - INFO -   - Tempo: 0.78 segundos
+2025-06-23 14:26:00,581 - INFO - Otimização de memória para df_lojas:
+2025-06-23 14:26:00,582 - INFO -   - Antes: 0.21 MB
+2025-06-23 14:26:00,595 - INFO - Otimização de memória para df_vendas:
+2025-06-23 14:26:00,595 - INFO -   - Depois: 0.03 MB
+2025-06-23 14:26:00,595 - INFO -   - Antes: 110.59 MB
+2025-06-23 14:26:00,604 - INFO -   - Redução: 86.57%
+2025-06-23 14:26:00,605 - INFO -   - Depois: 18.43 MB
+2025-06-23 14:26:00,613 - INFO - Otimização de memória para df_vendas:
+2025-06-23 14:26:00,617 - INFO -   - Tempo: 0.00 segundos
+2025-06-23 14:26:00,619 - INFO -   - Redução: 83.33%
+2025-06-23 14:26:00,620 - INFO - Otimização de memória para df_vendas:
+2025-06-23 14:26:00,620 - INFO -   - Antes: 110.59 MB
+2025-06-23 14:26:00,621 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-23 14:26:00,622 - INFO -   - Tempo: 0.65 segundos
+2025-06-23 14:26:00,622 - INFO -   - Antes: 110.59 MB
+2025-06-23 14:26:00,622 - INFO -   - Depois: 18.43 MB
+2025-06-23 14:26:00,625 - INFO -   - Redução: 83.33%
+2025-06-23 14:26:00,624 - INFO -   - Depois: 18.43 MB
+2025-06-23 14:26:00,625 - INFO -   - Tempo: 0.37 segundos
+2025-06-23 14:26:00,625 - INFO -   - Redução: 83.33%
+2025-06-23 14:26:00,628 - INFO -   - Tempo: 0.53 segundos
+2025-06-23 14:26:00,631 - INFO - Otimização de memória para df_lojas:
+2025-06-23 14:26:00,632 - INFO -   - Antes: 0.21 MB
+2025-06-23 14:26:00,634 - INFO -   - Depois: 0.03 MB
+2025-06-23 14:26:00,635 - INFO - Otimização de memória para df_lojas:
+2025-06-23 14:26:00,635 - INFO -   - Redução: 86.57%
+2025-06-23 14:26:00,636 - INFO -   - Antes: 0.21 MB
+2025-06-23 14:26:00,638 - INFO -   - Depois: 0.03 MB
+2025-06-23 14:26:00,637 - INFO -   - Tempo: 0.01 segundos
+2025-06-23 14:26:00,637 - INFO - Otimização de memória para df_lojas:
+2025-06-23 14:26:00,638 - INFO -   - Redução: 86.57%
+2025-06-23 14:26:00,639 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-23 14:26:00,643 - INFO -   - Antes: 0.21 MB
+2025-06-23 14:26:00,645 - INFO -   - Tempo: 0.01 segundos
+2025-06-23 14:26:00,656 - INFO -   - Depois: 0.03 MB
+2025-06-23 14:26:00,662 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-23 14:26:00,662 - INFO -   - Redução: 86.57%
+2025-06-23 14:26:00,664 - INFO -   - Tempo: 0.01 segundos
+2025-06-23 14:26:00,664 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-23 14:26:00,836 - INFO - 127.0.0.1 - - [23/Jun/2025 14:26:00] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:26:00,875 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 14:26:00,931 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 14:26:00,989 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 14:26:01,086 - INFO - 127.0.0.1 - - [23/Jun/2025 14:26:01] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:26:01,093 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 14:26:01,101 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 14:26:01,117 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 14:26:01,348 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 14:26:01,502 - INFO - 127.0.0.1 - - [23/Jun/2025 14:26:01] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:26:01,698 - INFO - 127.0.0.1 - - [23/Jun/2025 14:26:01] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:26:01,709 - INFO - 127.0.0.1 - - [23/Jun/2025 14:26:01] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:26:01,713 - INFO - 127.0.0.1 - - [23/Jun/2025 14:26:01] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-23 14:26:01,719 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 14:26:01,732 - INFO - 127.0.0.1 - - [23/Jun/2025 14:26:01] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-23 14:26:01,787 - INFO - 127.0.0.1 - - [23/Jun/2025 14:26:01] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:26:01,801 - INFO - 127.0.0.1 - - [23/Jun/2025 14:26:01] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:26:01,818 - INFO - 127.0.0.1 - - [23/Jun/2025 14:26:01] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:26:02,297 - INFO - Amostragem concluída em 2.08 segundos
+2025-06-23 14:26:02,298 - INFO - Total de registros após amostragem: 55750
+2025-06-23 14:26:02,316 - INFO - 127.0.0.1 - - [23/Jun/2025 14:26:02] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:26:02,783 - INFO - 127.0.0.1 - - [23/Jun/2025 14:26:02] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-23 14:26:02,784 - INFO - 127.0.0.1 - - [23/Jun/2025 14:26:02] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-23 14:26:02,786 - INFO - 127.0.0.1 - - [23/Jun/2025 14:26:02] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-23 14:26:02,786 - INFO - 127.0.0.1 - - [23/Jun/2025 14:26:02] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-23 14:26:02,794 - INFO - 127.0.0.1 - - [23/Jun/2025 14:26:02] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:26:03,082 - INFO - 127.0.0.1 - - [23/Jun/2025 14:26:03] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-23 14:26:14,089 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 14:26:14,172 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 14:26:14,173 - INFO - Amostrando 50 registros por loja...
+2025-06-23 14:26:14,176 - INFO - Total de lojas: 1115
+2025-06-23 14:26:14,666 - INFO - Amostragem concluída em 0.49 segundos
+2025-06-23 14:26:14,667 - INFO - Total de registros após amostragem: 55750
+2025-06-23 14:26:14,755 - INFO - Carregamento de dados concluído no modo 'amostra'
+2025-06-23 14:26:14,755 - INFO - Registros no DataFrame reduzido: 55750
+2025-06-23 14:26:14,762 - INFO - Carregando dados brutos em Parquet...
+2025-06-23 14:26:15,075 - INFO - Otimização de memória para df_vendas:
+2025-06-23 14:26:15,075 - INFO -   - Antes: 110.59 MB
+2025-06-23 14:26:15,075 - INFO -   - Depois: 18.43 MB
+2025-06-23 14:26:15,075 - INFO -   - Redução: 83.33%
+2025-06-23 14:26:15,075 - INFO -   - Tempo: 0.21 segundos
+2025-06-23 14:26:15,078 - INFO - Otimização de memória para df_lojas:
+2025-06-23 14:26:15,078 - INFO -   - Antes: 0.21 MB
+2025-06-23 14:26:15,078 - INFO -   - Depois: 0.03 MB
+2025-06-23 14:26:15,078 - INFO -   - Redução: 86.57%
+2025-06-23 14:26:15,078 - INFO -   - Tempo: 0.00 segundos
+2025-06-23 14:26:15,078 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-23 14:26:15,330 - INFO - Otimização de memória para df_lojas_bruto_dashboard:
+2025-06-23 14:26:15,330 - INFO -   - Antes: 0.21 MB
+2025-06-23 14:26:15,330 - INFO -   - Depois: 0.03 MB
+2025-06-23 14:26:15,330 - INFO -   - Redução: 86.57%
+2025-06-23 14:26:15,330 - INFO -   - Tempo: 0.00 segundos
+2025-06-23 14:26:15,390 - INFO - Dash is running on http://localhost:8050/
+
+2025-06-23 14:26:15,397 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:8050
+2025-06-23 14:26:15,397 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-23 14:35:31,395 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:31] "GET /dashboard HTTP/1.1" 200 -
+2025-06-23 14:35:31,441 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:31] "[36mGET /assets/css/estilos_barra_lateral.css HTTP/1.1[0m" 304 -
+2025-06-23 14:35:31,443 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:31] "[36mGET /assets/css/estilos_customizados.css?m=1750697690.9472873 HTTP/1.1[0m" 304 -
+2025-06-23 14:35:31,443 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:31] "[36mGET /assets/css/estilos_customizados.css HTTP/1.1[0m" 304 -
+2025-06-23 14:35:31,443 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:31] "[36mGET /assets/css/estilos_barra_lateral.css?m=1750697690.947188 HTTP/1.1[0m" 304 -
+2025-06-23 14:35:31,507 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:31] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-06-23 14:35:31,589 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:31] "GET /_dash-layout HTTP/1.1" 200 -
+2025-06-23 14:35:31,622 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:31] "[36mGET /assets/images/rossmann_logo2.png HTTP/1.1[0m" 304 -
+2025-06-23 14:35:31,624 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:31] "[36mGET /assets/images/rossmann_logo_colorida.png HTTP/1.1[0m" 304 -
+2025-06-23 14:35:31,640 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:31] "[36mGET /_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+2025-06-23 14:35:31,649 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:31] "[36mGET /_dash-component-suites/dash/dcc/async-markdown.js HTTP/1.1[0m" 304 -
+2025-06-23 14:35:31,650 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:31] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2025-06-23 14:35:31,652 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:31] "[36mGET /_dash-component-suites/dash/dcc/async-datepicker.js HTTP/1.1[0m" 304 -
+2025-06-23 14:35:31,654 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:31] "[36mGET /_dash-component-suites/dash/dcc/async-slider.js HTTP/1.1[0m" 304 -
+2025-06-23 14:35:31,665 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:31] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2025-06-23 14:35:31,685 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:31] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:35:31,688 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:31] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:35:31,689 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:31] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:35:31,692 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:31] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:35:31,695 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:31] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:35:31,697 - INFO - Carregando dados brutos em Parquet...
+2025-06-23 14:35:31,826 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:31] "[36mGET /_dash-component-suites/dash/dcc/async-highlight.js HTTP/1.1[0m" 304 -
+2025-06-23 14:35:32,173 - INFO - Otimização de memória para df_vendas:
+2025-06-23 14:35:32,173 - INFO -   - Antes: 110.59 MB
+2025-06-23 14:35:32,173 - INFO -   - Depois: 18.43 MB
+2025-06-23 14:35:32,174 - INFO -   - Redução: 83.33%
+2025-06-23 14:35:32,174 - INFO -   - Tempo: 0.23 segundos
+2025-06-23 14:35:32,179 - INFO - Otimização de memória para df_lojas:
+2025-06-23 14:35:32,179 - INFO -   - Antes: 0.21 MB
+2025-06-23 14:35:32,179 - INFO -   - Depois: 0.03 MB
+2025-06-23 14:35:32,179 - INFO -   - Redução: 86.57%
+2025-06-23 14:35:32,179 - INFO -   - Tempo: 0.00 segundos
+2025-06-23 14:35:32,179 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-23 14:35:32,228 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 14:35:32,228 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 14:35:32,229 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 14:35:32,230 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 14:35:32,231 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 14:35:32,430 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 14:35:32,431 - INFO - Amostrando 50 registros por loja...
+2025-06-23 14:35:32,436 - INFO - Total de lojas: 1115
+2025-06-23 14:35:32,463 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 14:35:32,463 - INFO - Amostrando 50 registros por loja...
+2025-06-23 14:35:32,467 - INFO - Total de lojas: 1115
+2025-06-23 14:35:32,531 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 14:35:32,531 - INFO - Amostrando 50 registros por loja...
+2025-06-23 14:35:32,539 - INFO - Total de lojas: 1115
+2025-06-23 14:35:32,566 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 14:35:32,566 - INFO - Amostrando 50 registros por loja...
+2025-06-23 14:35:32,572 - INFO - Total de lojas: 1115
+2025-06-23 14:35:32,626 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 14:35:32,626 - INFO - Amostrando 50 registros por loja...
+2025-06-23 14:35:32,637 - INFO - Total de lojas: 1115
+2025-06-23 14:35:32,708 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 14:35:32,908 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 14:35:32,910 - INFO - Amostrando 50 registros por loja...
+2025-06-23 14:35:33,068 - INFO - Total de lojas: 1115
+2025-06-23 14:35:36,260 - INFO - Amostragem concluída em 3.80 segundos
+2025-06-23 14:35:36,260 - INFO - Total de registros após amostragem: 55750
+2025-06-23 14:35:36,273 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:36] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:35:36,277 - INFO - Carregando dados brutos em Parquet...
+2025-06-23 14:35:36,300 - INFO - Amostragem concluída em 3.73 segundos
+2025-06-23 14:35:36,300 - INFO - Total de registros após amostragem: 55750
+2025-06-23 14:35:36,319 - INFO - Carregando dados brutos em Parquet...
+2025-06-23 14:35:36,361 - INFO - Amostragem concluída em 3.44 segundos
+2025-06-23 14:35:36,387 - INFO - Total de registros após amostragem: 55750
+2025-06-23 14:35:36,438 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:36] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:35:36,509 - INFO - Amostragem concluída em 3.88 segundos
+2025-06-23 14:35:36,509 - INFO - Total de registros após amostragem: 55750
+2025-06-23 14:35:36,559 - INFO - Amostragem concluída em 4.13 segundos
+2025-06-23 14:35:36,568 - INFO - Total de registros após amostragem: 55750
+2025-06-23 14:35:36,583 - INFO - Carregando dados brutos em Parquet...
+2025-06-23 14:35:36,743 - INFO - Amostragem concluída em 4.21 segundos
+2025-06-23 14:35:36,743 - INFO - Total de registros após amostragem: 55750
+2025-06-23 14:35:36,755 - INFO - Carregando dados brutos em Parquet...
+2025-06-23 14:35:37,085 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:37] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:35:37,494 - INFO - Otimização de memória para df_vendas:
+2025-06-23 14:35:37,497 - INFO - Otimização de memória para df_vendas:
+2025-06-23 14:35:37,497 - INFO -   - Antes: 110.59 MB
+2025-06-23 14:35:37,497 - INFO -   - Depois: 18.43 MB
+2025-06-23 14:35:37,498 - INFO -   - Redução: 83.33%
+2025-06-23 14:35:37,497 - INFO -   - Antes: 110.59 MB
+2025-06-23 14:35:37,498 - INFO -   - Depois: 18.43 MB
+2025-06-23 14:35:37,498 - INFO -   - Redução: 83.33%
+2025-06-23 14:35:37,498 - INFO -   - Tempo: 0.73 segundos
+2025-06-23 14:35:37,498 - INFO -   - Tempo: 0.91 segundos
+2025-06-23 14:35:37,505 - INFO - Otimização de memória para df_lojas:
+2025-06-23 14:35:37,505 - INFO -   - Antes: 0.21 MB
+2025-06-23 14:35:37,505 - INFO -   - Depois: 0.03 MB
+2025-06-23 14:35:37,506 - INFO -   - Redução: 86.57%
+2025-06-23 14:35:37,507 - INFO - Otimização de memória para df_lojas:
+2025-06-23 14:35:37,507 - INFO -   - Tempo: 0.01 segundos
+2025-06-23 14:35:37,507 - INFO -   - Antes: 0.21 MB
+2025-06-23 14:35:37,508 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-23 14:35:37,508 - INFO -   - Depois: 0.03 MB
+2025-06-23 14:35:37,509 - INFO -   - Redução: 86.57%
+2025-06-23 14:35:37,509 - INFO -   - Tempo: 0.01 segundos
+2025-06-23 14:35:37,510 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-23 14:35:37,629 - INFO - Otimização de memória para df_vendas:
+2025-06-23 14:35:37,629 - INFO -   - Antes: 110.59 MB
+2025-06-23 14:35:37,629 - INFO -   - Depois: 18.43 MB
+2025-06-23 14:35:37,629 - INFO -   - Redução: 83.33%
+2025-06-23 14:35:37,630 - INFO -   - Tempo: 0.54 segundos
+2025-06-23 14:35:37,632 - INFO - Otimização de memória para df_vendas:
+2025-06-23 14:35:37,635 - INFO -   - Antes: 110.59 MB
+2025-06-23 14:35:37,635 - INFO -   - Depois: 18.43 MB
+2025-06-23 14:35:37,636 - INFO -   - Redução: 83.33%
+2025-06-23 14:35:37,636 - INFO -   - Tempo: 0.39 segundos
+2025-06-23 14:35:37,639 - INFO - Otimização de memória para df_lojas:
+2025-06-23 14:35:37,640 - INFO -   - Antes: 0.21 MB
+2025-06-23 14:35:37,641 - INFO -   - Depois: 0.03 MB
+2025-06-23 14:35:37,643 - INFO -   - Redução: 86.57%
+2025-06-23 14:35:37,645 - INFO -   - Tempo: 0.01 segundos
+2025-06-23 14:35:37,645 - INFO - Otimização de memória para df_lojas:
+2025-06-23 14:35:37,648 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-23 14:35:37,648 - INFO -   - Antes: 0.21 MB
+2025-06-23 14:35:37,651 - INFO -   - Depois: 0.03 MB
+2025-06-23 14:35:37,651 - INFO -   - Redução: 86.57%
+2025-06-23 14:35:37,651 - INFO -   - Tempo: 0.01 segundos
+2025-06-23 14:35:37,651 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-23 14:35:37,690 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:37] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:35:37,846 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:37] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:35:37,889 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 14:35:37,890 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 14:35:37,952 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:37] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:35:37,976 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:37] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-23 14:35:37,987 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:37] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-23 14:35:38,002 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 14:35:38,005 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 14:35:38,052 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 14:35:38,260 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:38] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-23 14:35:38,262 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 14:35:38,293 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:38] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-23 14:35:38,346 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:38] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-23 14:35:38,560 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:38] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-23 14:35:38,572 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:38] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:35:38,613 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:38] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:35:38,635 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:38] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:35:38,651 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 14:35:38,654 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 14:35:38,783 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:38] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:35:38,814 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:38] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:35:38,915 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:38] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:35:39,308 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:39] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-23 14:35:40,416 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:40] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:35:40,466 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:40] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:35:40,505 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:40] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:35:40,742 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:40] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:35:43,306 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:43] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:35:43,328 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:43] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:35:43,351 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:43] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:35:43,491 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:43] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:35:48,154 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:48] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:35:48,191 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:48] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:35:48,203 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:48] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:35:48,339 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:48] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:35:51,469 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:51] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:35:51,527 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:51] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:35:51,530 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:51] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:35:51,684 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:51] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:35:53,318 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:53] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:35:53,351 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:53] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:35:53,375 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:53] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:35:53,508 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:53] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:35:54,353 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:54] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:35:54,403 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:54] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:35:54,406 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:54] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:35:54,549 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:54] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:35:56,607 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:56] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:35:56,648 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:56] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:35:56,658 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:56] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:35:56,807 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:56] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:35:58,494 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:58] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:35:58,541 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:58] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:35:58,556 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:58] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:35:58,704 - INFO - 127.0.0.1 - - [23/Jun/2025 14:35:58] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:36:50,974 - INFO - 127.0.0.1 - - [23/Jun/2025 14:36:50] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:36:51,144 - INFO - 127.0.0.1 - - [23/Jun/2025 14:36:51] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:58:36,295 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 14:58:36,378 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 14:58:36,381 - INFO - Amostrando 50 registros por loja...
+2025-06-23 14:58:36,387 - INFO - Total de lojas: 1115
+2025-06-23 14:58:36,836 - INFO - Amostragem concluída em 0.45 segundos
+2025-06-23 14:58:36,836 - INFO - Total de registros após amostragem: 55750
+2025-06-23 14:58:36,932 - INFO - Carregamento de dados concluído no modo 'amostra'
+2025-06-23 14:58:36,932 - INFO - Registros no DataFrame reduzido: 55750
+2025-06-23 14:58:36,939 - INFO - Carregando dados brutos em Parquet...
+2025-06-23 14:58:37,222 - INFO - Otimização de memória para df_vendas:
+2025-06-23 14:58:37,223 - INFO -   - Antes: 110.59 MB
+2025-06-23 14:58:37,223 - INFO -   - Depois: 18.43 MB
+2025-06-23 14:58:37,223 - INFO -   - Redução: 83.33%
+2025-06-23 14:58:37,223 - INFO -   - Tempo: 0.19 segundos
+2025-06-23 14:58:37,225 - INFO - Otimização de memória para df_lojas:
+2025-06-23 14:58:37,225 - INFO -   - Antes: 0.21 MB
+2025-06-23 14:58:37,226 - INFO -   - Depois: 0.03 MB
+2025-06-23 14:58:37,226 - INFO -   - Redução: 86.57%
+2025-06-23 14:58:37,226 - INFO -   - Tempo: 0.00 segundos
+2025-06-23 14:58:37,226 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-23 14:58:37,408 - INFO - Otimização de memória para df_lojas_bruto_dashboard:
+2025-06-23 14:58:37,408 - INFO -   - Antes: 0.21 MB
+2025-06-23 14:58:37,408 - INFO -   - Depois: 0.03 MB
+2025-06-23 14:58:37,408 - INFO -   - Redução: 86.57%
+2025-06-23 14:58:37,408 - INFO -   - Tempo: 0.00 segundos
+2025-06-23 14:58:37,461 - INFO - Dash is running on http://localhost:8050/
+
+2025-06-23 14:58:37,467 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:8050
+2025-06-23 14:58:37,467 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-23 14:58:47,564 - INFO - 127.0.0.1 - - [23/Jun/2025 14:58:47] "GET /dashboard HTTP/1.1" 200 -
+2025-06-23 14:58:47,654 - INFO - 127.0.0.1 - - [23/Jun/2025 14:58:47] "[36mGET /assets/css/estilos_barra_lateral.css HTTP/1.1[0m" 304 -
+2025-06-23 14:58:47,657 - INFO - 127.0.0.1 - - [23/Jun/2025 14:58:47] "[36mGET /assets/css/estilos_customizados.css HTTP/1.1[0m" 304 -
+2025-06-23 14:58:47,658 - INFO - 127.0.0.1 - - [23/Jun/2025 14:58:47] "[36mGET /assets/css/estilos_barra_lateral.css?m=1750697690.947188 HTTP/1.1[0m" 304 -
+2025-06-23 14:58:47,658 - INFO - 127.0.0.1 - - [23/Jun/2025 14:58:47] "[36mGET /assets/css/estilos_customizados.css?m=1750697690.9472873 HTTP/1.1[0m" 304 -
+2025-06-23 14:58:47,784 - INFO - 127.0.0.1 - - [23/Jun/2025 14:58:47] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-06-23 14:58:47,842 - INFO - 127.0.0.1 - - [23/Jun/2025 14:58:47] "GET /_dash-layout HTTP/1.1" 200 -
+2025-06-23 14:58:47,880 - INFO - 127.0.0.1 - - [23/Jun/2025 14:58:47] "[36mGET /assets/images/rossmann_logo2.png HTTP/1.1[0m" 304 -
+2025-06-23 14:58:47,885 - INFO - 127.0.0.1 - - [23/Jun/2025 14:58:47] "[36mGET /assets/images/rossmann_logo_colorida.png HTTP/1.1[0m" 304 -
+2025-06-23 14:58:47,894 - INFO - 127.0.0.1 - - [23/Jun/2025 14:58:47] "[36mGET /_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+2025-06-23 14:58:47,909 - INFO - 127.0.0.1 - - [23/Jun/2025 14:58:47] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2025-06-23 14:58:47,910 - INFO - 127.0.0.1 - - [23/Jun/2025 14:58:47] "[36mGET /_dash-component-suites/dash/dcc/async-markdown.js HTTP/1.1[0m" 304 -
+2025-06-23 14:58:47,915 - INFO - 127.0.0.1 - - [23/Jun/2025 14:58:47] "[36mGET /_dash-component-suites/dash/dcc/async-datepicker.js HTTP/1.1[0m" 304 -
+2025-06-23 14:58:47,929 - INFO - 127.0.0.1 - - [23/Jun/2025 14:58:47] "[36mGET /_dash-component-suites/dash/dcc/async-slider.js HTTP/1.1[0m" 304 -
+2025-06-23 14:58:47,937 - INFO - 127.0.0.1 - - [23/Jun/2025 14:58:47] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2025-06-23 14:58:47,967 - INFO - 127.0.0.1 - - [23/Jun/2025 14:58:47] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:58:47,968 - INFO - 127.0.0.1 - - [23/Jun/2025 14:58:47] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:58:47,969 - INFO - 127.0.0.1 - - [23/Jun/2025 14:58:47] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:58:47,970 - INFO - 127.0.0.1 - - [23/Jun/2025 14:58:47] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:58:47,970 - INFO - Carregando dados brutos em Parquet...
+2025-06-23 14:58:47,970 - INFO - 127.0.0.1 - - [23/Jun/2025 14:58:47] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:58:48,014 - INFO - 127.0.0.1 - - [23/Jun/2025 14:58:48] "[36mGET /assets/images/rossmann_logo1.png HTTP/1.1[0m" 304 -
+2025-06-23 14:58:48,048 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 14:58:48,048 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 14:58:48,057 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 14:58:48,072 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 14:58:48,073 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 14:58:48,170 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 14:58:48,170 - INFO - Amostrando 50 registros por loja...
+2025-06-23 14:58:48,176 - INFO - Total de lojas: 1115
+2025-06-23 14:58:48,183 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 14:58:48,183 - INFO - Amostrando 50 registros por loja...
+2025-06-23 14:58:48,189 - INFO - Total de lojas: 1115
+2025-06-23 14:58:48,192 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 14:58:48,192 - INFO - Amostrando 50 registros por loja...
+2025-06-23 14:58:48,333 - INFO - Total de lojas: 1115
+2025-06-23 14:58:48,338 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 14:58:48,339 - INFO - Amostrando 50 registros por loja...
+2025-06-23 14:58:48,342 - INFO - Total de lojas: 1115
+2025-06-23 14:58:48,343 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 14:58:48,343 - INFO - Amostrando 50 registros por loja...
+2025-06-23 14:58:48,346 - INFO - Total de lojas: 1115
+2025-06-23 14:58:48,613 - INFO - Otimização de memória para df_vendas:
+2025-06-23 14:58:48,615 - INFO -   - Antes: 110.59 MB
+2025-06-23 14:58:48,621 - INFO -   - Depois: 18.43 MB
+2025-06-23 14:58:48,622 - INFO -   - Redução: 83.33%
+2025-06-23 14:58:48,622 - INFO -   - Tempo: 0.42 segundos
+2025-06-23 14:58:48,724 - INFO - Otimização de memória para df_lojas:
+2025-06-23 14:58:48,725 - INFO -   - Antes: 0.21 MB
+2025-06-23 14:58:48,726 - INFO -   - Depois: 0.03 MB
+2025-06-23 14:58:48,726 - INFO -   - Redução: 86.57%
+2025-06-23 14:58:48,726 - INFO -   - Tempo: 0.10 segundos
+2025-06-23 14:58:48,729 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-23 14:58:48,958 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 14:58:49,050 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 14:58:49,051 - INFO - Amostrando 50 registros por loja...
+2025-06-23 14:58:49,054 - INFO - Total de lojas: 1115
+2025-06-23 14:58:52,052 - INFO - Amostragem concluída em 3.88 segundos
+2025-06-23 14:58:52,053 - INFO - Total de registros após amostragem: 55750
+2025-06-23 14:58:52,061 - INFO - Carregando dados brutos em Parquet...
+2025-06-23 14:58:52,069 - INFO - Amostragem concluída em 3.73 segundos
+2025-06-23 14:58:52,070 - INFO - Total de registros após amostragem: 55750
+2025-06-23 14:58:52,077 - INFO - Carregando dados brutos em Parquet...
+2025-06-23 14:58:52,084 - INFO - Amostragem concluída em 3.03 segundos
+2025-06-23 14:58:52,084 - INFO - Total de registros após amostragem: 55750
+2025-06-23 14:58:52,108 - INFO - Amostragem concluída em 3.92 segundos
+2025-06-23 14:58:52,108 - INFO - Total de registros após amostragem: 55750
+2025-06-23 14:58:52,134 - INFO - 127.0.0.1 - - [23/Jun/2025 14:58:52] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:58:52,134 - INFO - Carregando dados brutos em Parquet...
+2025-06-23 14:58:52,151 - INFO - Amostragem concluída em 3.81 segundos
+2025-06-23 14:58:52,174 - INFO - Total de registros após amostragem: 55750
+2025-06-23 14:58:52,189 - INFO - Amostragem concluída em 4.01 segundos
+2025-06-23 14:58:52,223 - INFO - Total de registros após amostragem: 55750
+2025-06-23 14:58:52,255 - INFO - Carregando dados brutos em Parquet...
+2025-06-23 14:58:53,005 - INFO - 127.0.0.1 - - [23/Jun/2025 14:58:53] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:58:53,033 - INFO - Otimização de memória para df_vendas:
+2025-06-23 14:58:53,035 - INFO -   - Antes: 110.59 MB
+2025-06-23 14:58:53,041 - INFO -   - Depois: 18.43 MB
+2025-06-23 14:58:53,041 - INFO -   - Redução: 83.33%
+2025-06-23 14:58:53,042 - INFO -   - Tempo: 0.72 segundos
+2025-06-23 14:58:53,062 - INFO - Otimização de memória para df_lojas:
+2025-06-23 14:58:53,063 - INFO - Otimização de memória para df_vendas:
+2025-06-23 14:58:53,064 - INFO -   - Antes: 0.21 MB
+2025-06-23 14:58:53,064 - INFO -   - Antes: 110.59 MB
+2025-06-23 14:58:53,064 - INFO -   - Depois: 0.03 MB
+2025-06-23 14:58:53,064 - INFO -   - Depois: 18.43 MB
+2025-06-23 14:58:53,064 - INFO -   - Redução: 86.57%
+2025-06-23 14:58:53,079 - INFO -   - Redução: 83.33%
+2025-06-23 14:58:53,081 - INFO -   - Tempo: 0.02 segundos
+2025-06-23 14:58:53,082 - INFO -   - Tempo: 0.62 segundos
+2025-06-23 14:58:53,097 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-23 14:58:53,124 - INFO - Otimização de memória para df_lojas:
+2025-06-23 14:58:53,125 - INFO -   - Antes: 0.21 MB
+2025-06-23 14:58:53,126 - INFO -   - Depois: 0.03 MB
+2025-06-23 14:58:53,126 - INFO -   - Redução: 86.57%
+2025-06-23 14:58:53,128 - INFO - Otimização de memória para df_vendas:
+2025-06-23 14:58:53,128 - INFO -   - Tempo: 0.02 segundos
+2025-06-23 14:58:53,134 - INFO -   - Antes: 110.59 MB
+2025-06-23 14:58:53,134 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-23 14:58:53,134 - INFO -   - Depois: 18.43 MB
+2025-06-23 14:58:53,135 - INFO -   - Redução: 83.33%
+2025-06-23 14:58:53,136 - INFO -   - Tempo: 0.31 segundos
+2025-06-23 14:58:53,141 - INFO - Otimização de memória para df_vendas:
+2025-06-23 14:58:53,143 - INFO -   - Antes: 110.59 MB
+2025-06-23 14:58:53,145 - INFO - Otimização de memória para df_lojas:
+2025-06-23 14:58:53,150 - INFO -   - Depois: 18.43 MB
+2025-06-23 14:58:53,156 - INFO -   - Antes: 0.21 MB
+2025-06-23 14:58:53,158 - INFO -   - Redução: 83.33%
+2025-06-23 14:58:53,158 - INFO -   - Depois: 0.03 MB
+2025-06-23 14:58:53,158 - INFO -   - Tempo: 0.45 segundos
+2025-06-23 14:58:53,158 - INFO -   - Redução: 86.57%
+2025-06-23 14:58:53,160 - INFO -   - Tempo: 0.01 segundos
+2025-06-23 14:58:53,161 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-23 14:58:53,163 - INFO - Otimização de memória para df_lojas:
+2025-06-23 14:58:53,165 - INFO -   - Antes: 0.21 MB
+2025-06-23 14:58:53,165 - INFO -   - Depois: 0.03 MB
+2025-06-23 14:58:53,165 - INFO -   - Redução: 86.57%
+2025-06-23 14:58:53,165 - INFO -   - Tempo: 0.00 segundos
+2025-06-23 14:58:53,166 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-23 14:58:53,213 - INFO - 127.0.0.1 - - [23/Jun/2025 14:58:53] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:58:53,343 - INFO - 127.0.0.1 - - [23/Jun/2025 14:58:53] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:58:53,360 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 14:58:53,381 - INFO - 127.0.0.1 - - [23/Jun/2025 14:58:53] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:58:53,383 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 14:58:53,394 - INFO - 127.0.0.1 - - [23/Jun/2025 14:58:53] "[36mGET /_dash-component-suites/dash/dcc/async-highlight.js HTTP/1.1[0m" 304 -
+2025-06-23 14:58:53,399 - INFO - 127.0.0.1 - - [23/Jun/2025 14:58:53] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-23 14:58:53,411 - INFO - 127.0.0.1 - - [23/Jun/2025 14:58:53] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-23 14:58:53,416 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 14:58:53,423 - INFO - 127.0.0.1 - - [23/Jun/2025 14:58:53] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:58:53,444 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 14:58:53,468 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 14:58:53,487 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 14:58:53,660 - INFO - 127.0.0.1 - - [23/Jun/2025 14:58:53] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-23 14:58:53,667 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 14:58:53,701 - INFO - 127.0.0.1 - - [23/Jun/2025 14:58:53] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-23 14:58:53,739 - INFO - 127.0.0.1 - - [23/Jun/2025 14:58:53] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-23 14:58:53,852 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 14:58:53,862 - INFO - 127.0.0.1 - - [23/Jun/2025 14:58:53] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:58:53,925 - INFO - 127.0.0.1 - - [23/Jun/2025 14:58:53] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:58:53,925 - INFO - 127.0.0.1 - - [23/Jun/2025 14:58:53] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-23 14:58:53,937 - INFO - 127.0.0.1 - - [23/Jun/2025 14:58:53] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:58:53,946 - INFO - 127.0.0.1 - - [23/Jun/2025 14:58:53] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:58:54,023 - INFO - 127.0.0.1 - - [23/Jun/2025 14:58:54] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:58:54,048 - INFO - 127.0.0.1 - - [23/Jun/2025 14:58:54] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:58:55,419 - INFO - 127.0.0.1 - - [23/Jun/2025 14:58:55] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-23 14:59:08,244 - INFO - 127.0.0.1 - - [23/Jun/2025 14:59:08] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:59:08,265 - INFO - 127.0.0.1 - - [23/Jun/2025 14:59:08] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:59:08,293 - INFO - 127.0.0.1 - - [23/Jun/2025 14:59:08] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:59:08,433 - INFO - 127.0.0.1 - - [23/Jun/2025 14:59:08] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:59:16,494 - INFO - 127.0.0.1 - - [23/Jun/2025 14:59:16] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:59:16,549 - INFO - 127.0.0.1 - - [23/Jun/2025 14:59:16] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:59:16,552 - INFO - 127.0.0.1 - - [23/Jun/2025 14:59:16] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:59:16,703 - INFO - 127.0.0.1 - - [23/Jun/2025 14:59:16] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:59:28,155 - INFO - 127.0.0.1 - - [23/Jun/2025 14:59:28] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:59:28,198 - INFO - 127.0.0.1 - - [23/Jun/2025 14:59:28] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:59:28,200 - INFO - 127.0.0.1 - - [23/Jun/2025 14:59:28] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:59:28,337 - INFO - 127.0.0.1 - - [23/Jun/2025 14:59:28] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:59:48,099 - INFO - 127.0.0.1 - - [23/Jun/2025 14:59:48] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:59:48,151 - INFO - 127.0.0.1 - - [23/Jun/2025 14:59:48] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:59:48,168 - INFO - 127.0.0.1 - - [23/Jun/2025 14:59:48] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:59:48,320 - INFO - 127.0.0.1 - - [23/Jun/2025 14:59:48] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:59:52,795 - INFO - 127.0.0.1 - - [23/Jun/2025 14:59:52] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:59:52,830 - INFO - 127.0.0.1 - - [23/Jun/2025 14:59:52] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:59:52,842 - INFO - 127.0.0.1 - - [23/Jun/2025 14:59:52] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:59:52,979 - INFO - 127.0.0.1 - - [23/Jun/2025 14:59:52] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:59:58,894 - INFO - 127.0.0.1 - - [23/Jun/2025 14:59:58] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:59:58,962 - INFO - 127.0.0.1 - - [23/Jun/2025 14:59:58] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:59:59,008 - INFO - 127.0.0.1 - - [23/Jun/2025 14:59:59] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:59:59,021 - INFO - 127.0.0.1 - - [23/Jun/2025 14:59:59] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 14:59:59,186 - INFO - 127.0.0.1 - - [23/Jun/2025 14:59:59] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:00:04,341 - INFO - 127.0.0.1 - - [23/Jun/2025 15:00:04] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:00:04,377 - INFO - 127.0.0.1 - - [23/Jun/2025 15:00:04] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:00:04,394 - INFO - 127.0.0.1 - - [23/Jun/2025 15:00:04] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:00:04,530 - INFO - 127.0.0.1 - - [23/Jun/2025 15:00:04] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:00:10,086 - INFO - 127.0.0.1 - - [23/Jun/2025 15:00:10] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:00:10,115 - INFO - 127.0.0.1 - - [23/Jun/2025 15:00:10] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:00:10,148 - INFO - 127.0.0.1 - - [23/Jun/2025 15:00:10] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:00:10,298 - INFO - 127.0.0.1 - - [23/Jun/2025 15:00:10] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:00:29,911 - INFO - 127.0.0.1 - - [23/Jun/2025 15:00:29] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:00:31,055 - INFO - 127.0.0.1 - - [23/Jun/2025 15:00:31] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:00:40,433 - INFO - 127.0.0.1 - - [23/Jun/2025 15:00:40] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:00:40,455 - INFO - 127.0.0.1 - - [23/Jun/2025 15:00:40] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:00:40,483 - INFO - 127.0.0.1 - - [23/Jun/2025 15:00:40] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:00:40,616 - INFO - 127.0.0.1 - - [23/Jun/2025 15:00:40] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:00:41,280 - INFO - 127.0.0.1 - - [23/Jun/2025 15:00:41] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:00:41,327 - INFO - 127.0.0.1 - - [23/Jun/2025 15:00:41] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:00:41,342 - INFO - 127.0.0.1 - - [23/Jun/2025 15:00:41] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:00:41,495 - INFO - 127.0.0.1 - - [23/Jun/2025 15:00:41] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:00:51,332 - INFO - 127.0.0.1 - - [23/Jun/2025 15:00:51] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:00:51,540 - INFO - 127.0.0.1 - - [23/Jun/2025 15:00:51] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:01:01,547 - INFO - 127.0.0.1 - - [23/Jun/2025 15:01:01] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:01:01,570 - INFO - 127.0.0.1 - - [23/Jun/2025 15:01:01] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:01:01,580 - INFO - 127.0.0.1 - - [23/Jun/2025 15:01:01] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-23 15:01:01,711 - INFO - 127.0.0.1 - - [23/Jun/2025 15:01:01] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:01:01,854 - INFO - 127.0.0.1 - - [23/Jun/2025 15:01:01] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:01:03,942 - INFO - 127.0.0.1 - - [23/Jun/2025 15:01:03] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:01:04,016 - INFO - 127.0.0.1 - - [23/Jun/2025 15:01:04] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:01:05,442 - INFO - 127.0.0.1 - - [23/Jun/2025 15:01:05] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:01:05,581 - INFO - 127.0.0.1 - - [23/Jun/2025 15:01:05] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:01:06,329 - INFO - 127.0.0.1 - - [23/Jun/2025 15:01:06] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:01:06,331 - INFO - 127.0.0.1 - - [23/Jun/2025 15:01:06] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-23 15:01:06,435 - INFO - 127.0.0.1 - - [23/Jun/2025 15:01:06] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:01:06,894 - INFO - 127.0.0.1 - - [23/Jun/2025 15:01:06] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:01:06,898 - INFO - 127.0.0.1 - - [23/Jun/2025 15:01:06] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:01:06,914 - INFO - 127.0.0.1 - - [23/Jun/2025 15:01:06] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:01:06,921 - INFO - 127.0.0.1 - - [23/Jun/2025 15:01:06] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:01:13,915 - INFO - 127.0.0.1 - - [23/Jun/2025 15:01:13] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:01:17,031 - INFO - 127.0.0.1 - - [23/Jun/2025 15:01:17] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:01:21,821 - INFO - 127.0.0.1 - - [23/Jun/2025 15:01:21] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:01:25,047 - INFO - 127.0.0.1 - - [23/Jun/2025 15:01:25] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:01:25,885 - INFO - 127.0.0.1 - - [23/Jun/2025 15:01:25] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:01:26,622 - INFO - 127.0.0.1 - - [23/Jun/2025 15:01:26] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:01:29,513 - INFO - 127.0.0.1 - - [23/Jun/2025 15:01:29] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:01:31,700 - INFO - 127.0.0.1 - - [23/Jun/2025 15:01:31] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:06:46,547 - INFO - Carregando dados brutos em Parquet...
+2025-06-23 15:06:46,913 - INFO - Otimização de memória para df_vendas:
+2025-06-23 15:06:46,913 - INFO -   - Antes: 110.59 MB
+2025-06-23 15:06:46,913 - INFO -   - Depois: 18.43 MB
+2025-06-23 15:06:46,913 - INFO -   - Redução: 83.33%
+2025-06-23 15:06:46,913 - INFO -   - Tempo: 0.18 segundos
+2025-06-23 15:06:46,915 - INFO - Otimização de memória para df_lojas:
+2025-06-23 15:06:46,915 - INFO -   - Antes: 0.21 MB
+2025-06-23 15:06:46,915 - INFO -   - Depois: 0.03 MB
+2025-06-23 15:06:46,915 - INFO -   - Redução: 86.57%
+2025-06-23 15:06:46,915 - INFO -   - Tempo: 0.00 segundos
+2025-06-23 15:06:46,915 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-23 15:06:47,151 - INFO - Otimização de memória para df_lojas_bruto_dashboard:
+2025-06-23 15:06:47,151 - INFO -   - Antes: 0.21 MB
+2025-06-23 15:06:47,151 - INFO -   - Depois: 0.03 MB
+2025-06-23 15:06:47,151 - INFO -   - Redução: 86.57%
+2025-06-23 15:06:47,151 - INFO -   - Tempo: 0.00 segundos
+2025-06-23 15:06:47,203 - INFO - Dash is running on http://localhost:8050/
+
+2025-06-23 15:06:47,209 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:8050
+2025-06-23 15:06:47,209 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-23 15:06:51,960 - INFO - 127.0.0.1 - - [23/Jun/2025 15:06:51] "GET /analise-3d HTTP/1.1" 200 -
+2025-06-23 15:06:52,054 - INFO - 127.0.0.1 - - [23/Jun/2025 15:06:52] "[36mGET /assets/css/estilos_barra_lateral.css HTTP/1.1[0m" 304 -
+2025-06-23 15:06:52,055 - INFO - 127.0.0.1 - - [23/Jun/2025 15:06:52] "[36mGET /assets/css/estilos_customizados.css HTTP/1.1[0m" 304 -
+2025-06-23 15:06:52,057 - INFO - 127.0.0.1 - - [23/Jun/2025 15:06:52] "[36mGET /assets/css/estilos_customizados.css?m=1750697690.9472873 HTTP/1.1[0m" 304 -
+2025-06-23 15:06:52,058 - INFO - 127.0.0.1 - - [23/Jun/2025 15:06:52] "[36mGET /assets/css/estilos_barra_lateral.css?m=1750697690.947188 HTTP/1.1[0m" 304 -
+2025-06-23 15:06:52,222 - INFO - 127.0.0.1 - - [23/Jun/2025 15:06:52] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-06-23 15:06:52,282 - INFO - 127.0.0.1 - - [23/Jun/2025 15:06:52] "GET /_dash-layout HTTP/1.1" 200 -
+2025-06-23 15:06:52,317 - INFO - 127.0.0.1 - - [23/Jun/2025 15:06:52] "[36mGET /assets/images/rossmann_logo2.png HTTP/1.1[0m" 304 -
+2025-06-23 15:06:52,325 - INFO - 127.0.0.1 - - [23/Jun/2025 15:06:52] "[36mGET /assets/images/rossmann_logo_colorida.png HTTP/1.1[0m" 304 -
+2025-06-23 15:06:52,338 - INFO - 127.0.0.1 - - [23/Jun/2025 15:06:52] "[36mGET /_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+2025-06-23 15:06:52,346 - INFO - 127.0.0.1 - - [23/Jun/2025 15:06:52] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2025-06-23 15:06:52,347 - INFO - 127.0.0.1 - - [23/Jun/2025 15:06:52] "[36mGET /_dash-component-suites/dash/dcc/async-markdown.js HTTP/1.1[0m" 304 -
+2025-06-23 15:06:52,356 - INFO - 127.0.0.1 - - [23/Jun/2025 15:06:52] "[36mGET /_dash-component-suites/dash/dcc/async-datepicker.js HTTP/1.1[0m" 304 -
+2025-06-23 15:06:52,365 - INFO - 127.0.0.1 - - [23/Jun/2025 15:06:52] "[36mGET /_dash-component-suites/dash/dcc/async-slider.js HTTP/1.1[0m" 304 -
+2025-06-23 15:06:52,371 - INFO - 127.0.0.1 - - [23/Jun/2025 15:06:52] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2025-06-23 15:06:52,404 - INFO - 127.0.0.1 - - [23/Jun/2025 15:06:52] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:06:52,407 - INFO - 127.0.0.1 - - [23/Jun/2025 15:06:52] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:06:52,408 - INFO - 127.0.0.1 - - [23/Jun/2025 15:06:52] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:06:52,409 - INFO - 127.0.0.1 - - [23/Jun/2025 15:06:52] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:06:52,410 - INFO - 127.0.0.1 - - [23/Jun/2025 15:06:52] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:06:52,411 - INFO - Carregando dados brutos em Parquet...
+2025-06-23 15:06:52,702 - INFO - 127.0.0.1 - - [23/Jun/2025 15:06:52] "[36mGET /_dash-component-suites/dash/dcc/async-highlight.js HTTP/1.1[0m" 304 -
+2025-06-23 15:06:52,774 - INFO - Otimização de memória para df_vendas:
+2025-06-23 15:06:52,774 - INFO -   - Antes: 110.59 MB
+2025-06-23 15:06:52,774 - INFO -   - Depois: 18.43 MB
+2025-06-23 15:06:52,774 - INFO -   - Redução: 83.33%
+2025-06-23 15:06:52,774 - INFO -   - Tempo: 0.21 segundos
+2025-06-23 15:06:52,776 - INFO - Otimização de memória para df_lojas:
+2025-06-23 15:06:52,776 - INFO -   - Antes: 0.21 MB
+2025-06-23 15:06:52,776 - INFO -   - Depois: 0.03 MB
+2025-06-23 15:06:52,776 - INFO -   - Redução: 86.57%
+2025-06-23 15:06:52,776 - INFO -   - Tempo: 0.00 segundos
+2025-06-23 15:06:52,776 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-23 15:06:52,865 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 15:06:52,918 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 15:06:52,919 - INFO - Amostrando 50 registros por loja...
+2025-06-23 15:06:52,922 - INFO - Total de lojas: 1115
+2025-06-23 15:06:53,152 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 15:06:53,152 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 15:06:53,161 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 15:06:53,166 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 15:06:53,171 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 15:06:53,314 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 15:06:53,315 - INFO - Amostrando 50 registros por loja...
+2025-06-23 15:06:53,318 - INFO - Total de lojas: 1115
+2025-06-23 15:06:53,325 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 15:06:53,326 - INFO - Amostrando 50 registros por loja...
+2025-06-23 15:06:53,340 - INFO - Total de lojas: 1115
+2025-06-23 15:06:53,384 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 15:06:53,384 - INFO - Amostrando 50 registros por loja...
+2025-06-23 15:06:53,403 - INFO - Total de lojas: 1115
+2025-06-23 15:06:53,407 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 15:06:53,407 - INFO - Amostrando 50 registros por loja...
+2025-06-23 15:06:53,418 - INFO - Total de lojas: 1115
+2025-06-23 15:06:53,427 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 15:06:53,427 - INFO - Amostrando 50 registros por loja...
+2025-06-23 15:06:53,463 - INFO - Total de lojas: 1115
+2025-06-23 15:06:56,667 - INFO - Amostragem concluída em 3.75 segundos
+2025-06-23 15:06:56,670 - INFO - Total de registros após amostragem: 55750
+2025-06-23 15:06:56,687 - INFO - 127.0.0.1 - - [23/Jun/2025 15:06:56] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:06:56,692 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 15:06:56,752 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 15:06:56,752 - INFO - Amostrando 50 registros por loja...
+2025-06-23 15:06:56,761 - INFO - Total de lojas: 1115
+2025-06-23 15:06:56,796 - INFO - Amostragem concluída em 3.37 segundos
+2025-06-23 15:06:56,796 - INFO - Total de registros após amostragem: 55750
+2025-06-23 15:06:56,811 - INFO - Carregando dados brutos em Parquet...
+2025-06-23 15:06:56,846 - INFO - Amostragem concluída em 3.51 segundos
+2025-06-23 15:06:56,846 - INFO - Total de registros após amostragem: 55750
+2025-06-23 15:06:56,861 - INFO - 127.0.0.1 - - [23/Jun/2025 15:06:56] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:06:56,969 - INFO - Amostragem concluída em 3.59 segundos
+2025-06-23 15:06:56,970 - INFO - Total de registros após amostragem: 55750
+2025-06-23 15:06:56,980 - INFO - Carregando dados brutos em Parquet...
+2025-06-23 15:06:57,141 - INFO - Amostragem concluída em 3.73 segundos
+2025-06-23 15:06:57,141 - INFO - Total de registros após amostragem: 55750
+2025-06-23 15:06:57,172 - INFO - Amostragem concluída em 3.86 segundos
+2025-06-23 15:06:57,173 - INFO - Total de registros após amostragem: 55750
+2025-06-23 15:06:57,182 - INFO - Carregando dados brutos em Parquet...
+2025-06-23 15:06:57,364 - INFO - Otimização de memória para df_vendas:
+2025-06-23 15:06:57,365 - INFO -   - Antes: 110.59 MB
+2025-06-23 15:06:57,365 - INFO -   - Depois: 18.43 MB
+2025-06-23 15:06:57,365 - INFO -   - Redução: 83.33%
+2025-06-23 15:06:57,365 - INFO -   - Tempo: 0.38 segundos
+2025-06-23 15:06:57,497 - INFO - Otimização de memória para df_lojas:
+2025-06-23 15:06:57,499 - INFO -   - Antes: 0.21 MB
+2025-06-23 15:06:57,499 - INFO -   - Depois: 0.03 MB
+2025-06-23 15:06:57,499 - INFO -   - Redução: 86.57%
+2025-06-23 15:06:57,500 - INFO -   - Tempo: 0.13 segundos
+2025-06-23 15:06:57,500 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-23 15:06:57,650 - INFO - 127.0.0.1 - - [23/Jun/2025 15:06:57] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:06:57,750 - INFO - Otimização de memória para df_vendas:
+2025-06-23 15:06:57,754 - INFO -   - Antes: 110.59 MB
+2025-06-23 15:06:57,755 - INFO -   - Depois: 18.43 MB
+2025-06-23 15:06:57,755 - INFO -   - Redução: 83.33%
+2025-06-23 15:06:57,757 - INFO -   - Tempo: 0.24 segundos
+2025-06-23 15:06:57,761 - INFO - Otimização de memória para df_vendas:
+2025-06-23 15:06:57,762 - INFO -   - Antes: 110.59 MB
+2025-06-23 15:06:57,764 - INFO -   - Depois: 18.43 MB
+2025-06-23 15:06:57,766 - INFO -   - Redução: 83.33%
+2025-06-23 15:06:57,767 - INFO -   - Tempo: 0.39 segundos
+2025-06-23 15:06:57,767 - INFO - Otimização de memória para df_lojas:
+2025-06-23 15:06:57,768 - INFO -   - Antes: 0.21 MB
+2025-06-23 15:06:57,769 - INFO -   - Depois: 0.03 MB
+2025-06-23 15:06:57,772 - INFO - Otimização de memória para df_lojas:
+2025-06-23 15:06:57,773 - INFO -   - Redução: 86.57%
+2025-06-23 15:06:57,773 - INFO -   - Antes: 0.21 MB
+2025-06-23 15:06:57,774 - INFO -   - Tempo: 0.01 segundos
+2025-06-23 15:06:57,775 - INFO -   - Depois: 0.03 MB
+2025-06-23 15:06:57,776 - INFO -   - Redução: 86.57%
+2025-06-23 15:06:57,776 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-23 15:06:57,776 - INFO -   - Tempo: 0.00 segundos
+2025-06-23 15:06:57,779 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-23 15:06:57,881 - INFO - 127.0.0.1 - - [23/Jun/2025 15:06:57] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:06:57,941 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 15:06:58,017 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 15:06:58,051 - INFO - 127.0.0.1 - - [23/Jun/2025 15:06:58] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:06:58,110 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 15:06:58,112 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 15:06:58,119 - INFO - 127.0.0.1 - - [23/Jun/2025 15:06:58] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:06:58,198 - INFO - 127.0.0.1 - - [23/Jun/2025 15:06:58] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:06:58,202 - INFO - 127.0.0.1 - - [23/Jun/2025 15:06:58] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-23 15:06:58,206 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 15:06:58,207 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 15:06:58,437 - INFO - 127.0.0.1 - - [23/Jun/2025 15:06:58] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:06:58,456 - INFO - 127.0.0.1 - - [23/Jun/2025 15:06:58] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:06:58,503 - INFO - 127.0.0.1 - - [23/Jun/2025 15:06:58] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:06:58,692 - INFO - 127.0.0.1 - - [23/Jun/2025 15:06:58] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:06:58,824 - INFO - 127.0.0.1 - - [23/Jun/2025 15:06:58] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:06:59,352 - INFO - Amostragem concluída em 2.60 segundos
+2025-06-23 15:06:59,352 - INFO - Total de registros após amostragem: 55750
+2025-06-23 15:06:59,363 - INFO - Carregando dados brutos em Parquet...
+2025-06-23 15:06:59,649 - INFO - 127.0.0.1 - - [23/Jun/2025 15:06:59] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-23 15:06:59,673 - INFO - Otimização de memória para df_vendas:
+2025-06-23 15:06:59,674 - INFO -   - Antes: 110.59 MB
+2025-06-23 15:06:59,674 - INFO -   - Depois: 18.43 MB
+2025-06-23 15:06:59,674 - INFO -   - Redução: 83.33%
+2025-06-23 15:06:59,674 - INFO -   - Tempo: 0.21 segundos
+2025-06-23 15:06:59,678 - INFO - Otimização de memória para df_lojas:
+2025-06-23 15:06:59,678 - INFO -   - Antes: 0.21 MB
+2025-06-23 15:06:59,679 - INFO -   - Depois: 0.03 MB
+2025-06-23 15:06:59,680 - INFO -   - Redução: 86.57%
+2025-06-23 15:06:59,680 - INFO -   - Tempo: 0.00 segundos
+2025-06-23 15:06:59,680 - INFO - Dados brutos carregados com sucesso. Vendas: 1017209 registros, Lojas: 1115 registros
+2025-06-23 15:07:00,304 - INFO - Carregando arquivo processado: /Users/micarloteixeira/Desktop/teste-1/dataset/processados/df_completo_processado.parquet
+2025-06-23 15:07:00,359 - INFO - Arquivo processado carregado com sucesso: 844392 registros
+2025-06-23 15:07:00,423 - INFO - 127.0.0.1 - - [23/Jun/2025 15:07:00] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:07:00,429 - INFO - 127.0.0.1 - - [23/Jun/2025 15:07:00] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:07:00,455 - INFO - 127.0.0.1 - - [23/Jun/2025 15:07:00] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:07:00,479 - INFO - 127.0.0.1 - - [23/Jun/2025 15:07:00] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:07:00,487 - INFO - 127.0.0.1 - - [23/Jun/2025 15:07:00] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:07:03,020 - INFO - 127.0.0.1 - - [23/Jun/2025 15:07:03] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:07:03,022 - INFO - 127.0.0.1 - - [23/Jun/2025 15:07:03] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-23 15:07:03,053 - INFO - 127.0.0.1 - - [23/Jun/2025 15:07:03] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-23 15:07:05,273 - INFO - 127.0.0.1 - - [23/Jun/2025 15:07:05] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:07:05,306 - INFO - 127.0.0.1 - - [23/Jun/2025 15:07:05] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:07:05,364 - INFO - 127.0.0.1 - - [23/Jun/2025 15:07:05] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-23 15:07:05,440 - INFO - 127.0.0.1 - - [23/Jun/2025 15:07:05] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:07:05,582 - INFO - 127.0.0.1 - - [23/Jun/2025 15:07:05] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:07:07,267 - INFO - 127.0.0.1 - - [23/Jun/2025 15:07:07] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:07:07,270 - INFO - 127.0.0.1 - - [23/Jun/2025 15:07:07] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-23 15:07:07,343 - INFO - 127.0.0.1 - - [23/Jun/2025 15:07:07] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-23 15:07:07,807 - INFO - 127.0.0.1 - - [23/Jun/2025 15:07:07] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:07:07,809 - INFO - 127.0.0.1 - - [23/Jun/2025 15:07:07] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-23 15:07:07,837 - INFO - 127.0.0.1 - - [23/Jun/2025 15:07:07] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-23 15:07:10,002 - INFO - 127.0.0.1 - - [23/Jun/2025 15:07:10] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:07:10,003 - INFO - 127.0.0.1 - - [23/Jun/2025 15:07:10] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-23 15:07:10,079 - INFO - 127.0.0.1 - - [23/Jun/2025 15:07:10] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 204 -
+2025-06-23 15:07:12,829 - INFO - 127.0.0.1 - - [23/Jun/2025 15:07:12] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:07:12,861 - INFO - 127.0.0.1 - - [23/Jun/2025 15:07:12] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:07:12,875 - INFO - 127.0.0.1 - - [23/Jun/2025 15:07:12] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:07:13,027 - INFO - 127.0.0.1 - - [23/Jun/2025 15:07:13] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:07:20,736 - INFO - 127.0.0.1 - - [23/Jun/2025 15:07:20] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:07:20,800 - INFO - 127.0.0.1 - - [23/Jun/2025 15:07:20] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:07:20,804 - INFO - 127.0.0.1 - - [23/Jun/2025 15:07:20] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:07:21,044 - INFO - 127.0.0.1 - - [23/Jun/2025 15:07:21] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:07:23,594 - INFO - 127.0.0.1 - - [23/Jun/2025 15:07:23] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:07:23,612 - INFO - 127.0.0.1 - - [23/Jun/2025 15:07:23] "[36mGET /assets/images/rossmann_logo1.png HTTP/1.1[0m" 304 -
+2025-06-23 15:07:27,662 - INFO - 127.0.0.1 - - [23/Jun/2025 15:07:27] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:07:27,693 - INFO - 127.0.0.1 - - [23/Jun/2025 15:07:27] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:07:27,709 - INFO - 127.0.0.1 - - [23/Jun/2025 15:07:27] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:07:27,844 - INFO - 127.0.0.1 - - [23/Jun/2025 15:07:27] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:07:37,131 - INFO - 127.0.0.1 - - [23/Jun/2025 15:07:37] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:07:37,158 - INFO - 127.0.0.1 - - [23/Jun/2025 15:07:37] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:07:37,198 - INFO - 127.0.0.1 - - [23/Jun/2025 15:07:37] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:07:37,355 - INFO - 127.0.0.1 - - [23/Jun/2025 15:07:37] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:07:38,163 - INFO - 127.0.0.1 - - [23/Jun/2025 15:07:38] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-06-23 15:07:38,176 - INFO - 127.0.0.1 - - [23/Jun/2025 15:07:38] "[36mGET /assets/images/rossmann_logo2.png HTTP/1.1[0m" 304 -

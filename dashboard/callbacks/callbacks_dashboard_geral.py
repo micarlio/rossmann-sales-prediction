@@ -92,7 +92,7 @@ def registrar_callbacks_dashboard_geral(aplicativo, dados):
         return fig, texto_analise
 
     def obter_grafico_promocao_tipo_loja(df_filtrado, metrica, texto_rotulo_eixo_y, texto_titulo_eixo_y):
-        df_promo_tipo_loja = df_filtrado.groupby(['StoreType', 'Promo'])[metrica].mean().reset_index()
+        df_promo_tipo_loja = df_filtrado.groupby(['StoreType', 'Promo'], observed=True)[metrica].mean().reset_index()
         df_promo_tipo_loja['Promo'] = df_promo_tipo_loja['Promo'].map({0: 'Sem Promoção', 1: 'Com Promoção'})
         fig = px.bar(df_promo_tipo_loja, x='StoreType', y=metrica, color='Promo', barmode='group', text_auto='.0f', title=f'Promoção Vs {texto_rotulo_eixo_y} por Tipo de Loja', labels={metrica: texto_titulo_eixo_y, 'Promo': 'Status da Promoção', 'StoreType': 'Tipo de Loja'}, color_discrete_map={'Sem Promoção': CINZA_NEUTRO, 'Com Promoção': VERMELHO_ROSSMANN})
         fig.update_layout(height=ALTURA_GRAFICO, plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)')
@@ -179,7 +179,7 @@ def registrar_callbacks_dashboard_geral(aplicativo, dados):
 
         if dados_nivel_loja.empty:
             return criar_figura_vazia("Sem dados suficientes para este gráfico."), "Não há lojas com dados de concorrência nos filtros selecionados."
-
+        dados_nivel_loja['StoreType'] = dados_nivel_loja['StoreType'].cat.remove_unused_categories()
         fig = px.scatter(
             dados_nivel_loja,
             x='CompetitionDistance',
@@ -210,7 +210,7 @@ def registrar_callbacks_dashboard_geral(aplicativo, dados):
         return fig, texto_analise
 
     def obter_grafico_impacto_sortimento(df_filtrado, metrica, texto_rotulo_eixo_y, texto_titulo_eixo_y):
-        df_sortimento_metrica = df_filtrado.groupby('Assortment')[metrica].mean().reset_index()
+        df_sortimento_metrica = df_filtrado.groupby('Assortment', observed=True)[metrica].mean().reset_index()
         fig = px.bar(df_sortimento_metrica, x='Assortment', y=metrica, title=f'{texto_rotulo_eixo_y} Médio por Tipo de Sortimento', labels={metrica: texto_titulo_eixo_y, 'Assortment': 'Tipo de Sortimento'}, color='Assortment')
         fig.update_layout(height=ALTURA_GRAFICO, plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)')
         texto_analise = f"O gráfico mostra como diferentes tipos de sortimento (a=básico, b=extra, c=estendido) se relacionam com a performance média da métrica '{texto_rotulo_eixo_y}'."

@@ -4,8 +4,6 @@ from pathlib import Path
 import os
 import sys
 import logging
-import gzip
-import pickle
 import time
 from datetime import datetime
 
@@ -25,12 +23,11 @@ DIRETORIO_BASE = Path(__file__).resolve().parent.parent
 DIRETORIO_DADOS = DIRETORIO_BASE / "dataset"
 
 # Caminhos para dados brutos
-CAMINHO_ARQUIVO_TREINO_BRUTO = DIRETORIO_DADOS / "brutos" / "train.csv"
-CAMINHO_ARQUIVO_LOJAS_BRUTO = DIRETORIO_DADOS / "brutos" / "store.csv"
+CAMINHO_ARQUIVO_TREINO_BRUTO = DIRETORIO_DADOS / "brutos" / "train.parquet"
+CAMINHO_ARQUIVO_LOJAS_BRUTO = DIRETORIO_DADOS / "brutos" / "store.parquet"
 
-# Caminhos para dados processados
-CAMINHO_ARQUIVO_PROCESSADO = DIRETORIO_DADOS / "processados" / "df_completo_processado.pkl.gz"
-CAMINHO_ARQUIVO_REDUZIDO = DIRETORIO_DADOS / "processados" / "df_completo_reduzido.pkl.gz"
+# Caminho para dados processados em Parquet
+CAMINHO_ARQUIVO_PROCESSADO = DIRETORIO_DADOS / "processados" / "df_completo_processado.parquet"
 
 # Número padrão de amostras por loja
 N_AMOSTRAS_PADRAO = 50
@@ -125,9 +122,9 @@ def carregar_dados_brutos():
         tuple: (df_vendas, df_lojas) ou (None, None) em caso de erro
     """
     try:
-        logging.info("Carregando dados brutos...")
+        logging.info("Carregando dados brutos em Parquet...")
         
-        # Verifica se os arquivos existem
+        # Verifica se os arquivos Parquet existem
         if not CAMINHO_ARQUIVO_TREINO_BRUTO.exists():
             logging.error(f"Arquivo de vendas não encontrado: {CAMINHO_ARQUIVO_TREINO_BRUTO}")
             return None, None
@@ -136,11 +133,11 @@ def carregar_dados_brutos():
             logging.error(f"Arquivo de lojas não encontrado: {CAMINHO_ARQUIVO_LOJAS_BRUTO}")
             return None, None
         
-        # Carrega os dados
-        df_vendas = pd.read_csv(CAMINHO_ARQUIVO_TREINO_BRUTO, dtype={'StateHoliday': str}, low_memory=False)
+        # Carrega os dados em Parquet
+        df_vendas = pd.read_parquet(CAMINHO_ARQUIVO_TREINO_BRUTO)
         df_vendas['Date'] = pd.to_datetime(df_vendas['Date'])
         
-        df_lojas = pd.read_csv(CAMINHO_ARQUIVO_LOJAS_BRUTO)
+        df_lojas = pd.read_parquet(CAMINHO_ARQUIVO_LOJAS_BRUTO)
         
         # Otimiza memória
         df_vendas = reduzir_uso_memoria(df_vendas, "df_vendas")
@@ -169,11 +166,7 @@ def processar_dados_brutos(force_reprocess=False):
         # Verifica se já existe um arquivo processado e não está forçando reprocessamento
         if CAMINHO_ARQUIVO_PROCESSADO.exists() and not force_reprocess:
             logging.info(f"Carregando arquivo processado: {CAMINHO_ARQUIVO_PROCESSADO}")
-            
-            # Carrega o arquivo processado
-            with gzip.open(CAMINHO_ARQUIVO_PROCESSADO, 'rb') as f:
-                df_completo = pickle.load(f)
-                
+            df_completo = pd.read_parquet(CAMINHO_ARQUIVO_PROCESSADO)
             logging.info(f"Arquivo processado carregado com sucesso: {len(df_completo)} registros")
             return df_completo
             
@@ -226,10 +219,9 @@ def processar_dados_brutos(force_reprocess=False):
         # Otimiza memória novamente
         df_completo = reduzir_uso_memoria(df_completo, "df_completo")
         
-        # Salva o DataFrame processado
+        # Salva o DataFrame processado em Parquet
         verificar_diretorios()
-        with gzip.open(CAMINHO_ARQUIVO_PROCESSADO, 'wb') as f:
-            pickle.dump(df_completo, f)
+        df_completo.to_parquet(CAMINHO_ARQUIVO_PROCESSADO, index=False)
         
         logging.info(f"DataFrame processado salvo com sucesso: {CAMINHO_ARQUIVO_PROCESSADO}")
         logging.info(f"Total de registros: {len(df_completo)}")

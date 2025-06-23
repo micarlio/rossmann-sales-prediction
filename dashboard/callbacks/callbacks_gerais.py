@@ -175,7 +175,7 @@ def registrar_callbacks_gerais(aplicativo, dados):
 
     # --- Callback para Download dos Dados Filtrados ---
     @aplicativo.callback(
-        Output("download-df-csv", "data"),
+        Output("download-df-parquet", "data"),
         Input("dashboard-botao-baixar-dados-filtrados", "n_clicks"),
         [
             dash.State('dashboard-filtro-data', 'start_date'),
@@ -190,7 +190,10 @@ def registrar_callbacks_gerais(aplicativo, dados):
     def baixar_dados_filtrados(n_clicks, data_inicio, data_fim, tipos_loja_selecionados, lojas_especificas_selecionadas, feriado_estadual_selecionado, feriado_escolar_selecionado):
         if n_clicks:
             df_download = filtrar_dataframe(df_principal, data_inicio, data_fim, tipos_loja_selecionados, lojas_especificas_selecionadas, feriado_estadual_selecionado, feriado_escolar_selecionado)
-            return dcc.send_data_frame(df_download.to_csv, f"rossmann_dados_filtrados_{data_inicio}_a_{data_fim}.csv", index=False)
+            return dcc.send_bytes(
+                lambda buf: df_download.to_parquet(buf, index=False),
+                f"rossmann_dados_filtrados_{data_inicio}_a_{data_fim}.parquet"
+            )
         return dash.no_update
 
     @aplicativo.callback(

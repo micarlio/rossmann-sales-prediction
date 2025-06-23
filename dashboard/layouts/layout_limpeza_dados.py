@@ -25,7 +25,7 @@ def criar_layout_limpeza_dados(dados): # Refatorar nome da função e parâmetro
 
     # --- Seção de Tratamento de Valores Ausentes ---
     # Carrega dados brutos de lojas para análise de valores ausentes
-    df_lojas_bruto = pd.read_csv(CAMINHO_ARQUIVO_LOJAS_BRUTO)
+    df_lojas_bruto = pd.read_parquet(CAMINHO_ARQUIVO_LOJAS_BRUTO)
     colunas_nulos = ['CompetitionDistance', 'CompetitionOpenSinceMonth', 'CompetitionOpenSinceYear', 'Promo2SinceWeek', 'Promo2SinceYear', 'PromoInterval']
     percent_missing = df_lojas_bruto[colunas_nulos].isnull().mean() * 100
     estrategias = [
@@ -54,7 +54,7 @@ def criar_layout_limpeza_dados(dados): # Refatorar nome da função e parâmetro
         color_continuous_scale=[FUNDO_CINZA_CLARO, VERMELHO_ROSSMANN],
         labels={'x': 'Índice', 'y': 'Coluna', 'color': 'Ausente'},
         aspect='auto',
-        title="Matriz de Valores Ausentes (store.csv)"
+        title="Matriz de Valores Ausentes (store.parquet)"
     ).update_xaxes(showticklabels=False)
 
     # --- Seção de Impacto da Limpeza ---
@@ -113,7 +113,7 @@ def criar_layout_limpeza_dados(dados): # Refatorar nome da função e parâmetro
             dbc.CardBody([
                 dcc.Markdown(f"""
                     A primeira etapa do projeto envolveu a limpeza e a preparação dos dados brutos. As ações mais significativas foram:
-                    * **União dos Datasets:** Foi realizada a junção dos dados de vendas (`train.csv`) com as informações detalhadas sobre cada loja (`store.csv`) utilizando o `Store ID` como chave comum.
+                    * **União dos Datasets:** Foi realizada a junção dos dados de vendas (`train.parquet`) com as informações detalhadas sobre cada loja (`store.parquet`) utilizando o `Store ID` como chave comum.
                     * **Tratamento de Lojas Fechadas:** A decisão mais impactante foi a remoção dos {registros_removidos:,.0f} registros diários onde as lojas estavam fechadas (`Open == 0`), de um total de {registros_originais:,.0f} registros originais. Isso garante que a análise se concentre apenas nos dias de operação efetiva.
                     * **Tratamento de Dados Faltantes em `store_df`:** Preenchemos valores ausentes (`NaN`) em colunas como `CompetitionDistance` (com a média da coluna) e em campos relacionados a `Promo2` e `CompetitionOpenSince` (com 0, indicando "não aplicável" ou "desconhecido" para facilitar a modelagem futura).
                 """, className="mb-4"),

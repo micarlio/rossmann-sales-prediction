@@ -4,8 +4,8 @@ import plotly.express as px
 import pandas as pd
 
 from .componentes_compartilhados import criar_botoes_cabecalho # Refatorar nome do módulo e da função
-from ..config import CINZA_NEUTRO, VERMELHO_ROSSMANN, BRANCO_NEUTRO, FUNDO_CINZA_CLARO, AZUL_ESCURO # Importar novas constantes
-from ..data_loader import CAMINHO_ARQUIVO_LOJAS_BRUTO, reduzir_uso_memoria, N_AMOSTRAS_PADRAO  # para análise de valores ausentes e memória
+from ..config import VERMELHO_ROSSMANN, FUNDO_CINZA_CLARO, AZUL_ESCURO, CINZA_NEUTRO
+from ..data_loader import CAMINHO_ARQUIVO_LOJAS_BRUTO, reduzir_uso_memoria  # para análise de valores ausentes e memória
 
 def criar_layout_limpeza_dados(dados): # Refatorar nome da função e parâmetro
     nome_pagina = "limpeza" # Refatorar nome da variável

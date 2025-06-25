@@ -1,16 +1,10 @@
 # dashboard/layouts/layout_contextualizacao.py
 import dash_bootstrap_components as dbc
 from dash import dcc, html
-import sys
-import os
 import pandas as pd
 from ..data_loader import carregar_dados_brutos
 
-# Adicionar o diretório raiz ao path para permitir importações absolutas
-sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
-
-from dashboard.config import VERMELHO_ROSSMANN, AZUL_ESCURO, FUNDO_CINZA_CLARO, BRANCO_NEUTRO, AZUL_DESTAQUE, VERDE_DESTAQUE, AMARELO_DESTAQUE, PALETA_CORES_GRAFICO, CINZA_NEUTRO
-# from .shared_components import generate_section_title # Esta função não está sendo usada no layout atual. Será removida ou traduzida se for usada em outro lugar.
+from ..config import VERMELHO_ROSSMANN, AZUL_ESCURO, FUNDO_CINZA_CLARO, BRANCO_NEUTRO, AZUL_DESTAQUE, VERDE_DESTAQUE, AMARELO_DESTAQUE, PALETA_CORES_GRAFICO, CINZA_NEUTRO
 
 def criar_layout_contextualizacao(dados):
     # Carrega datasets brutos para contextualização

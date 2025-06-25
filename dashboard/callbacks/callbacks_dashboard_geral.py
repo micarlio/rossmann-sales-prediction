@@ -1,11 +1,8 @@
 # dashboard/callbacks/callbacks_dashboard_geral.py
 from dash import Input, Output, State, html
 import dash
-import pandas as pd
-import numpy as np
 import plotly.express as px
 import plotly.graph_objects as go
-import statsmodels.api as sm
 import dash_bootstrap_components as dbc
 
 from ..utils import criar_figura_vazia, filtrar_dataframe, parse_json_to_df
@@ -47,10 +44,10 @@ def registrar_callbacks_dashboard_geral(aplicativo, dados):
             sufixo_titulo = 'Diária (Suavizado 7 dias)'
 
         if tipo_granularidade != 'D':
-            df_agrupado = df_temporal.groupby(['Date_Period', chave_agrupamento])[metrica].mean().reset_index()
+            df_agrupado = df_temporal.groupby(['Date_Period', chave_agrupamento], observed=False)[metrica].mean().reset_index()
             df_agrupado.rename(columns={metrica: 'Value'}, inplace=True)
         else:
-            metrica_diaria = df_filtrado.groupby(['Date', chave_agrupamento])[metrica].mean().unstack()
+            metrica_diaria = df_filtrado.groupby(['Date', chave_agrupamento], observed=False)[metrica].mean().unstack()
             metrica_suavizada = metrica_diaria.rolling(window=7, center=True, min_periods=1).mean()
             df_agrupado = metrica_suavizada.stack().reset_index(name='Value')
             df_agrupado.rename(columns={'Date': 'Date_Period'}, inplace=True)
@@ -67,7 +64,7 @@ def registrar_callbacks_dashboard_geral(aplicativo, dados):
         return fig, texto_analise
 
     def obter_grafico_media_mensal(df_filtrado, metrica, texto_rotulo_eixo_y, texto_titulo_eixo_y):
-        df_media_mensal = df_filtrado.groupby('Month')[metrica].mean().reset_index()
+        df_media_mensal = df_filtrado.groupby('Month', observed=False)[metrica].mean().reset_index()
         fig = px.line(df_media_mensal, x='Month', y=metrica, markers=True, title=f'Média de {texto_rotulo_eixo_y} por Mês', labels={metrica: texto_titulo_eixo_y, 'Month': 'Mês'}, color_discrete_sequence=[VERMELHO_ROSSMANN])
         fig.update_layout(
             xaxis=dict(tickmode='array', tickvals=list(range(1, 13))),
@@ -80,7 +77,7 @@ def registrar_callbacks_dashboard_geral(aplicativo, dados):
         return fig, texto_analise
 
     def obter_grafico_media_anual(df_filtrado, metrica, texto_rotulo_eixo_y, texto_titulo_eixo_y):
-        df_media_anual = df_filtrado.groupby('Year')[metrica].mean().reset_index()
+        df_media_anual = df_filtrado.groupby('Year', observed=False)[metrica].mean().reset_index()
         fig = px.line(df_media_anual, x='Year', y=metrica, markers=True, title=f'Média de {texto_rotulo_eixo_y} por Ano', labels={metrica: texto_titulo_eixo_y, 'Year': 'Ano'}, color_discrete_sequence=[VERMELHO_ROSSMANN])
         fig.update_layout(
             height=ALTURA_GRAFICO,
@@ -100,7 +97,7 @@ def registrar_callbacks_dashboard_geral(aplicativo, dados):
         return fig, texto_analise
 
     def obter_grafico_dia_semana(df_filtrado, metrica, texto_rotulo_eixo_y, texto_titulo_eixo_y):
-        df_dia_semana = df_filtrado.groupby('DayOfWeek')[metrica].mean().reset_index()
+        df_dia_semana = df_filtrado.groupby('DayOfWeek', observed=False)[metrica].mean().reset_index()
         df_dia_semana['DayName'] = df_dia_semana['DayOfWeek'].map(MAPEAMENTO_DIAS_SEMANA)
         fig = px.line(df_dia_semana, x='DayName', y=metrica, markers=True, title=f'{texto_rotulo_eixo_y} Médio por Dia da Semana', labels={metrica: texto_titulo_eixo_y, 'DayName': 'Dia da Semana'}, color_discrete_sequence=[VERMELHO_ROSSMANN])
         fig.update_layout(
@@ -113,7 +110,7 @@ def registrar_callbacks_dashboard_geral(aplicativo, dados):
         return fig, texto_analise
 
     def obter_grafico_dia_do_mes(df_filtrado, metrica, texto_rotulo_eixo_y, texto_titulo_eixo_y):
-        df_dia_mes = df_filtrado.groupby('Day')[metrica].mean().reset_index()
+        df_dia_mes = df_filtrado.groupby('Day', observed=False)[metrica].mean().reset_index()
         fig = px.line(df_dia_mes, x='Day', y=metrica, markers=True, title=f'{texto_rotulo_eixo_y} Médio por Dia do Mês', labels={metrica: texto_titulo_eixo_y, 'Day': 'Dia do Mês'}, color_discrete_sequence=[VERMELHO_ROSSMANN])
         fig.update_layout(height=ALTURA_GRAFICO, plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)')
         texto_analise = f"Este gráfico revela o padrão de {texto_rotulo_eixo_y} ao longo do mês. Picos no início e no final do mês podem estar correlacionados com ciclos de pagamento de salários."
@@ -170,7 +167,7 @@ def registrar_callbacks_dashboard_geral(aplicativo, dados):
         a performance da loja, a distância do concorrente, o tipo de loja e o volume de clientes.
         """
         # Agrupar por loja para ter um ponto por loja no gráfico
-        dados_nivel_loja = df_filtrado.groupby('Store').agg(
+        dados_nivel_loja = df_filtrado.groupby('Store', observed=False).agg(
             MetricValue=(metrica, 'mean'),
             CompetitionDistance=('CompetitionDistance', 'first'),
             StoreType=('StoreType', 'first'),
@@ -202,7 +199,7 @@ def registrar_callbacks_dashboard_geral(aplicativo, dados):
         return fig, texto_analise
 
     def obter_grafico_impacto_promo2(df_filtrado, metrica, texto_rotulo_eixo_y, texto_titulo_eixo_y):
-        df_promo2_metrica = df_filtrado.groupby('Promo2')[metrica].mean().reset_index()
+        df_promo2_metrica = df_filtrado.groupby('Promo2', observed=False)[metrica].mean().reset_index()
         df_promo2_metrica['Promo2_Label'] = df_promo2_metrica['Promo2'].map({0: 'Não Participa', 1: 'Participa'})
         fig = px.bar(df_promo2_metrica, x='Promo2_Label', y=metrica, title=f'Média de {texto_rotulo_eixo_y} (Promo2)', labels={metrica: texto_titulo_eixo_y, 'Promo2_Label': 'Participação em Promo2'}, color='Promo2_Label', color_discrete_map={'Não Participa': CINZA_NEUTRO, 'Participa': VERMELHO_ROSSMANN})
         fig.update_layout(height=ALTURA_GRAFICO, plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)')
@@ -210,14 +207,14 @@ def registrar_callbacks_dashboard_geral(aplicativo, dados):
         return fig, texto_analise
 
     def obter_grafico_impacto_sortimento(df_filtrado, metrica, texto_rotulo_eixo_y, texto_titulo_eixo_y):
-        df_sortimento_metrica = df_filtrado.groupby('Assortment', observed=True)[metrica].mean().reset_index()
+        df_sortimento_metrica = df_filtrado.groupby('Assortment', observed=False)[metrica].mean().reset_index()
         fig = px.bar(df_sortimento_metrica, x='Assortment', y=metrica, title=f'{texto_rotulo_eixo_y} Médio por Tipo de Sortimento', labels={metrica: texto_titulo_eixo_y, 'Assortment': 'Tipo de Sortimento'}, color='Assortment')
         fig.update_layout(height=ALTURA_GRAFICO, plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)')
         texto_analise = f"O gráfico mostra como diferentes tipos de sortimento (a=básico, b=extra, c=estendido) se relacionam com a performance média da métrica '{texto_rotulo_eixo_y}'."
         return fig, texto_analise
 
     def obter_grafico_tipo_feriado(df_filtrado, metrica, texto_rotulo_eixo_y, texto_titulo_eixo_y):
-        df_feriado_metrica = df_filtrado.groupby('StateHoliday')[metrica].mean().reset_index()
+        df_feriado_metrica = df_filtrado.groupby('StateHoliday', observed=False)[metrica].mean().reset_index()
         mapeamento_feriado = {'0': 'Dia Normal', 'a': 'Feriado Público', 'b': 'Páscoa', 'c': 'Natal'}
         df_feriado_metrica['StateHoliday_Label'] = df_feriado_metrica['StateHoliday'].map(mapeamento_feriado)
         ordem = [h for h in mapeamento_feriado.values() if h in df_feriado_metrica['StateHoliday_Label'].unique()]
@@ -354,7 +351,7 @@ def registrar_callbacks_dashboard_geral(aplicativo, dados):
             'SalesPerCustomer': 'Ticket Médio'
         }
         rotulo_eixo_y = mapeamento_metrica.get(metrica, metrica)
-        df_sortimento_metrica = df_filtrado.groupby('Assortment')[metrica].mean().reset_index()
+        df_sortimento_metrica = df_filtrado.groupby('Assortment', observed=False)[metrica].mean().reset_index()
         fig = px.bar(df_sortimento_metrica, x='Assortment', y=metrica,
                      title=f'{rotulo_eixo_y} por Sortimento',
                      labels={metrica: f'{rotulo_eixo_y} (€)' if 'Sales' in metrica or 'SalesPerCustomer' in metrica else rotulo_eixo_y, 'Assortment': 'Tipo de Sortimento'},

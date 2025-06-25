@@ -6,11 +6,8 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 import statsmodels.api as sm
-import json
 from io import StringIO
-from sklearn.preprocessing import StandardScaler
-from sklearn.metrics.pairwise import cosine_similarity
-import numpy as np
+import json
 
 from ..utils import criar_figura_vazia, filtrar_dataframe # Importar as funções utilitárias refatoradas
 from ..data_loader import get_principal_dataset, N_AMOSTRAS_PADRAO

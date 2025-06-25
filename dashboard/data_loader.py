@@ -2,10 +2,8 @@ import pandas as pd
 import numpy as np
 from pathlib import Path
 import os
-import sys
 import logging
 import time
-from datetime import datetime
 
 # Configuração do logging
 logging.basicConfig(
@@ -458,13 +456,12 @@ def get_data_states(use_samples=False, n_amostras=N_AMOSTRAS_PADRAO, random_stat
 
     # Estado 1: Antes da Limpeza
     df_antes = pd.merge(df_vendas_raw, df_lojas_raw, how='left', on='Store')
-    # Estado 2: Depois da Limpeza
+    
+    # Estado 2: Depois da Limpeza (usando processar_dados_brutos)
     df_depois = processar_dados_brutos(force_reprocess=False)
-    # Estado 3: Depois da Amostragem, se solicitado
-    if use_samples:
-        df_amostrado = amostrar_por_loja(df_depois, n_amostras=n_amostras, random_state=random_state)
-    else:
-        df_amostrado = df_depois
+    
+    # Estado 3: Depois da Amostragem (usando get_principal_dataset)
+    df_amostrado = get_principal_dataset(use_samples, n_amostras, random_state)
 
     return {"antes": df_antes, "depois": df_depois, "amostrado": df_amostrado}
 
@@ -475,12 +472,15 @@ def get_principal_dataset(use_samples=False, n_amostras=N_AMOSTRAS_PADRAO, rando
     key = (use_samples, n_amostras)
     if key in _principal_cache:
         return _principal_cache[key]
+    
     # Obter o dataset limpo (carregado do arquivo processado)
     df_base = processar_dados_brutos(force_reprocess=False)
+    
     # Aplicar amostragem se solicitado
-    if use_samples:
+    if use_samples and df_base is not None:
         df_princ = amostrar_por_loja(df_base, n_amostras=n_amostras, random_state=random_state)
     else:
         df_princ = df_base
+        
     _principal_cache[key] = df_princ
     return df_princ

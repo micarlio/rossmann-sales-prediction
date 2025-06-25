@@ -3,10 +3,7 @@ from dash import dcc, html
 
 # Importar as constantes com os novos nomes
 from ..utils import criar_figura_vazia, criar_icone_informacao # Refatorar nomes de funções
-from ..config import (
-    VERMELHO_ROSSMANN, AZUL_ESCURO, CINZA_NEUTRO, ALTURA_GRAFICO, # Importar novas constantes
-    MAPEAMENTO_DIAS_SEMANA, ORDEM_DIAS_SEMANA # Novas constantes para DayOfWeek
-)
+from ..config import AZUL_ESCURO, ALTURA_GRAFICO
 
 def gerar_titulo_secao(titulo, subtitulo): # Refatorar nome da função
     """Gera um título de seção padronizado com subtítulo."""

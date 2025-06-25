@@ -3,13 +3,23 @@ import dash
 from dash import dcc, html
 from dash.dependencies import Input, Output
 import dash_bootstrap_components as dbc
-import sys
 import os
 from flask_caching import Cache
+import warnings
 import pandas as pd
+import logging
 
-# Adicionar o diretório pai ao path para permitir importações absolutas
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# Configuração de logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
+
+# Suprimir avisos específicos do pandas para melhorar a legibilidade dos logs
+warnings.filterwarnings('ignore', category=pd.errors.SettingWithCopyWarning)
+warnings.filterwarnings('ignore', category=FutureWarning, message=".*observed=False.*")
+warnings.filterwarnings('ignore', category=FutureWarning, message=".*When grouping with a length-1 list-like.*")
 
 # Importar layouts e dados com caminho absoluto
 from dashboard.layouts import (
@@ -29,7 +39,7 @@ from dashboard.callbacks import registrar_callbacks
 # Inicialização do Aplicativo
 # ==============================================================================
 # Configuração da porta
-port = int(os.environ.get('PORT', 10000))
+port = int(os.environ.get('PORT', 8050))
 
 aplicativo = dash.Dash(
     __name__,
@@ -100,10 +110,11 @@ data_inicio = os.environ.get('DATA_INICIO', None)
 data_fim = os.environ.get('DATA_FIM', None)
 force_reprocess = os.environ.get('FORCE_REPROCESS', 'False').lower() == 'true'
 
-print(f"Carregando dados no modo '{modo_carregamento}'...")
-print(f"  - Amostras por loja: {n_amostras if modo_carregamento == 'amostra' else 'N/A'}")
-print(f"  - Intervalo de datas: {data_inicio} a {data_fim if data_fim else 'hoje'}" if modo_carregamento == 'data' else "")
-print(f"  - Forçar reprocessamento: {force_reprocess}")
+logger.info(f"Carregando dados no modo '{modo_carregamento}'...")
+logger.info(f"  - Amostras por loja: {n_amostras if modo_carregamento == 'amostra' else 'N/A'}")
+if modo_carregamento == 'data':
+    logger.info(f"  - Intervalo de datas: {data_inicio} a {data_fim if data_fim else 'hoje'}")
+logger.info(f"  - Forçar reprocessamento: {force_reprocess}")
 
 # Carregar dados usando cache
 dados = get_cached_data(
@@ -151,8 +162,5 @@ registrar_callbacks(aplicativo, dados)
 # Execução do Aplicativo
 # ==============================================================================
 if __name__ == '__main__':
-    # Definir o host como 0.0.0.0 para permitir acesso externo
-    aplicativo.run(host='localhost', port=8050, debug=False)
+    aplicativo.run(host='localhost', port=port, debug=False)
 
-# Exportar o servidor para o gunicorn
-server = aplicativo.server
